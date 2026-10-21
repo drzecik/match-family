@@ -101,3 +101,67 @@ describe('evaluateMemoryCompatibility', () => {
     expect(result.status).toBe('unknown');
   });
 });
+
+describe('memory input boundary regressions', () => {
+  it.each([0, -1, Number.NaN, Number.POSITIVE_INFINITY])(
+    'never approves invalid card capacity %s',
+    (capacityGB) => {
+      const result = evaluateMemoryCompatibility({
+        deviceMedia,
+        mode: mode(),
+        card: card({ capacityGB }),
+      });
+      expect(result.status).toBe('unknown');
+      expect(result.estimatedRecordingSeconds).toBeUndefined();
+    },
+  );
+
+  it.each([0, -1, Number.NaN, Number.POSITIVE_INFINITY, Number.MIN_VALUE, Number.MAX_VALUE])(
+    'never publishes invalid or overflowing estimates for bitrate %s',
+    (bitrateMbps) => {
+      const result = evaluateMemoryCompatibility({
+        deviceMedia,
+        mode: mode({ bitrateMbps }),
+        card: card(),
+      });
+      expect(result.status).toBe('unknown');
+      expect(result.estimatedRecordingSeconds).toBeUndefined();
+      expect(result.estimatedStorageGBPerHour).toBeUndefined();
+    },
+  );
+
+  it('does not approve infinite write performance or non-finite tuning values', () => {
+    for (const overrides of [
+      { card: card({ sustainedWriteMBps: Number.POSITIVE_INFINITY }) },
+      { safetyHeadroom: Number.NaN },
+      { usableCapacityRatio: Number.NaN },
+    ]) {
+      const result = evaluateMemoryCompatibility({
+        deviceMedia,
+        mode: mode(),
+        card: card(),
+        ...overrides,
+      });
+      expect(result.status).toBe('unknown');
+      expect(result.estimatedRecordingSeconds).toBeUndefined();
+    }
+  });
+
+  it('does not treat blank evidence identifiers as proof', () => {
+    const result = evaluateMemoryCompatibility({
+      deviceMedia,
+      mode: mode(),
+      card: card({ evidenceIds: ['  '] }),
+    });
+    expect(result.status).toBe('unknown');
+  });
+
+  it('does not approve two empty media format identifiers', () => {
+    const result = evaluateMemoryCompatibility({
+      deviceMedia: [{ ...deviceMedia[0]!, format: '' }],
+      mode: mode({ mediaRequirements: { ...mode().mediaRequirements, mediaFormats: [''] } }),
+      card: card({ format: '' }),
+    });
+    expect(result.status).toBe('unknown');
+  });
+});

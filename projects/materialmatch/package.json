@@ -20,13 +20,16 @@
     "test:e2e": "pnpm --filter @materialmatch/demo-store --filter @materialmatch/materialmatch-widget test:e2e",
     "test:php": "node scripts/run-php-tests/index.mjs",
     "test:wordpress:integration": "node scripts/test-wordpress-integration/index.mjs",
-    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm test:php && pnpm build",
+    "check": "pnpm test:release-guards && pnpm lint && pnpm typecheck && pnpm test && pnpm test:php && pnpm build && corepack pnpm typecheck:demo && corepack pnpm demo:core",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "validate:pack": "tsx scripts/validate-pack/index.ts",
     "create:demo-data": "tsx scripts/create-demo-data/index.ts",
     "build:wordpress-release": "node scripts/build-release/index.mjs",
-    "build:demo-release": "node scripts/build-demo-release/index.mjs"
+    "build:demo-release": "node scripts/build-demo-release/index.mjs",
+    "demo:core": "tsx scripts/core-demo/index.ts",
+    "typecheck:demo": "tsc --noEmit -p scripts/core-demo/tsconfig.json",
+    "test:release-guards": "node --test scripts/lib/*.test.mjs"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

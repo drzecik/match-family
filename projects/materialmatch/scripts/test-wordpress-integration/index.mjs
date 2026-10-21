@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { request } from '@playwright/test';
 import { runCLI } from '@wp-playground/cli';
 import { writeProductionAutoloader } from '../lib/production-autoloader.mjs';
+import { withoutApprovedLicenseUri } from '../lib/license-header.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const WORDPRESS_VERSION = '7.0.1';
@@ -71,6 +72,8 @@ async function prepareInstallablePlugin(temporaryRoot) {
   for (const name of [
     'composer.json',
     'composer.lock',
+    'LICENSE',
+    'LICENSE-SCOPE.md',
     'materialmatch.php',
     'src',
     'assets',
@@ -105,7 +108,7 @@ async function prepareInstallablePlugin(temporaryRoot) {
   const archiveRoot = join(temporaryRoot, 'archive');
   const stagedPlugin = join(archiveRoot, 'materialmatch');
   await mkdir(stagedPlugin, { recursive: true });
-  for (const name of ['materialmatch.php', 'src', 'assets', 'examples', 'vendor']) {
+  for (const name of ['materialmatch.php', 'LICENSE', 'LICENSE-SCOPE.md', 'src', 'assets', 'examples', 'vendor']) {
     await cp(join(copiedPlugin, name), join(stagedPlugin, name), { recursive: true });
   }
   await mkdir(join(stagedPlugin, 'assets', 'widget'), { recursive: true });
@@ -126,10 +129,11 @@ async function prepareInstallablePlugin(temporaryRoot) {
       name === 'materialmatch.php' ||
       name.startsWith('src/') ||
       name.startsWith('vendor/materialmatch/woocommerce-adapter/src/');
-    if (isMaterialMatchCode && executableOrRemotePattern.test(await readFile(file, 'utf8'))) {
+    if (isMaterialMatchCode && executableOrRemotePattern.test(withoutApprovedLicenseUri(name, await readFile(file, 'utf8')))) {
       throw new Error(`Forbidden executable or outbound pattern in integration ZIP: ${name}`);
     }
   }
+  assert(stagedFiles.some((file) => relative(stagedPlugin, file) === 'LICENSE'));
   assert(stagedFiles.some((file) => relative(stagedPlugin, file) === 'vendor/autoload.php'));
   assert(
     stagedFiles.some(

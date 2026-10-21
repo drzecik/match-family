@@ -14,6 +14,7 @@ import { tmpdir } from 'node:os';
 import { basename, join, relative, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { writeProductionAutoloader } from '../lib/production-autoloader.mjs';
+import { withoutApprovedLicenseUri } from '../lib/license-header.mjs';
 
 const root = resolve(import.meta.dirname, '../..');
 const version = process.argv[2];
@@ -118,6 +119,8 @@ try {
   await cp(join(plugin, 'assets'), join(stagedPlugin, 'assets'), { recursive: true });
   await cp(join(plugin, 'examples'), join(stagedPlugin, 'examples'), { recursive: true });
   await cp(join(plugin, 'readme.txt'), join(stagedPlugin, 'readme.txt'));
+  await cp(join(plugin, 'LICENSE'), join(stagedPlugin, 'LICENSE'));
+  await cp(join(plugin, 'LICENSE-SCOPE.md'), join(stagedPlugin, 'LICENSE-SCOPE.md'));
   await writeProductionAutoloader(stagedPlugin, join(root, 'integrations/woocommerce-adapter/src'));
   await mkdir(join(stagedPlugin, 'assets/widget'), { recursive: true });
   await cp(
@@ -143,7 +146,7 @@ try {
       }
       if (name === 'assets/widget/materialmatch-widget.js') {
         if (networkApiScan.test(content)) throw new Error(`Forbidden network API in ${name}`);
-      } else if (outboundUrlScan.test(content)) {
+      } else if (outboundUrlScan.test(withoutApprovedLicenseUri(name, content))) {
         throw new Error(`Forbidden outbound URL in ${name}`);
       }
     }

@@ -21,3 +21,7 @@
 /owner-private/
 /license-proposal/
 
+
+# Transient local code-analysis state.
+.serena/
+**/.phpunit.cache/

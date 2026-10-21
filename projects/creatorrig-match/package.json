@@ -21,8 +21,10 @@
     "data:report": "tsx scripts/report-conflicts/index.ts && tsx scripts/report-stale-data/index.ts && tsx scripts/report-missing-relations/index.ts",
     "rig:validate": "tsx scripts/validate-rig-fixtures/index.ts",
     "offers:import": "tsx scripts/import-offers/index.ts",
-    "check": "pnpm lint && pnpm typecheck && pnpm data:validate && pnpm rig:validate && pnpm data:build && pnpm test && pnpm build",
-    "e2e": "playwright test"
+    "check": "pnpm lint && pnpm typecheck && pnpm data:validate && pnpm rig:validate && pnpm data:build && pnpm test && pnpm build && corepack pnpm typecheck:demo && corepack pnpm demo:core",
+    "e2e": "playwright test",
+    "demo:core": "tsx scripts/core-demo/index.ts",
+    "typecheck:demo": "tsc --noEmit -p scripts/core-demo/tsconfig.json"
   },
   "dependencies": {
     "@creatorrig/affiliate-offers": "workspace:*"

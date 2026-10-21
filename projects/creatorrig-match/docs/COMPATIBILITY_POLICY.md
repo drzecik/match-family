@@ -18,3 +18,12 @@ Every module applies the same order: missing applicability or evidence → `unkn
 - Explain each edge, required item, limitation, and evidence reference.
 
 Candidate extraction and human verification are separate operations. Only an authorized reviewer may change verification status after examining the source.
+
+## Memory evaluator input boundary
+
+The public memory evaluator checks supplied numeric values as well as scoped evidence. Defined
+capacities, speeds and bitrates must be finite and positive; non-finite options, arithmetic overflow
+and blank media/evidence identifiers must not produce a positive compatibility claim. Invalid numeric
+input returns `unknown`, includes a warning and omits derived recording estimates. Finite tuning options
+retain the existing clamping behavior. Runtime checks do not validate the authenticity or review status
+of a supplied evidence identifier; that remains the responsibility of the upstream evidence pipeline.

@@ -58,6 +58,37 @@ export interface MemoryCompatibilityEvaluation extends BaseEvaluation {
 export function evaluateMemoryCompatibility(
   input: MemoryEvaluationInput,
 ): MemoryCompatibilityEvaluation {
+  // TypeScript types do not validate data supplied by an importer or a JS caller.
+  const positiveValues = [
+    input.card.capacityGB,
+    input.card.sustainedWriteMBps,
+    input.card.guaranteedSpeedClassMBps,
+    input.mode.bitrateMbps,
+    input.mode.mediaRequirements.minimumSustainedWriteMBps,
+    input.mode.mediaRequirements.minimumSpeedClassMBps,
+    ...input.deviceMedia.map((support) => support.maximumCapacityGB),
+  ];
+  if (
+    positiveValues.some((value) => value !== undefined && (!Number.isFinite(value) || value <= 0))
+  ) {
+    return unknownMemoryEvaluation(
+      'Memory capacities, bitrates and speeds must be finite positive numbers.',
+    );
+  }
+  if (
+    [input.safetyHeadroom, input.usableCapacityRatio].some(
+      (value) => value !== undefined && !Number.isFinite(value),
+    )
+  ) {
+    return unknownMemoryEvaluation('Memory calculation options must be finite numbers.');
+  }
+  if (
+    !input.card.format.trim() ||
+    input.mode.mediaRequirements.mediaFormats.some((format) => !format.trim()) ||
+    input.deviceMedia.some((support) => !support.format.trim())
+  ) {
+    return unknownMemoryEvaluation('A media format identifier is missing.');
+  }
   const safetyHeadroom = Math.max(input.safetyHeadroom ?? 1.25, 1);
   const usableCapacityRatio = clamp(input.usableCapacityRatio ?? 0.95, 0.5, 1);
   const { card, mode } = input;
@@ -87,6 +118,17 @@ export function evaluateMemoryCompatibility(
     mode.bitrateMbps === undefined
       ? undefined
       : (card.capacityGB * usableCapacityRatio * 8_000) / mode.bitrateMbps;
+
+  if (
+    [
+      requiredSustainedWriteMBps,
+      recommendedSustainedWriteMBps,
+      estimatedStorageGBPerHour,
+      estimatedRecordingSeconds,
+    ].some((value) => value !== undefined && (!Number.isFinite(value) || value <= 0))
+  ) {
+    return unknownMemoryEvaluation('Memory calculation exceeds the supported numeric range.');
+  }
 
   const warnings: string[] = [];
   if (!formatWorks)
@@ -124,10 +166,10 @@ export function evaluateMemoryCompatibility(
   };
   const evidenced =
     input.deviceMedia.length > 0 &&
-    input.deviceMedia.every((support) => support.evidenceIds.length > 0) &&
-    mode.evidenceIds.length > 0 &&
-    mode.mediaRequirements.evidenceIds.length > 0 &&
-    card.evidenceIds.length > 0;
+    input.deviceMedia.every((support) => hasEvidence(support.evidenceIds)) &&
+    hasEvidence(mode.evidenceIds) &&
+    hasEvidence(mode.mediaRequirements.evidenceIds) &&
+    hasEvidence(card.evidenceIds);
   const status = aggregateEvaluationStatus({
     evidenced,
     dimensions: [format, capacity, sustainedWrite, speedClass, filesystem],
@@ -163,6 +205,28 @@ export function evaluateMemoryCompatibility(
       sustainedWrite,
       speedClass,
       filesystem,
+    },
+  };
+}
+
+function hasEvidence(ids: readonly string[]): boolean {
+  return ids.length > 0 && ids.every((id) => id.trim().length > 0);
+}
+
+function unknownMemoryEvaluation(reason: string): MemoryCompatibilityEvaluation {
+  const dimension: EvaluationDimension = { status: 'unknown', explanation: reason };
+  return {
+    status: 'unknown',
+    performanceHeadroom: 'unknown',
+    limitations: [],
+    warnings: [reason],
+    evidenceIds: [],
+    dimensions: {
+      format: dimension,
+      capacity: dimension,
+      sustainedWrite: dimension,
+      speedClass: dimension,
+      filesystem: dimension,
     },
   };
 }
