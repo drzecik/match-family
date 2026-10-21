@@ -2,6 +2,8 @@
 
 This is the sanitized source edition of Match Family. The first-party license scope is described in [LICENSE-STATUS.md](LICENSE-STATUS.md). Use this repository’s issues and pull requests to propose improvements.
 
+Start with the [core quickstart](docs/GETTING_STARTED.md) and [project status](docs/PROJECT_STATUS.md).
+
 ## Reproduce a problem
 
 Choose the affected workspace under `projects/` and follow its README. Keep its pinned Node and pnpm versions and its dependency lockfile. Include the exact revision, command, expected result and observed result. A small fictional input is preferable to a real catalog or customer record.

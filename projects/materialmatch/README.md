@@ -2,6 +2,12 @@
 
 This independent workspace contains first-party source, generic tests and explicitly fictional demonstration data. It is part of the sanitized public Match Family source edition. First-party TypeScript source and demos use MIT, with the separately scoped GPL-2.0-or-later MaterialMatch PHP integrations. Packages remain private to prevent registry publication. See ../../LICENSE-STATUS.md.
 
+## Try the core without a browser
+
+After installing dependencies in this directory, run `corepack pnpm demo:core`.
+The example asserts its fictional result and does not start a server. See the
+[family quickstart](../../docs/GETTING_STARTED.md) for inputs, outputs and package entrypoints.
+
 ## Run locally
 
 Use Node 24.18.0 and the pnpm version pinned in package.json. From this directory:

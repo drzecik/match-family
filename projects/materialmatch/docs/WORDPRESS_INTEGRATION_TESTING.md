@@ -51,3 +51,10 @@ This gate proves one current WordPress/WooCommerce combination on SQLite. It doe
 declared minimum versions, MySQL/MariaDB behavior, multisite, taxes, shipping, coupons, upgrade
 migrations, or uninstall retention. Those remain mandatory before advertising a wider support
 matrix.
+
+## Source-edition license metadata
+
+The integration and release scans allow only the approved GPL URI in the leading plugin documentation
+header or the readme's license field. They continue rejecting URLs in executable PHP, unexpected URLs
+and executable patterns. The staged plugin includes its GPL license text and scope notice.
+`pnpm test:release-guards` covers these boundaries before the workspace checks.

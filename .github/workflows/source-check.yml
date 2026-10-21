@@ -3,6 +3,14 @@ on: [push, pull_request]
 permissions:
   contents: read
 jobs:
+  family-tooling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.18.0
+      - run: node --test scripts/family.test.mjs
   check:
     runs-on: ubuntu-latest
     strategy:
@@ -33,3 +41,5 @@ jobs:
         run: corepack pnpm e2e
       - if: matrix.project != 'creatorrig-match'
         run: corepack pnpm test:e2e
+      - if: matrix.project == 'materialmatch'
+        run: corepack pnpm test:wordpress:integration

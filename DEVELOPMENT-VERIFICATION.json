@@ -1,0 +1,82 @@
+{
+  "status": "LOCAL_CHECKS_PASS",
+  "verified_on": "2026-10-21",
+  "base_commit": "7bd7de8f9437d45d259af1b2893e50164d6871b0",
+  "scope": "Unreleased changes described in CHANGELOG.md; local source copy only.",
+  "runtime": "Node 24.18.0",
+  "checks": {
+    "workspace_checks": {
+      "filtermatch": "PASS",
+      "creatorrig-match": "PASS",
+      "materialmatch": "PASS"
+    },
+    "typescript_tests": 624,
+    "php_contract_tests": 64,
+    "creatorrig_browser_tests": 58,
+    "family_runner_tests": 8,
+    "release_guard_tests": 5,
+    "core_examples": "3/3 PASS including type checks and asserted outputs",
+    "frozen_offline_install": "3/3 PASS",
+    "fresh_wordpress_integration": {
+      "status": "PASS",
+      "wordpress": "7.0.1",
+      "woocommerce": "10.9.4",
+      "php": "8.3",
+      "database": "SQLite",
+      "acceptance_scenarios": 8
+    }
+  },
+  "regression_proof": {
+    "memory_cases_before_patch": "13 failed, 6 passed",
+    "memory_cases_after_patch": "19 passed",
+    "integration_before_patch": "Rejected approved GPL License URI in plugin header",
+    "integration_after_patch": "Fresh install and cart acceptance scenarios passed"
+  },
+  "php_test_dependency_setup": "Reused existing local test dependencies; source adapter synchronized from this copy. CI installs locked Composer dependencies afresh.",
+  "original_applications": "657 source files, Git heads and pre-existing dirty states unchanged",
+  "privacy_scan": {
+    "detector": "TruffleHog 3.99.2",
+    "active_key_verification": false,
+    "findings": 3,
+    "review": "Same three deliberate negative-test URI fixtures as published baseline; no new findings."
+  },
+  "limits": [
+    "No external adoption or independent user review has been established.",
+    "Fresh WordPress check covers only the stated SQLite combination, not minimum versions or a wider production matrix.",
+    "FilterMatch and MaterialMatch browser tests were not rerun for this patch; their earlier 24 passes are historical.",
+    "This record is local; CI for the new revision must be checked separately.",
+    "No original application deployment, registry publication or program submission."
+  ],
+  "changed_file_sha256": {
+    ".github/workflows/source-check.yml": "d18c1a126d9a476ef4dadb0f4aa874fa9a010dd65a57abab26736475027bded6",
+    ".gitignore": "73166b2971ea4aff4b5aeaefc6021b13de2a98dbcb7bdb2ae5e9e30efe50bfc7",
+    ".nvmrc": "55075b5ec4e8b31936cbbc282b8829116d1fd48f2f2f1856dee592a6650700ce",
+    "CHANGELOG.md": "b1422de682b2224b75d5d74bec9cb6e3d52450108698fcbc3869b1c19cb28e65",
+    "CONTRIBUTING.md": "3d1203b656b6d3c999dd779d8490e10f1b71844319fa7cb6b927443cb5c9d3d2",
+    "README.md": "96cb2727d41ce6d390f11e92b4dba3f342e3b11a0f5f7c6459f68bf829ccc056",
+    "docs/GETTING_STARTED.md": "67b28657278fb51dee318d07cb834506a6b43285cd950ec8a565276eb73892ee",
+    "docs/PROJECT_STATUS.md": "853fd399ac0016c6b490bf79d033c9e0a27dd22d3f0d3ac7f372ea1d19a3b1be",
+    "projects/creatorrig-match/README.md": "10f8902616bd12b4f3947b16a808369043b0a8a97a522a6a7695de298b34b9f5",
+    "projects/creatorrig-match/docs/COMPATIBILITY_POLICY.md": "51d57bbf1e1052a308a613e3667d74c88de7a4533907a3d581e0b03ab71ec5cf",
+    "projects/creatorrig-match/package.json": "dac2e907f30c7d6d4f4da01e682c74ae2fc57ca3eb8bf996f925d1262ffa4cfa",
+    "projects/creatorrig-match/packages/compatibility-evaluator/src/memory.ts": "64a3b639f2e7222b8354254454965660c440b3708ea62a1f6fb0bc72980b4fb2",
+    "projects/creatorrig-match/packages/compatibility-evaluator/test/memory.test.ts": "41ed0e6148f3c91018402522446b95e06f064a6b5e8d2b6987b66dc7c14622f9",
+    "projects/creatorrig-match/scripts/core-demo/index.ts": "5e65cd8edbac38be46120e90d2170f0339f10736767c4b163fadee7f88e1b3dc",
+    "projects/creatorrig-match/scripts/core-demo/tsconfig.json": "06e513ce8bbd66e5e2149192875f173b3ac2c184d4e82e3ea618bb4eab12f346",
+    "projects/filtermatch/README.md": "3ca4f89293598219d4eaf950bccb835569023e39f5b9db5a6c51c589eafef302",
+    "projects/filtermatch/package.json": "396190068b10333ed9f4f4745e0b65477e452e6144b97c0301fb65b94370454e",
+    "projects/filtermatch/scripts/core-demo/index.ts": "862a4a26dfc8ea65e0d2ea2ff29692fdc1a48bb48f67e4c3c968b765bc259d17",
+    "projects/filtermatch/scripts/core-demo/tsconfig.json": "32767c737e2fad77341c93ad12fec3186b79d03891a7a0c3b24acd85d1ecc3c3",
+    "projects/materialmatch/README.md": "52162742ee01e986b10efccc9ecbe07f73279d18bc3365ab446476c0deb299cb",
+    "projects/materialmatch/docs/WORDPRESS_INTEGRATION_TESTING.md": "e25983e94b22511cf8941cdfc29cd993844b33b70dbe130bb95fbdda05730e47",
+    "projects/materialmatch/package.json": "65fa368b2bc3ec51dd770bbb1d6ad75bf7df6a6ff4345b3d23ac8256c5034ca5",
+    "projects/materialmatch/scripts/build-release/index.mjs": "3a3cc46ebaa12ce008129dcddd04d639e76ad8fda7f6f5e17d96ebfa5e422955",
+    "projects/materialmatch/scripts/core-demo/index.ts": "630527480f0ddc06732ffa1a280c26338250db08a24f4cfa78f5b8b8c7b68c8c",
+    "projects/materialmatch/scripts/core-demo/tsconfig.json": "32767c737e2fad77341c93ad12fec3186b79d03891a7a0c3b24acd85d1ecc3c3",
+    "projects/materialmatch/scripts/lib/license-header.mjs": "51088537698ac55a2ffd24914c8a15bbe9d908e80e3c7e821dc4a53a01a47103",
+    "projects/materialmatch/scripts/lib/license-header.test.mjs": "cb7cdedab3d669471a4a2a53f301e6167e71c29b077f6a753ef06f16fa0b6b04",
+    "projects/materialmatch/scripts/test-wordpress-integration/index.mjs": "ae801c4a70bd470867f1e81240e3077d9f42eadf8623ebecc0f1b1575bf8dae0",
+    "scripts/family.mjs": "2ab894620e50a57680ae97fa0570de929768813d4345f0fdc3ac8c1ba6ffb99b",
+    "scripts/family.test.mjs": "0030f3f989ac09ad23441c50d781a74a9f841fedfeb42a8479ddec5c1fd134ef"
+  }
+}

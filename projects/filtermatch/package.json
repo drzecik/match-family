@@ -30,7 +30,9 @@
     "typecheck": "tsc -p tsconfig.deployment.json && corepack pnpm -r --if-present typecheck",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "check": "corepack pnpm run generate && corepack pnpm run lint && corepack pnpm run typecheck && corepack pnpm run test && corepack pnpm run build"
+    "check": "corepack pnpm run generate && corepack pnpm run lint && corepack pnpm run typecheck && corepack pnpm run test && corepack pnpm run build && corepack pnpm typecheck:demo && corepack pnpm demo:core",
+    "demo:core": "corepack pnpm --filter @filtermatch/data-pipeline exec tsx ../../scripts/core-demo/index.ts",
+    "typecheck:demo": "tsc --noEmit -p scripts/core-demo/tsconfig.json"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
