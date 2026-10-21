@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Gear Category"
+  short_description: "Extend the verified gear ontology safely"
+  default_prompt: "Use $add-gear-category to add a new gear category with schemas, migration notes, and tests."

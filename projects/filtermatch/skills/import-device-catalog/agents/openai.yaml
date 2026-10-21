@@ -1,0 +1,4 @@
+interface:
+  display_name: "Import device catalog"
+  short_description: "Safely import device catalog candidates"
+  default_prompt: "Use $import-device-catalog to import a supplied device catalog as candidates and produce a validation report."

@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-07-17T00:00:00.000Z",
+  "schemaVersion": 2,
+  "normalizerVersion": "model-v1",
+  "dataRevision": "sha256:a93c65ad9e40b1529c2072f0cf4a83c18ff3ea56deb9f3773fc78272c0ecac3d",
+  "summary": {
+    "staleRelations": 0
+  },
+  "maxAgeDays": 365,
+  "threshold": "2025-07-17T00:00:00.000Z",
+  "stale": []
+}

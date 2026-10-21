@@ -1,0 +1,18 @@
+{
+  "name": "@materialmatch/test-fixtures",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@materialmatch/domain": "workspace:*",
+    "@materialmatch/vertical-pack-flooring": "workspace:*"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "MIT"
+}

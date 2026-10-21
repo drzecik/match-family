@@ -1,0 +1,30 @@
+{
+  "scopeId": "demo-catalog-v1",
+  "synthetic": true,
+  "notForProduction": true,
+  "requiredDeviceIds": [
+    "airpure-ap100-pl",
+    "airpure-ap101-pl",
+    "homebreeze-hb200-pl",
+    "homebreeze-hb200-de",
+    "cleanflow-cf300-10"
+  ],
+  "expectedPublicEdges": [
+    { "edgeId": "compat-ap100-pf100", "deviceId": "airpure-ap100-pl", "consumableId": "airpure-purefilter-100", "relationType": "required" },
+    { "edgeId": "compat-ap100-cf100", "deviceId": "airpure-ap100-pl", "consumableId": "cleanflow-cf100-replacement", "relationType": "alternative" },
+    { "edgeId": "compat-hb200-pl-original-kit", "deviceId": "homebreeze-hb200-pl", "consumableId": "homebreeze-breeze200-service-kit", "relationType": "required" },
+    { "edgeId": "compat-hb200-pl-cf200-kit", "deviceId": "homebreeze-hb200-pl", "consumableId": "cleanflow-cf200-replacement-kit", "relationType": "alternative" },
+    { "edgeId": "compat-hb200-pl-seal-frame", "deviceId": "homebreeze-hb200-pl", "consumableId": "homebreeze-breeze200-seal-frame", "relationType": "optional" },
+    { "edgeId": "compat-hb200-de-original-hepa", "deviceId": "homebreeze-hb200-de", "consumableId": "homebreeze-breeze200-hepa", "relationType": "required" },
+    { "edgeId": "compat-hb200-de-original-carbon", "deviceId": "homebreeze-hb200-de", "consumableId": "homebreeze-breeze200-carbon", "relationType": "required" },
+    { "edgeId": "compat-hb200-de-cf200-kit", "deviceId": "homebreeze-hb200-de", "consumableId": "cleanflow-cf200-replacement-kit", "relationType": "alternative" },
+    { "edgeId": "compat-cf300-original-kit", "deviceId": "cleanflow-cf300-10", "consumableId": "cleanflow-airguard300-service-kit", "relationType": "required" },
+    { "edgeId": "compat-cf300-hb300-kit", "deviceId": "cleanflow-cf300-10", "consumableId": "homebreeze-hb300-replacement-kit", "relationType": "alternative" }
+  ],
+  "expectedNonPublicEdgeIds": [
+    "compat-ap100-hb100-candidate",
+    "compat-ap101-hb101-conflicting",
+    "compat-hb200-pl-cf200-hepa-candidate",
+    "compat-cf300-ap300-candidate"
+  ]
+}

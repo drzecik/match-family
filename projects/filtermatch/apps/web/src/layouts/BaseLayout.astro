@@ -1,0 +1,65 @@
+---
+import '../styles/global.css';
+import { serializeStructuredData } from '@filtermatch/shared-ui';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  noindex?: boolean;
+  schema?: Record<string, unknown>;
+}
+
+const {
+  title,
+  description,
+  canonicalPath = Astro.url.pathname,
+  noindex = false,
+  schema
+} = Astro.props;
+const canonical = new URL(canonicalPath, Astro.site);
+const schemaJson = schema ? serializeStructuredData(schema) : null;
+const privateReview = import.meta.env.FILTERMATCH_BUILD_PROFILE === 'private-review';
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow'} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+    {schemaJson && <script is:inline type="application/ld+json" set:html={schemaJson} />}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="FilterMatch — strona główna">
+        <span class="brand-mark" aria-hidden="true">FM</span>
+        <span>FilterMatch</span>
+      </a>
+      <nav aria-label="Główna nawigacja">
+        {privateReview ? <a href="/przeglad-danych/">Prawdziwe dane</a> : <a href="/katalog/">Katalog</a>}
+        <a href="/metodologia/">Jak weryfikujemy</a>
+        {!privateReview && <a href="/korekty/">Korekty</a>}
+        {!privateReview && <a href="/afiliacja/">Afiliacja</a>}
+      </nav>
+    </header>
+    <main id="main"><slot /></main>
+    <footer>
+      <div>
+        <strong>FilterMatch</strong>
+        <p>Kompatybilność oparta na dowodach, nie na podobieństwie nazw.</p>
+      </div>
+      <nav aria-label="Stopka">
+        {privateReview ? <a href="/przeglad-danych/">Prawdziwe dane</a> : <a href="/katalog/">Katalog</a>}
+        <a href="/metodologia/">Metodologia</a>
+        <a href="/prywatnosc/">Prywatność</a>
+        {!privateReview && <a href="/afiliacja/">Informacja afiliacyjna</a>}
+      </nav>
+    </footer>
+  </body>
+</html>

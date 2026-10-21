@@ -1,0 +1,2 @@
+id,consumableId,merchant,merchantProductId,sku,ean,priceMinor,currency,shippingMinor,availability,destinationUrl,affiliateUrl,sponsored,fetchedAt,expiresAt,status,synthetic,notForProduction
+offer-fixture-original-current,airpure-purefilter-100,Rynek Filtrów — sklep demonstracyjny,SYN-OFFER-PF100,SYN-PF-100,0000000000107,12999,PLN,999,in_stock,https://shop.filtermatch.example/fixtures/pf100,https://shop.filtermatch.example/fixtures/pf100?ref=filtermatch-demo,false,2026-07-15T08:00:00.000Z,2026-08-15T08:00:00.000Z,active,true,true

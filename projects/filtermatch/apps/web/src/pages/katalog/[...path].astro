@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catalogScope, snapshot } from '../../lib/data';
+import { consumableCategoryLabel } from '@filtermatch/shared-ui';
+
+export function getStaticPaths() {
+  return import.meta.env.FILTERMATCH_BUILD_PROFILE === 'private-review'
+    ? []
+    : [{ params: { path: undefined } }];
+}
+
+const publicDeviceIds = new Set(snapshot.compatibilityEdges.map(({ deviceId }) => deviceId));
+const publicConsumableIds = new Set(snapshot.compatibilityEdges.map(({ consumableId }) => consumableId));
+const devices = snapshot.devices
+  .filter(({ id }) => publicDeviceIds.has(id))
+  .sort((left, right) => `${left.brand} ${left.canonicalModel}`.localeCompare(`${right.brand} ${right.canonicalModel}`, 'pl'));
+const consumables = snapshot.consumables
+  .filter(({ id }) => publicConsumableIds.has(id))
+  .sort((left, right) => `${left.brand} ${left.canonicalName}`.localeCompare(`${right.brand} ${right.canonicalName}`, 'pl'));
+const brands = new Set([...devices.map(({ brand }) => brand), ...consumables.map(({ brand }) => brand)]);
+---
+
+<BaseLayout
+  title="Zweryfikowany katalog filtrów i akcesoriów — FilterMatch"
+  description="Katalog zweryfikowanych urządzeń, filtrów, kompletów i akcesoriów w demonstratorze FilterMatch."
+  canonicalPath="/katalog/"
+>
+  <div class="demo-banner" role="note"><strong>Dane syntetyczne:</strong> zakres tej strony to macierz demonstracyjna <code>{catalogScope.scopeId}</code>, rewizja <code>{catalogScope.shortRevision}</code>. Nie opisuje ona dostępności ani pokrycia rynku.</div>
+  <div class="shell page-shell">
+    <nav class="breadcrumbs" aria-label="Okruszki"><a href="/">Strona główna</a><span>/</span><span aria-current="page">Katalog</span></nav>
+    <header class="catalog-intro">
+      <span class="kicker">Zweryfikowany zasób</span>
+      <h1>Urządzenia, elementy i akcesoria</h1>
+      <p>Każda widoczna relacja ma dowód i decyzję publikacyjną. Kandydaci oraz konflikty nie trafiają do tego katalogu.</p>
+    </header>
+    <dl class="catalog-stats" aria-label="Rozmiar katalogu">
+      <div><dt>Urządzenia z dopasowaniem</dt><dd>{devices.length}</dd></div>
+      <div><dt>Materiały i akcesoria</dt><dd>{consumables.length}</dd></div>
+      <div><dt>Marki syntetyczne</dt><dd>{brands.size}</dd></div>
+    </dl>
+
+    <section class="catalog-section" aria-labelledby="catalog-devices">
+      <h2 id="catalog-devices">Urządzenia</h2>
+      <div class="catalog-grid">
+        {devices.map((device) => {
+          const relationCount = snapshot.compatibilityEdges.filter(({ deviceId }) => deviceId === device.id).length;
+          return <a class="catalog-card" href={`/urzadzenia/${device.id}/`}><span class="tag tag-verified">Zweryfikowane dane</span><strong>{device.brand} {device.canonicalModel}</strong><p>{device.series} · {relationCount} {relationCount === 1 ? 'pozycja' : 'pozycji'} w katalogu</p></a>;
+        })}
+      </div>
+    </section>
+
+    <section class="catalog-section" aria-labelledby="catalog-consumables">
+      <h2 id="catalog-consumables">Filtry, zestawy i akcesoria</h2>
+      <div class="catalog-grid">
+        {consumables.map((consumable) => {
+          const deviceCount = new Set(snapshot.compatibilityEdges.filter(({ consumableId }) => consumableId === consumable.id).map(({ deviceId }) => deviceId)).size;
+          return <a class="catalog-card" href={`/materialy/${consumable.id}/`}><span class="tag tag-category">{consumableCategoryLabel(consumable.category)}</span><strong>{consumable.brand} {consumable.canonicalName}</strong><p>SKU {consumable.sku} · {deviceCount} {deviceCount === 1 ? 'urządzenie' : 'urządzenia'}</p></a>;
+        })}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

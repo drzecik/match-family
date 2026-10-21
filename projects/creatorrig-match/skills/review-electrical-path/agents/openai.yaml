@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Electrical Path"
+  short_description: "Fail-closed electrical path safety review"
+  default_prompt: "Use $review-electrical-path to audit voltage, power, polarity, and protocol evidence for a path."

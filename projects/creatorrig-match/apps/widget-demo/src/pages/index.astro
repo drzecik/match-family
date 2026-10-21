@@ -1,0 +1,81 @@
+---
+import {
+  createWidgetViewModel,
+  type PublicWidgetStatus,
+} from '@creatorrig/compatibility-widget';
+import catalog from '../../../../data/fixtures/demo-catalog.json';
+
+function publicStatus(value: string): PublicWidgetStatus {
+  if (
+    value === 'directly_compatible' ||
+    value === 'compatible_with_adapter' ||
+    value === 'compatible_with_limitations' ||
+    value === 'conditionally_compatible' ||
+    value === 'incompatible' ||
+    value === 'candidate'
+  ) return value;
+  return 'unknown';
+}
+
+function verificationStatus(value: string): 'verified' | 'candidate' | 'in_review' | 'rejected' {
+  if (value === 'verified' || value === 'candidate' || value === 'in_review') return value;
+  return 'rejected';
+}
+
+const edge = catalog.compatibilityEdges.find((item) => item.id === 'n7-n23');
+if (!edge) throw new Error('Missing verified widget demo edge.');
+const source = catalog.products.find((item) => item.id === edge.sourceProductId);
+const target = catalog.products.find((item) => item.id === edge.targetProductId);
+if (!source || !target) throw new Error('Missing widget demo products.');
+const view = createWidgetViewModel({
+  sourceName: source.canonicalName,
+  targetName: target.canonicalName,
+  status: publicStatus(edge.relationType),
+  verificationStatus: verificationStatus(edge.verificationStatus),
+  evidenceIds: edge.evidenceIds,
+  requiredProductNames: edge.requiredProductIds.map(
+    (id) => catalog.products.find((item) => item.id === id)?.canonicalName ?? id,
+  ),
+  limitations: edge.limitations,
+  sponsored: false,
+});
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex" />
+    <title>CreatorRig Match — widget demonstracyjny</title>
+    <style>
+      :root { font-family: Inter, system-ui, sans-serif; color: #171713; background: #f2efe8; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+      main { width: min(680px, 100%); }
+      .eyebrow { color: #d85f43; font: 700 12px ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; }
+      article { background: #fffdf7; border: 1px solid #aaa69a; border-left: 5px solid #2f8a69; padding: 24px; box-shadow: 8px 8px 0 #171713; }
+      h1 { font-size: clamp(24px, 5vw, 42px); margin: 8px 0 24px; }
+      h2 { margin: 0 0 8px; }
+      .status { display: inline-block; background: #d9f0e6; color: #14563f; padding: 6px 10px; font-weight: 800; }
+      dl { display: grid; grid-template-columns: 1fr auto; gap: 12px; border-top: 1px solid #ddd8cc; padding-top: 18px; }
+      dt, dd { margin: 0; }
+      footer { margin-top: 18px; font-size: 13px; color: #6e6a61; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Widget sklepowy · dane syntetyczne</p>
+      <article data-recommendable={String(view.recommendable)}>
+        <h1>{view.title}</h1>
+        <p class="status">{view.label}</p>
+        <dl>
+          <dt>Dowody</dt><dd>{view.evidenceCount}</dd>
+          <dt>Elementy pośrednie</dt><dd>{view.requiredItems.length || 'brak'}</dd>
+          <dt>Status publikacji</dt><dd>{view.noindex ? 'wyłączony z indeksowania' : 'zweryfikowany'}</dd>
+        </dl>
+        {view.disclosure && <p>{view.disclosure}</p>}
+      </article>
+      <footer>CreatorRig Match nie zmienia statusu zgodności przez sponsorowanie lub afiliację.</footer>
+    </main>
+  </body>
+</html>

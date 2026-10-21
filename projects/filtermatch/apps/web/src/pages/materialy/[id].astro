@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CorrectionForm from '../../components/CorrectionForm.astro';
+import { snapshot } from '../../lib/data';
+import {
+  compatibilityRelationLabel,
+  consumableCategoryLabel,
+  formatDatePl,
+  formatMoneyPl,
+  verificationLabel
+} from '@filtermatch/shared-ui';
+import type { Offer } from '@filtermatch/domain';
+
+export function getStaticPaths() {
+  const publicConsumableIds = new Set(snapshot.compatibilityEdges.map(({ consumableId }) => consumableId));
+  return snapshot.consumables.filter(({ id }) => publicConsumableIds.has(id)).map((consumable) => ({ params: { id: consumable.id } }));
+}
+
+const { id } = Astro.params;
+const consumable = snapshot.consumables.find((item) => item.id === id);
+if (!consumable) return Astro.redirect('/404');
+const relations = snapshot.compatibilityEdges.filter((edge) => edge.consumableId === consumable.id);
+const devices = relations.flatMap((edge) => {
+  const device = snapshot.devices.find(({ id: deviceId }) => deviceId === edge.deviceId);
+  return device ? [{ edge, device }] : [];
+});
+const evidenceIds = new Set(relations.flatMap(({ evidenceIds }) => evidenceIds));
+const sources = snapshot.sourceEvidence.filter(({ id: sourceId }) => evidenceIds.has(sourceId));
+const similar = snapshot.consumables.filter((item) => item.id !== consumable.id && item.category === consumable.category).slice(0, 3);
+const now = new Date('2026-07-17T12:00:00.000Z');
+const offers = snapshot.offers
+  .filter((offer) => offer.consumableId === consumable.id)
+  .sort((left, right) => {
+    const freshness = Number(isCurrentOffer(right)) - Number(isCurrentOffer(left));
+    const leftTotal = (left.priceMinor ?? Number.MAX_SAFE_INTEGER) + (left.shippingMinor ?? 0);
+    const rightTotal = (right.priceMinor ?? Number.MAX_SAFE_INTEGER) + (right.shippingMinor ?? 0);
+    return freshness || leftTotal - rightTotal || left.merchant.localeCompare(right.merchant, 'pl');
+  });
+const productDimensions = consumable.dimensions;
+
+function isCurrentOffer(offer: Offer): boolean {
+  return offer.status === 'active' && (!offer.expiresAt || new Date(offer.expiresAt) > now);
+}
+
+function dimensionText(): string | null {
+  if (!productDimensions) return null;
+  const dimensionValues = [
+    productDimensions.widthMm,
+    productDimensions.heightMm,
+    productDimensions.depthMm
+  ].filter((value): value is number => value !== undefined);
+  if (dimensionValues.length > 0) return `${dimensionValues.join(' × ')} mm`;
+  return productDimensions.diameterMm ? `Ø ${productDimensions.diameterMm} mm` : null;
+}
+---
+<BaseLayout
+  title={`${consumable.brand} ${consumable.canonicalName} — kompatybilne urządzenia`}
+  description={`Zweryfikowana lista urządzeń dla filtra ${consumable.brand} ${consumable.canonicalName}.`}
+  canonicalPath={`/materialy/${consumable.id}/`}
+  noindex={devices.length === 0 || sources.length === 0}
+>
+  <div class="demo-banner" role="note"><strong>Dane syntetyczne:</strong> ta karta nie opisuje realnego produktu.</div>
+  <div class="shell page-shell prose-page">
+    <nav class="breadcrumbs" aria-label="Okruszki"><a href="/">Strona główna</a><span>/</span><span aria-current="page">{consumable.canonicalName}</span></nav>
+    <span class="kicker">{consumableCategoryLabel(consumable.category)}</span>
+    <h1>{consumable.brand} {consumable.canonicalName}</h1>
+    <dl class="facts"><div><dt>SKU</dt><dd>{consumable.sku}</dd></div>{consumable.ean && <div><dt>EAN</dt><dd>{consumable.ean}</dd></div>}<div><dt>Typ</dt><dd>{consumable.originalOrReplacement === 'original' ? 'oryginał' : 'zamiennik'}</dd></div><div><dt>Kategoria</dt><dd>{consumableCategoryLabel(consumable.category)}</dd></div>{dimensionText() && <div><dt>Wymiary</dt><dd>{dimensionText()}</dd></div>}</dl>
+    <section><h2>Elementy w opakowaniu</h2><ul class="elements elements-large">{consumable.includedElements.map((element) => <li>{element.quantity} × {element.name}</li>)}</ul></section>
+    <section><h2>Zweryfikowane urządzenia</h2><ul class="device-links">{devices.map(({ edge, device }) => <li><a href={`/urzadzenia/${device.id}/`}><strong>{device.brand} {device.canonicalModel}</strong><span>{compatibilityRelationLabel(edge.relationType)} · {verificationLabel(edge.verificationStatus)} · {edge.lastVerifiedAt ? formatDatePl(edge.lastVerifiedAt) : 'brak daty'}</span></a></li>)}</ul></section>
+    <section><h2>Źródła</h2><ul class="source-list">{sources.map((source) => <li><strong>{source.title}</strong><p>{source.evidenceSummary}</p>{source.url && <a href={source.url} rel="nofollow noopener noreferrer">Źródło ↗</a>}</li>)}</ul></section>
+    <section><h2>Oferty demonstracyjne</h2><div class="offers offers-standalone">{offers.length === 0 ? <p>Brak aktualnych ofert.</p> : <ul>{offers.map((offer) => {
+      const fresh = isCurrentOffer(offer);
+      const href = offer.affiliateUrl ?? offer.destinationUrl;
+      return <li class:list={{ stale: !fresh }}><div><strong>{offer.merchant}</strong>{offer.sponsored && <span class="sponsored">Sponsorowane</span>}<small>Aktualizacja: {formatDatePl(offer.fetchedAt)}</small></div><div class="offer-action">{fresh && offer.priceMinor !== undefined ? <strong>{formatMoneyPl(offer.priceMinor, offer.currency)}</strong> : <span>Cena nieaktualna</span>}{fresh ? <a href={href} rel="sponsored nofollow noopener noreferrer" target="_blank">Do sklepu ↗</a> : <span class="disabled-link">Oferta wygasła</span>}</div></li>;
+    })}</ul>}<p class="fine-print">Aktualne oferty są sortowane według aktualności i łącznej ceny. Sponsorowanie nie zmienia kompatybilności.</p></div></section>
+    {similar.length > 0 && <section class="neutral-similar"><h2>Inne produkty tej kategorii</h2><p>Podobna kategoria nie oznacza kompatybilności. Sprawdź listę urządzeń na każdej karcie.</p><ul>{similar.map((item) => <li>{item.brand} {item.canonicalName}</li>)}</ul></section>}
+    <CorrectionForm entityId={consumable.id} />
+  </div>
+</BaseLayout>

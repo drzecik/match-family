@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+}
+
+const { title, description, noindex = true } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex,follow" />}
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%23e85d3f%22/><path d=%22M15 33h34M32 16v34%22 stroke=%22white%22 stroke-width=%226%22/></svg>" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="CreatorRig Match — strona główna">
+        <span class="brand-mark" aria-hidden="true">CR</span>
+        <span>CreatorRig <em>Match</em></span>
+      </a>
+      <nav aria-label="Główna nawigacja">
+        <a href="/#builder">Konfigurator</a>
+        <a href="/katalog">Katalog demonstracyjny</a>
+        <a href="/metodologia">Metodologia</a>
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer>
+      <p>CreatorRig Match · fikcyjny katalog demonstracyjny · dane nie służą do decyzji zakupowych</p>
+      <a href="/metodologia">Jak weryfikujemy zgodność</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+name: Bug report
+description: Reproduce a defect with fictional, non-sensitive data.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not post vulnerabilities, credentials, private catalogs or customer data here.
+        See SECURITY.md for security-reporting instructions.
+  - type: dropdown
+    id: project
+    attributes:
+      label: Project
+      options:
+        - FilterMatch
+        - CreatorRig Match
+        - MaterialMatch
+        - Family documentation or tooling
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Revision and runtime
+      description: Commit ID, operating system, Node/pnpm versions and PHP version if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Exact commands and fictional input. Remove sensitive data before posting.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and observed behavior
+      description: Include a short error message or a sanitized screenshot when useful.
+    validations:
+      required: true
+

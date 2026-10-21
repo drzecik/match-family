@@ -1,0 +1,29 @@
+{
+  "name": "@filtermatch/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "typecheck": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/sitemap": "^3.4.1",
+    "@filtermatch/affiliate-offers": "workspace:*",
+    "@filtermatch/compatibility-core": "workspace:*",
+    "@filtermatch/domain": "workspace:*",
+    "@filtermatch/model-search": "workspace:*",
+    "@filtermatch/shared-ui": "workspace:*",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "astro": "^5.12.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,81 @@
+{
+  "generatedAt": "2026-07-17T00:00:00.000Z",
+  "schemaVersion": 2,
+  "normalizerVersion": "model-v1",
+  "dataRevision": "sha256:a93c65ad9e40b1529c2072f0cf4a83c18ff3ea56deb9f3773fc78272c0ecac3d",
+  "summary": {
+    "relationsWithEvidenceGaps": 4,
+    "blockingRelations": 0,
+    "nonPublicRelations": 4
+  },
+  "relations": [
+    {
+      "edgeId": "compat-ap100-hb100-candidate",
+      "deviceId": "airpure-ap100-pl",
+      "consumableId": "homebreeze-hb100-candidate",
+      "verificationStatus": "candidate",
+      "blocking": false,
+      "evidenceIds": [
+        "evidence-candidate-mention"
+      ],
+      "missingEvidenceIds": [],
+      "unverifiedEvidenceIds": [
+        "evidence-candidate-mention"
+      ],
+      "reasons": [
+        "evidence_not_verified:evidence-candidate-mention"
+      ]
+    },
+    {
+      "edgeId": "compat-ap101-hb101-conflicting",
+      "deviceId": "airpure-ap101-pl",
+      "consumableId": "homebreeze-hb101-conflict",
+      "verificationStatus": "conflicting",
+      "blocking": false,
+      "evidenceIds": [
+        "evidence-conflicting-mention"
+      ],
+      "missingEvidenceIds": [],
+      "unverifiedEvidenceIds": [
+        "evidence-conflicting-mention"
+      ],
+      "reasons": [
+        "evidence_not_verified:evidence-conflicting-mention"
+      ]
+    },
+    {
+      "edgeId": "compat-cf300-ap300-candidate",
+      "deviceId": "cleanflow-cf300-10",
+      "consumableId": "airpure-ap300-candidate-kit",
+      "verificationStatus": "candidate",
+      "blocking": false,
+      "evidenceIds": [
+        "evidence-cf300-candidate-mention"
+      ],
+      "missingEvidenceIds": [],
+      "unverifiedEvidenceIds": [
+        "evidence-cf300-candidate-mention"
+      ],
+      "reasons": [
+        "evidence_not_verified:evidence-cf300-candidate-mention"
+      ]
+    },
+    {
+      "edgeId": "compat-hb200-pl-cf200-hepa-candidate",
+      "deviceId": "homebreeze-hb200-pl",
+      "consumableId": "cleanflow-cf200-hepa-candidate",
+      "verificationStatus": "candidate",
+      "blocking": false,
+      "evidenceIds": [
+        "evidence-hb200-candidate-mention"
+      ],
+      "missingEvidenceIds": [],
+      "unverifiedEvidenceIds": [
+        "evidence-hb200-candidate-mention"
+      ],
+      "reasons": [
+        "evidence_not_verified:evidence-hb200-candidate-mention"
+      ]
+    }
+  ]
+}

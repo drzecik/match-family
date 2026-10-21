@@ -1,0 +1,1312 @@
+{
+  "schemaVersion": "1.0.0-demo",
+  "synthetic": true,
+  "notForProduction": true,
+  "records": [
+    {
+      "id": "novacam-n7",
+      "canonicalName": "NovaCam N7",
+      "aliases": [
+        "Nova N7",
+        "N-7"
+      ],
+      "category": "capture_device",
+      "subcategory": "camera",
+      "normalizedTerms": [
+        "novacam n7",
+        "nova n7",
+        "n 7"
+      ]
+    },
+    {
+      "id": "novacam-x1",
+      "canonicalName": "NovaCam X1",
+      "aliases": [
+        "Nova X1",
+        "X-1 Full Frame"
+      ],
+      "category": "capture_device",
+      "subcategory": "camera",
+      "normalizedTerms": [
+        "novacam x1",
+        "nova x1",
+        "x 1 full frame"
+      ]
+    },
+    {
+      "id": "novacam-pocket-c",
+      "canonicalName": "NovaCam Pocket C",
+      "aliases": [
+        "Pocket USB-C",
+        "NC Pocket C EU"
+      ],
+      "category": "capture_device",
+      "subcategory": "phone",
+      "normalizedTerms": [
+        "novacam pocket c",
+        "pocket usb c",
+        "nc pocket c eu"
+      ]
+    },
+    {
+      "id": "clearlens-n23",
+      "canonicalName": "ClearLens N 23 mm F1.8",
+      "aliases": [
+        "Clear 23",
+        "N23"
+      ],
+      "category": "optics",
+      "subcategory": "lens",
+      "normalizedTerms": [
+        "clearlens n 23 mm f1 8",
+        "clear 23",
+        "n23"
+      ]
+    },
+    {
+      "id": "clearlens-l50",
+      "canonicalName": "ClearLens L 50 mm F1.4",
+      "aliases": [
+        "Clear 50",
+        "L50"
+      ],
+      "category": "optics",
+      "subcategory": "lens",
+      "normalizedTerms": [
+        "clearlens l 50 mm f1 4",
+        "clear 50",
+        "l50"
+      ]
+    },
+    {
+      "id": "clearlens-x-l-adapter",
+      "canonicalName": "ClearLens X–L Smart Adapter",
+      "aliases": [
+        "X L adapter",
+        "XL-SA1"
+      ],
+      "category": "optics",
+      "subcategory": "lens_mount_adapter",
+      "normalizedTerms": [
+        "clearlens x l smart adapter",
+        "x l adapter",
+        "xl sa1"
+      ]
+    },
+    {
+      "id": "echomic-shot-s",
+      "canonicalName": "EchoMic Shot S",
+      "aliases": [
+        "EMS Shot",
+        "Shot-S TRS"
+      ],
+      "category": "audio",
+      "subcategory": "wired_microphone",
+      "normalizedTerms": [
+        "echomic shot s",
+        "ems shot",
+        "shot s trs"
+      ]
+    },
+    {
+      "id": "echomic-lav-r",
+      "canonicalName": "EchoMic Lav R",
+      "aliases": [
+        "EM Lav",
+        "Lav-R TRRS"
+      ],
+      "category": "audio",
+      "subcategory": "wired_microphone",
+      "normalizedTerms": [
+        "echomic lav r",
+        "em lav",
+        "lav r trrs"
+      ]
+    },
+    {
+      "id": "echomic-air-c-rx",
+      "canonicalName": "EchoMic Air C Receiver",
+      "aliases": [
+        "AirC USB receiver",
+        "EM Air C"
+      ],
+      "category": "audio",
+      "subcategory": "audio_receiver",
+      "normalizedTerms": [
+        "echomic air c receiver",
+        "airc usb receiver",
+        "em air c"
+      ]
+    },
+    {
+      "id": "echomic-trrs-trs-adapter",
+      "canonicalName": "EchoMic TRRS–TRS Adapter",
+      "aliases": [
+        "TRRS to TRS",
+        "R2S"
+      ],
+      "category": "audio",
+      "subcategory": "trs_trrs_adapter",
+      "normalizedTerms": [
+        "echomic trrs trs adapter",
+        "trrs to trs",
+        "r2s"
+      ]
+    },
+    {
+      "id": "echomic-patch-35",
+      "canonicalName": "EchoMic Patch 3.5 Cable",
+      "aliases": [
+        "Patch cable",
+        "3.5 TRS cable"
+      ],
+      "category": "audio",
+      "subcategory": "audio_cable",
+      "normalizedTerms": [
+        "echomic patch 3 5 cable",
+        "patch cable",
+        "3 5 trs cable"
+      ]
+    },
+    {
+      "id": "swiftcard-v90-128",
+      "canonicalName": "SwiftCard V90 SDXC 128 GB",
+      "aliases": [
+        "Swift V90",
+        "SC SD 128"
+      ],
+      "category": "memory_and_transfer",
+      "subcategory": "sd_card",
+      "normalizedTerms": [
+        "swiftcard v90 sdxc 128 gb",
+        "swift v90",
+        "sc sd 128"
+      ]
+    },
+    {
+      "id": "swiftcard-v90-256",
+      "canonicalName": "SwiftCard V90 SDXC 256 GB",
+      "aliases": [
+        "Swift V90 256",
+        "SC SD 256"
+      ],
+      "category": "memory_and_transfer",
+      "subcategory": "sd_card",
+      "normalizedTerms": [
+        "swiftcard v90 sdxc 256 gb",
+        "swift v90 256",
+        "sc sd 256"
+      ]
+    },
+    {
+      "id": "swiftcard-v90-512",
+      "canonicalName": "SwiftCard V90 SDXC 512 GB",
+      "aliases": [
+        "Swift V90 512",
+        "SC SD 512"
+      ],
+      "category": "memory_and_transfer",
+      "subcategory": "sd_card",
+      "normalizedTerms": [
+        "swiftcard v90 sdxc 512 gb",
+        "swift v90 512",
+        "sc sd 512"
+      ]
+    },
+    {
+      "id": "swiftcard-v90-1024",
+      "canonicalName": "SwiftCard V90 SDXC 1 TB",
+      "aliases": [
+        "Swift V90 1TB",
+        "SC SD 1024"
+      ],
+      "category": "memory_and_transfer",
+      "subcategory": "sd_card",
+      "normalizedTerms": [
+        "swiftcard v90 sdxc 1 tb",
+        "swift v90 1tb",
+        "sc sd 1024"
+      ]
+    },
+    {
+      "id": "swiftcard-cfxb-256",
+      "canonicalName": "SwiftCard CFexpress B 256 GB",
+      "aliases": [
+        "Swift CFX B",
+        "CFXB256"
+      ],
+      "category": "memory_and_transfer",
+      "subcategory": "cfexpress_card",
+      "normalizedTerms": [
+        "swiftcard cfexpress b 256 gb",
+        "swift cfx b",
+        "cfxb256"
+      ]
+    },
+    {
+      "id": "swiftcard-cfxb-1024",
+      "canonicalName": "SwiftCard CFexpress B 1 TB",
+      "aliases": [
+        "Swift CFX B 1TB",
+        "CFXB1024"
+      ],
+      "category": "memory_and_transfer",
+      "subcategory": "cfexpress_card",
+      "normalizedTerms": [
+        "swiftcard cfexpress b 1 tb",
+        "swift cfx b 1tb",
+        "cfxb1024"
+      ]
+    },
+    {
+      "id": "powerframe-pd-72",
+      "canonicalName": "PowerFrame PD 72 Wh",
+      "aliases": [
+        "PF PD72",
+        "PowerFrame 27 W PD"
+      ],
+      "category": "power",
+      "subcategory": "power_bank",
+      "normalizedTerms": [
+        "powerframe pd 72 wh",
+        "pf pd72",
+        "powerframe 27 w pd"
+      ]
+    },
+    {
+      "id": "powerframe-legacy-5",
+      "canonicalName": "PowerFrame Legacy 5 V",
+      "aliases": [
+        "PF Legacy 5V",
+        "PowerFrame non-PD"
+      ],
+      "category": "power",
+      "subcategory": "power_bank",
+      "normalizedTerms": [
+        "powerframe legacy 5 v",
+        "pf legacy 5v",
+        "powerframe non pd"
+      ]
+    },
+    {
+      "id": "powerframe-usbc-pd-60-cable",
+      "canonicalName": "PowerFrame USB-C PD 60 W Cable",
+      "aliases": [
+        "PF USB-C PD cable",
+        "C-C-PD60"
+      ],
+      "category": "power",
+      "subcategory": "usb_c_cable",
+      "normalizedTerms": [
+        "powerframe usb c pd 60 w cable",
+        "pf usb c pd cable",
+        "c c pd60"
+      ]
+    },
+    {
+      "id": "lumaforge-panel-p60",
+      "canonicalName": "LumaForge Panel P60",
+      "aliases": [
+        "P60 panel",
+        "LF-P60"
+      ],
+      "category": "lighting",
+      "subcategory": "led_panel",
+      "normalizedTerms": [
+        "lumaforge panel p60",
+        "p60 panel",
+        "lf p60"
+      ]
+    },
+    {
+      "id": "lumaforge-cob-c120",
+      "canonicalName": "LumaForge COB C120",
+      "aliases": [
+        "C120 COB",
+        "LF-C120"
+      ],
+      "category": "lighting",
+      "subcategory": "cob_light",
+      "normalizedTerms": [
+        "lumaforge cob c120",
+        "c120 cob",
+        "lf c120"
+      ]
+    },
+    {
+      "id": "lumaforge-softbox-s60",
+      "canonicalName": "LumaForge Softbox S60",
+      "aliases": [
+        "S60 softbox",
+        "LF-S60"
+      ],
+      "category": "lighting",
+      "subcategory": "softbox",
+      "normalizedTerms": [
+        "lumaforge softbox s60",
+        "s60 softbox",
+        "lf s60"
+      ]
+    },
+    {
+      "id": "lumaforge-grid-s60",
+      "canonicalName": "LumaForge Grid S60",
+      "aliases": [
+        "S60 grid",
+        "LF Grid 60"
+      ],
+      "category": "lighting",
+      "subcategory": "lighting_grid",
+      "normalizedTerms": [
+        "lumaforge grid s60",
+        "s60 grid",
+        "lf grid 60"
+      ]
+    },
+    {
+      "id": "lumaforge-softbox-mini-q",
+      "canonicalName": "LumaForge Softbox Mini Q",
+      "aliases": [
+        "Mini Q softbox",
+        "LF-MQ"
+      ],
+      "category": "lighting",
+      "subcategory": "softbox",
+      "normalizedTerms": [
+        "lumaforge softbox mini q",
+        "mini q softbox",
+        "lf mq"
+      ]
+    },
+    {
+      "id": "motionrig-light-stand-air250",
+      "canonicalName": "MotionRig Light Stand Air 250",
+      "aliases": [
+        "Air 250 stand",
+        "MR-A250"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "light_stand",
+      "normalizedTerms": [
+        "motionrig light stand air 250",
+        "air 250 stand",
+        "mr a250"
+      ]
+    },
+    {
+      "id": "motionrig-light-stand-desk800",
+      "canonicalName": "MotionRig Desk Stand 800",
+      "aliases": [
+        "Desk 800 stand",
+        "MR-D800"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "light_stand",
+      "normalizedTerms": [
+        "motionrig desk stand 800",
+        "desk 800 stand",
+        "mr d800"
+      ]
+    },
+    {
+      "id": "powerframe-ac-75-15v",
+      "canonicalName": "PowerFrame AC 75 / 15 V",
+      "aliases": [
+        "PF 15 V 75 W",
+        "AC75-15"
+      ],
+      "category": "power",
+      "subcategory": "ac_power_supply",
+      "normalizedTerms": [
+        "powerframe ac 75 15 v",
+        "pf 15 v 75 w",
+        "ac75 15"
+      ]
+    },
+    {
+      "id": "powerframe-ac-150-48v",
+      "canonicalName": "PowerFrame AC 150 / 48 V",
+      "aliases": [
+        "PF 48 V 150 W",
+        "AC150-48"
+      ],
+      "category": "power",
+      "subcategory": "ac_power_supply",
+      "normalizedTerms": [
+        "powerframe ac 150 48 v",
+        "pf 48 v 150 w",
+        "ac150 48"
+      ]
+    },
+    {
+      "id": "lumaforge-control-bt",
+      "canonicalName": "LumaForge Control BT",
+      "aliases": [
+        "LF Bluetooth control",
+        "CTRL-BT"
+      ],
+      "category": "lighting",
+      "subcategory": "lighting_controller",
+      "normalizedTerms": [
+        "lumaforge control bt",
+        "lf bluetooth control",
+        "ctrl bt"
+      ]
+    },
+    {
+      "id": "lumaforge-control-wifi-candidate",
+      "canonicalName": "LumaForge Control Wi-Fi Candidate",
+      "aliases": [
+        "LF Wi-Fi candidate",
+        "CTRL-W-C"
+      ],
+      "category": "lighting",
+      "subcategory": "lighting_controller",
+      "normalizedTerms": [
+        "lumaforge control wi fi candidate",
+        "lf wi fi candidate",
+        "ctrl w c"
+      ]
+    },
+    {
+      "id": "viewframe-field-5",
+      "canonicalName": "ViewFrame Field 5",
+      "aliases": [
+        "VF Field 5",
+        "Field5"
+      ],
+      "category": "monitoring_and_recording",
+      "subcategory": "field_monitor",
+      "normalizedTerms": [
+        "viewframe field 5",
+        "vf field 5",
+        "field5"
+      ]
+    },
+    {
+      "id": "viewframe-recorder-7",
+      "canonicalName": "ViewFrame Recorder 7",
+      "aliases": [
+        "VF Recorder 7",
+        "REC7"
+      ],
+      "category": "monitoring_and_recording",
+      "subcategory": "external_recorder",
+      "normalizedTerms": [
+        "viewframe recorder 7",
+        "vf recorder 7",
+        "rec7"
+      ]
+    },
+    {
+      "id": "signalbridge-micro-a-hdmi20",
+      "canonicalName": "SignalBridge Micro HDMI–A 2.0",
+      "aliases": [
+        "Micro HDMI 2.0 cable",
+        "MD-A20"
+      ],
+      "category": "monitoring_and_recording",
+      "subcategory": "hdmi_cable",
+      "normalizedTerms": [
+        "signalbridge micro hdmi a 2 0",
+        "micro hdmi 2 0 cable",
+        "md a20"
+      ]
+    },
+    {
+      "id": "signalbridge-micro-a-hdmi14",
+      "canonicalName": "SignalBridge Micro HDMI–A 1.4",
+      "aliases": [
+        "Micro HDMI 1.4 cable",
+        "MD-A14"
+      ],
+      "category": "monitoring_and_recording",
+      "subcategory": "hdmi_cable",
+      "normalizedTerms": [
+        "signalbridge micro hdmi a 1 4",
+        "micro hdmi 1 4 cable",
+        "md a14"
+      ]
+    },
+    {
+      "id": "signalbridge-a-a-hdmi21",
+      "canonicalName": "SignalBridge HDMI A–A 2.1",
+      "aliases": [
+        "HDMI A 2.1 cable",
+        "A-A21"
+      ],
+      "category": "monitoring_and_recording",
+      "subcategory": "hdmi_cable",
+      "normalizedTerms": [
+        "signalbridge hdmi a a 2 1",
+        "hdmi a 2 1 cable",
+        "a a21"
+      ]
+    },
+    {
+      "id": "streambridge-capture-u4",
+      "canonicalName": "StreamBridge Capture U4",
+      "aliases": [
+        "U4 capture",
+        "CAP-U4"
+      ],
+      "category": "monitoring_and_recording",
+      "subcategory": "capture_card",
+      "normalizedTerms": [
+        "streambridge capture u4",
+        "u4 capture",
+        "cap u4"
+      ]
+    },
+    {
+      "id": "streambridge-live-s1",
+      "canonicalName": "StreamBridge Live S1",
+      "aliases": [
+        "Live S1",
+        "SB-S1"
+      ],
+      "category": "monitoring_and_recording",
+      "subcategory": "streaming_device",
+      "normalizedTerms": [
+        "streambridge live s1",
+        "live s1",
+        "sb s1"
+      ]
+    },
+    {
+      "id": "motionrig-x1-side-grip",
+      "canonicalName": "MotionRig X1 Side Grip",
+      "aliases": [
+        "X1 side grip",
+        "MR-X1SG"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "grip",
+      "normalizedTerms": [
+        "motionrig x1 side grip",
+        "x1 side grip",
+        "mr x1sg"
+      ]
+    },
+    {
+      "id": "motionrig-tripod-field-6",
+      "canonicalName": "MotionRig Tripod Field 6",
+      "aliases": [
+        "Field 6 legs",
+        "MR-F6"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "tripod",
+      "normalizedTerms": [
+        "motionrig tripod field 6",
+        "field 6 legs",
+        "mr f6"
+      ]
+    },
+    {
+      "id": "motionrig-tripod-desk-15",
+      "canonicalName": "MotionRig Tripod Desk 15",
+      "aliases": [
+        "Desk 15 tripod",
+        "MR-D15"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "tripod",
+      "normalizedTerms": [
+        "motionrig tripod desk 15",
+        "desk 15 tripod",
+        "mr d15"
+      ]
+    },
+    {
+      "id": "motionrig-head-fluid-5",
+      "canonicalName": "MotionRig Fluid Head 5",
+      "aliases": [
+        "Fluid 5 head",
+        "MR-FH5"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "tripod_head",
+      "normalizedTerms": [
+        "motionrig fluid head 5",
+        "fluid 5 head",
+        "mr fh5"
+      ]
+    },
+    {
+      "id": "motionrig-head-mini-1",
+      "canonicalName": "MotionRig Mini Head 1",
+      "aliases": [
+        "Mini 1 head",
+        "MR-MH1"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "tripod_head",
+      "normalizedTerms": [
+        "motionrig mini head 1",
+        "mini 1 head",
+        "mr mh1"
+      ]
+    },
+    {
+      "id": "promptframe-studio-12",
+      "canonicalName": "PromptFrame Studio 12",
+      "aliases": [
+        "Studio 12 prompter",
+        "PF-S12"
+      ],
+      "category": "studio_and_workflow",
+      "subcategory": "teleprompter",
+      "normalizedTerms": [
+        "promptframe studio 12",
+        "studio 12 prompter",
+        "pf s12"
+      ]
+    },
+    {
+      "id": "promptframe-mobile-candidate",
+      "canonicalName": "PromptFrame Mobile Candidate",
+      "aliases": [
+        "Mobile prompter candidate",
+        "PF-MC"
+      ],
+      "category": "studio_and_workflow",
+      "subcategory": "teleprompter",
+      "normalizedTerms": [
+        "promptframe mobile candidate",
+        "mobile prompter candidate",
+        "pf mc"
+      ]
+    },
+    {
+      "id": "flowcompute-studio-m2",
+      "canonicalName": "FlowCompute Studio M2",
+      "aliases": [
+        "FC Studio M2",
+        "Studio-M2"
+      ],
+      "category": "studio_and_workflow",
+      "subcategory": "computer",
+      "normalizedTerms": [
+        "flowcompute studio m2",
+        "fc studio m2",
+        "studio m2"
+      ]
+    },
+    {
+      "id": "flowcompute-air-c",
+      "canonicalName": "FlowCompute Air C",
+      "aliases": [
+        "FC Air C",
+        "Air-C"
+      ],
+      "category": "studio_and_workflow",
+      "subcategory": "computer",
+      "normalizedTerms": [
+        "flowcompute air c",
+        "fc air c",
+        "air c"
+      ]
+    },
+    {
+      "id": "datadock-pro-tb4",
+      "canonicalName": "DataDock Pro TB4",
+      "aliases": [
+        "DD Pro TB4",
+        "Dock TB4"
+      ],
+      "category": "memory_and_transfer",
+      "subcategory": "dock",
+      "normalizedTerms": [
+        "datadock pro tb4",
+        "dd pro tb4",
+        "dock tb4"
+      ]
+    },
+    {
+      "id": "datadock-lite-c",
+      "canonicalName": "DataDock Lite C",
+      "aliases": [
+        "DD Lite C",
+        "Dock Lite"
+      ],
+      "category": "memory_and_transfer",
+      "subcategory": "dock",
+      "normalizedTerms": [
+        "datadock lite c",
+        "dd lite c",
+        "dock lite"
+      ]
+    },
+    {
+      "id": "swiftreader-cfxb-pro",
+      "canonicalName": "SwiftReader CFexpress B Pro",
+      "aliases": [
+        "Swift CFX-B reader",
+        "CFXB-PRO"
+      ],
+      "category": "memory_and_transfer",
+      "subcategory": "card_reader",
+      "normalizedTerms": [
+        "swiftreader cfexpress b pro",
+        "swift cfx b reader",
+        "cfxb pro"
+      ]
+    },
+    {
+      "id": "swiftreader-sd-uhsii",
+      "canonicalName": "SwiftReader SD UHS-II",
+      "aliases": [
+        "Swift UHS-II reader",
+        "SD-U2"
+      ],
+      "category": "memory_and_transfer",
+      "subcategory": "card_reader",
+      "normalizedTerms": [
+        "swiftreader sd uhs ii",
+        "swift uhs ii reader",
+        "sd u2"
+      ]
+    },
+    {
+      "id": "datadock-nvme-enclosure",
+      "canonicalName": "DataDock NVMe Enclosure",
+      "aliases": [
+        "DD NVMe enclosure",
+        "NVME-E"
+      ],
+      "category": "memory_and_transfer",
+      "subcategory": "card_reader",
+      "normalizedTerms": [
+        "datadock nvme enclosure",
+        "dd nvme enclosure",
+        "nvme e"
+      ]
+    },
+    {
+      "id": "swiftdrive-nvme-1tb",
+      "canonicalName": "SwiftDrive NVMe 1 TB",
+      "aliases": [
+        "Swift NVMe 1TB",
+        "NV1T"
+      ],
+      "category": "memory_and_transfer",
+      "subcategory": "ssd",
+      "normalizedTerms": [
+        "swiftdrive nvme 1 tb",
+        "swift nvme 1tb",
+        "nv1t"
+      ]
+    },
+    {
+      "id": "swiftdrive-sata-500",
+      "canonicalName": "SwiftDrive SATA 500 GB",
+      "aliases": [
+        "Swift SATA 500",
+        "SATA500"
+      ],
+      "category": "memory_and_transfer",
+      "subcategory": "ssd",
+      "normalizedTerms": [
+        "swiftdrive sata 500 gb",
+        "swift sata 500",
+        "sata500"
+      ]
+    },
+    {
+      "id": "powerframe-dock-100",
+      "canonicalName": "PowerFrame Dock 100 W",
+      "aliases": [
+        "PF Dock PSU",
+        "DOCK100"
+      ],
+      "category": "power",
+      "subcategory": "workflow_power_supply",
+      "normalizedTerms": [
+        "powerframe dock 100 w",
+        "pf dock psu",
+        "dock100"
+      ]
+    },
+    {
+      "id": "echocast-duo-x",
+      "canonicalName": "EchoCast Duo X",
+      "aliases": [
+        "Duo X interface",
+        "EC-DUOX"
+      ],
+      "category": "audio",
+      "subcategory": "audio_interface",
+      "normalizedTerms": [
+        "echocast duo x",
+        "duo x interface",
+        "ec duox"
+      ]
+    },
+    {
+      "id": "echocast-solo-c",
+      "canonicalName": "EchoCast Solo C",
+      "aliases": [
+        "Solo C interface",
+        "EC-SOLOC"
+      ],
+      "category": "audio",
+      "subcategory": "audio_interface",
+      "normalizedTerms": [
+        "echocast solo c",
+        "solo c interface",
+        "ec soloc"
+      ]
+    },
+    {
+      "id": "echomic-studio-c1",
+      "canonicalName": "EchoMic Studio C1",
+      "aliases": [
+        "Studio C1",
+        "C1 XLR"
+      ],
+      "category": "audio",
+      "subcategory": "xlr_microphone",
+      "normalizedTerms": [
+        "echomic studio c1",
+        "studio c1",
+        "c1 xlr"
+      ]
+    },
+    {
+      "id": "echomic-studio-c2",
+      "canonicalName": "EchoMic Studio C2",
+      "aliases": [
+        "Studio C2",
+        "C2 XLR"
+      ],
+      "category": "audio",
+      "subcategory": "xlr_microphone",
+      "normalizedTerms": [
+        "echomic studio c2",
+        "studio c2",
+        "c2 xlr"
+      ]
+    },
+    {
+      "id": "echomic-dynamic-d1",
+      "canonicalName": "EchoMic Dynamic D1",
+      "aliases": [
+        "Dynamic D1",
+        "D1 XLR"
+      ],
+      "category": "audio",
+      "subcategory": "xlr_microphone",
+      "normalizedTerms": [
+        "echomic dynamic d1",
+        "dynamic d1",
+        "d1 xlr"
+      ]
+    },
+    {
+      "id": "echomic-monitor-h80",
+      "canonicalName": "EchoMic Monitor H80",
+      "aliases": [
+        "H80 headphones",
+        "Monitor H80"
+      ],
+      "category": "audio",
+      "subcategory": "headphones",
+      "normalizedTerms": [
+        "echomic monitor h80",
+        "h80 headphones",
+        "monitor h80"
+      ]
+    },
+    {
+      "id": "echomic-xlr-cable-a",
+      "canonicalName": "EchoMic XLR Cable A",
+      "aliases": [
+        "XLR cable A",
+        "XLR-A"
+      ],
+      "category": "audio",
+      "subcategory": "xlr_cable",
+      "normalizedTerms": [
+        "echomic xlr cable a",
+        "xlr cable a",
+        "xlr a"
+      ]
+    },
+    {
+      "id": "echomic-xlr-cable-b",
+      "canonicalName": "EchoMic XLR Cable B",
+      "aliases": [
+        "XLR cable B",
+        "XLR-B"
+      ],
+      "category": "audio",
+      "subcategory": "xlr_cable",
+      "normalizedTerms": [
+        "echomic xlr cable b",
+        "xlr cable b",
+        "xlr b"
+      ]
+    },
+    {
+      "id": "echomic-xlr-cable-c",
+      "canonicalName": "EchoMic XLR Cable C",
+      "aliases": [
+        "XLR cable C",
+        "XLR-C"
+      ],
+      "category": "audio",
+      "subcategory": "xlr_cable",
+      "normalizedTerms": [
+        "echomic xlr cable c",
+        "xlr cable c",
+        "xlr c"
+      ]
+    },
+    {
+      "id": "echomic-usbc-host-cable",
+      "canonicalName": "EchoMic USB-C Host Cable",
+      "aliases": [
+        "USB-C audio host cable",
+        "UC-HOST"
+      ],
+      "category": "audio",
+      "subcategory": "usb_audio_cable",
+      "normalizedTerms": [
+        "echomic usb c host cable",
+        "usb c audio host cable",
+        "uc host"
+      ]
+    },
+    {
+      "id": "powerframe-audio-30",
+      "canonicalName": "PowerFrame Audio 30 W",
+      "aliases": [
+        "PF Audio PSU",
+        "AUDIO30"
+      ],
+      "category": "power",
+      "subcategory": "workflow_power_supply",
+      "normalizedTerms": [
+        "powerframe audio 30 w",
+        "pf audio psu",
+        "audio30"
+      ]
+    },
+    {
+      "id": "clearfilter-protect-49",
+      "canonicalName": "ClearFilter Protect 49",
+      "aliases": [
+        "CF Protect 49",
+        "Clear 49"
+      ],
+      "category": "optics",
+      "subcategory": "round_filter",
+      "normalizedTerms": [
+        "clearfilter protect 49",
+        "cf protect 49",
+        "clear 49"
+      ]
+    },
+    {
+      "id": "clearfilter-vnd-67",
+      "canonicalName": "ClearFilter VND 2–5 67",
+      "aliases": [
+        "CF VND 67",
+        "VND25 67"
+      ],
+      "category": "optics",
+      "subcategory": "round_filter",
+      "normalizedTerms": [
+        "clearfilter vnd 2 5 67",
+        "cf vnd 67",
+        "vnd25 67"
+      ]
+    },
+    {
+      "id": "clearfilter-cpl-82",
+      "canonicalName": "ClearFilter CPL 82",
+      "aliases": [
+        "CF CPL 82",
+        "Polar 82"
+      ],
+      "category": "optics",
+      "subcategory": "round_filter",
+      "normalizedTerms": [
+        "clearfilter cpl 82",
+        "cf cpl 82",
+        "polar 82"
+      ]
+    },
+    {
+      "id": "clearfilter-vnd-49-narrow",
+      "canonicalName": "ClearFilter VND Narrow 49",
+      "aliases": [
+        "CF Narrow 49",
+        "VND N49"
+      ],
+      "category": "optics",
+      "subcategory": "round_filter",
+      "normalizedTerms": [
+        "clearfilter vnd narrow 49",
+        "cf narrow 49",
+        "vnd n49"
+      ]
+    },
+    {
+      "id": "clearfilter-step-up-49-67",
+      "canonicalName": "ClearFilter Step-Up 49–67",
+      "aliases": [
+        "49 to 67 ring",
+        "SU49-67"
+      ],
+      "category": "optics",
+      "subcategory": "step_up_ring",
+      "normalizedTerms": [
+        "clearfilter step up 49 67",
+        "49 to 67 ring",
+        "su49 67"
+      ]
+    },
+    {
+      "id": "clearfilter-step-up-67-82",
+      "canonicalName": "ClearFilter Step-Up 67–82",
+      "aliases": [
+        "67 to 82 ring",
+        "SU67-82"
+      ],
+      "category": "optics",
+      "subcategory": "step_up_ring",
+      "normalizedTerms": [
+        "clearfilter step up 67 82",
+        "67 to 82 ring",
+        "su67 82"
+      ]
+    },
+    {
+      "id": "clearfilter-step-up-58-67",
+      "canonicalName": "ClearFilter Step-Up 58–67",
+      "aliases": [
+        "58 to 67 ring",
+        "SU58-67"
+      ],
+      "category": "optics",
+      "subcategory": "step_up_ring",
+      "normalizedTerms": [
+        "clearfilter step up 58 67",
+        "58 to 67 ring",
+        "su58 67"
+      ]
+    },
+    {
+      "id": "motionrig-matte-mini-67",
+      "canonicalName": "MotionRig Matte Mini 67",
+      "aliases": [
+        "Matte Mini 67",
+        "MM67"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "matte_box",
+      "normalizedTerms": [
+        "motionrig matte mini 67",
+        "matte mini 67",
+        "mm67"
+      ]
+    },
+    {
+      "id": "motionrig-matte-cine-95-candidate",
+      "canonicalName": "MotionRig Matte Cine 95 Candidate",
+      "aliases": [
+        "Matte Cine 95 candidate",
+        "MC95-C"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "matte_box",
+      "normalizedTerms": [
+        "motionrig matte cine 95 candidate",
+        "matte cine 95 candidate",
+        "mc95 c"
+      ]
+    },
+    {
+      "id": "powerframe-pd-100",
+      "canonicalName": "PowerFrame PD 100",
+      "aliases": [
+        "PF100",
+        "PowerFrame 100 W"
+      ],
+      "category": "power",
+      "subcategory": "power_bank",
+      "normalizedTerms": [
+        "powerframe pd 100",
+        "pf100",
+        "powerframe 100 w"
+      ]
+    },
+    {
+      "id": "powerframe-pd-18-mini",
+      "canonicalName": "PowerFrame PD 18 Mini",
+      "aliases": [
+        "PF18 Mini",
+        "PD18M"
+      ],
+      "category": "power",
+      "subcategory": "power_bank",
+      "normalizedTerms": [
+        "powerframe pd 18 mini",
+        "pf18 mini",
+        "pd18m"
+      ]
+    },
+    {
+      "id": "powerframe-usbc-pd-100-cable",
+      "canonicalName": "PowerFrame USB-C PD 100 Cable",
+      "aliases": [
+        "PF PD100 cable",
+        "C-C-PD100"
+      ],
+      "category": "power",
+      "subcategory": "usb_c_cable",
+      "normalizedTerms": [
+        "powerframe usb c pd 100 cable",
+        "pf pd100 cable",
+        "c c pd100"
+      ]
+    },
+    {
+      "id": "powerframe-usbc-fixed5-cable",
+      "canonicalName": "PowerFrame USB-C Fixed 5 V Cable",
+      "aliases": [
+        "PF 5 V cable",
+        "C-C-5V"
+      ],
+      "category": "power",
+      "subcategory": "usb_c_cable",
+      "normalizedTerms": [
+        "powerframe usb c fixed 5 v cable",
+        "pf 5 v cable",
+        "c c 5v"
+      ]
+    },
+    {
+      "id": "motionrig-flow-max",
+      "canonicalName": "MotionRig Flow Max",
+      "aliases": [
+        "FlowMax",
+        "MR Flow Max"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "gimbal",
+      "normalizedTerms": [
+        "motionrig flow max",
+        "flowmax",
+        "mr flow max"
+      ]
+    },
+    {
+      "id": "motionrig-travel-one",
+      "canonicalName": "MotionRig Travel One",
+      "aliases": [
+        "TravelOne",
+        "MR T1"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "gimbal",
+      "normalizedTerms": [
+        "motionrig travel one",
+        "travelone",
+        "mr t1"
+      ]
+    },
+    {
+      "id": "motionrig-n7-air-cage",
+      "canonicalName": "MotionRig N7 Air Cage",
+      "aliases": [
+        "N7 Air cage",
+        "MR-N7A"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "cage",
+      "normalizedTerms": [
+        "motionrig n7 air cage",
+        "n7 air cage",
+        "mr n7a"
+      ]
+    },
+    {
+      "id": "motionrig-pocket-creator-cage",
+      "canonicalName": "MotionRig Pocket Creator Cage",
+      "aliases": [
+        "Pocket Creator cage",
+        "MR-PCC"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "cage",
+      "normalizedTerms": [
+        "motionrig pocket creator cage",
+        "pocket creator cage",
+        "mr pcc"
+      ]
+    },
+    {
+      "id": "motionrig-flow-pro",
+      "canonicalName": "MotionRig Flow Pro",
+      "aliases": [
+        "MR Flow Pro",
+        "FlowPro 1800"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "gimbal",
+      "normalizedTerms": [
+        "motionrig flow pro",
+        "mr flow pro",
+        "flowpro 1800"
+      ]
+    },
+    {
+      "id": "motionrig-pocket-lite",
+      "canonicalName": "MotionRig Pocket Lite",
+      "aliases": [
+        "MR Pocket",
+        "PocketLite 450"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "gimbal",
+      "normalizedTerms": [
+        "motionrig pocket lite",
+        "mr pocket",
+        "pocketlite 450"
+      ]
+    },
+    {
+      "id": "motionrig-n7-form-cage",
+      "canonicalName": "MotionRig N7 Form Cage",
+      "aliases": [
+        "MR N7 Cage",
+        "N7 Form Cage"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "cage",
+      "normalizedTerms": [
+        "motionrig n7 form cage",
+        "mr n7 cage",
+        "n7 form cage"
+      ]
+    },
+    {
+      "id": "motionrig-x1-form-cage",
+      "canonicalName": "MotionRig X1 Form Cage",
+      "aliases": [
+        "MR X1 Cage",
+        "X1 Form Cage"
+      ],
+      "category": "stabilization_and_mounting",
+      "subcategory": "cage",
+      "normalizedTerms": [
+        "motionrig x1 form cage",
+        "mr x1 cage",
+        "x1 form cage"
+      ]
+    }
+  ]
+}

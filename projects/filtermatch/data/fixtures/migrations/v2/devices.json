@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 2,
+  "kind": "devices",
+  "records": [
+    {
+      "id": "airpure-migration-fixture",
+      "brand": "AirPure",
+      "canonicalModel": "MIG-100/PL",
+      "regionalVariant": "/PL",
+      "category": "air-purifier",
+      "aliases": ["MIG 100 / PL"],
+      "identifiers": { "productCode": "SYN-MIG100PL" },
+      "lifecycleStatus": "unknown",
+      "sourceReferences": [],
+      "verificationStatus": "candidate",
+      "synthetic": true,
+      "notForProduction": true
+    }
+  ]
+}

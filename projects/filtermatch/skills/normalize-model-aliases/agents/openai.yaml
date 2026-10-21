@@ -1,0 +1,4 @@
+interface:
+  display_name: "Normalize model aliases"
+  short_description: "Normalize and review device model aliases"
+  default_prompt: "Use $normalize-model-aliases to normalize supplied aliases and report collisions without approving them."

@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchIsland from '../components/SearchIsland';
+import { searchIndex, snapshot } from '../lib/data';
+import { candidateReview } from '../lib/review-data';
+
+const publicDeviceIds = new Set(snapshot.compatibilityEdges.map(({ deviceId }) => deviceId));
+const latest = [...snapshot.devices]
+  .filter((device) => device.verificationStatus.startsWith('verified_') && publicDeviceIds.has(device.id))
+  .sort((left, right) => (right.lastVerifiedAt ?? '').localeCompare(left.lastVerifiedAt ?? ''))
+  .slice(0, 3);
+const brands = [...new Set(snapshot.devices.map(({ brand }) => brand))].sort();
+const rawNoResultEndpoint = import.meta.env.PUBLIC_NO_RESULT_ENDPOINT as string | undefined;
+const noResultEndpoint = rawNoResultEndpoint ? new URL(rawNoResultEndpoint) : null;
+const privateReview = import.meta.env.FILTERMATCH_BUILD_PROFILE === 'private-review';
+const realCandidateDevices = new Set(candidateReview.map(({ device }) => device.id)).size;
+const realCandidateBrands = new Set(candidateReview.map(({ device }) => device.brand)).size;
+if (noResultEndpoint && (noResultEndpoint.protocol !== 'https:' || noResultEndpoint.username || noResultEndpoint.password)) {
+  throw new Error('PUBLIC_NO_RESULT_ENDPOINT must be an HTTPS URL without credentials');
+}
+---
+<BaseLayout
+  title={privateReview ? 'Prywatny katalog danych — FilterMatch' : 'FilterMatch — sprawdź kompatybilny filtr'}
+  description={privateReview ? 'Prywatny katalog prawdziwych urządzeń, filtrów i kontrolowanych dowodów do zatwierdzenia.' : 'Wyszukaj dokładny model oczyszczacza i zobacz kompatybilne filtry wraz ze źródłami oraz datą weryfikacji.'}
+  noindex={privateReview}
+>
+  {privateReview ? (
+    <>
+      <div class="review-banner" role="note"><strong>Tryb prywatny:</strong> prawdziwe dane są dostępne wyłącznie do kontroli właściciela i nie są indeksowane.</div>
+      <section class="hero shell">
+        <div class="hero-copy">
+          <span class="kicker">Prywatna baza oparta na kontrolowanych źródłach</span>
+          <h1>Prawdziwe modele. Jawne dowody. Zero zgadywania.</h1>
+          <p>Zebrany katalog obejmuje {realCandidateDevices} urządzeń {realCandidateBrands} marek. Każda potencjalna relacja pozostaje poza wynikami zgodności, dopóki człowiek nie zatwierdzi dowodu.</p>
+          <a class="button-link" href="/przeglad-danych/">Przejdź do przeglądu danych</a>
+        </div>
+        <div class="verification-card">
+          <span class="verified-badge">Kontrola publikacji aktywna</span>
+          <dl>
+            <div><dt>Źródła</dt><dd>Producenci i wiarygodni dystrybutorzy</dd></div>
+            <div><dt>Status importu AI</dt><dd>Tylko kandydaci</dd></div>
+            <div><dt>Widoczność</dt><dd>Hasło + noindex</dd></div>
+          </dl>
+        </div>
+      </section>
+    </>
+  ) : (
+    <>
+  <div class="demo-banner" role="note"><strong>Demonstrator:</strong> wszystkie marki i oferty na tej stronie są fikcyjne.</div>
+  <section class="hero shell">
+    <div class="hero-copy">
+      <span class="kicker">Baza kompatybilności oparta na dowodach</span>
+      <h1>Właściwy filtr zaczyna się od właściwego modelu.</h1>
+      <p>Pokazujemy tylko relacje, które przeszły politykę publikacji i mają przypisane źródło.</p>
+      <div class="trust-row">
+        <span>Źródło przy dopasowaniu</span><span>Data weryfikacji</span><span>Kandydaci ukryci</span>
+      </div>
+    </div>
+    <SearchIsland index={searchIndex} noResultEndpoint={noResultEndpoint?.href} client:load />
+  </section>
+
+  <section class="section shell how-to">
+    <div>
+      <span class="kicker">Zanim wyszukasz</span>
+      <h2>Jak znaleźć numer modelu?</h2>
+    </div>
+    <ol class="steps">
+      <li><span>01</span><div><strong>Sprawdź tabliczkę</strong><p>Zwykle znajduje się z tyłu lub pod urządzeniem.</p></div></li>
+      <li><span>02</span><div><strong>Przepisz cały symbol</strong><p>Zachowaj cyfry i sufiks, np. <code>/10</code>.</p></div></li>
+      <li><span>03</span><div><strong>Potwierdź wariant</strong><p>Przed filtrami zawsze zobaczysz pełną nazwę urządzenia.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="section shell grid-two">
+    <div class="card">
+      <span class="kicker">Ostatnio zweryfikowane</span>
+      <ul class="link-list">
+        {latest.map((device) => <li><a href={`/urzadzenia/${device.id}/`}><strong>{device.brand} {device.canonicalModel}</strong><span>{device.series}</span></a></li>)}
+      </ul>
+    </div>
+    <div class="card">
+      <span class="kicker">Marki w demonstratorze</span>
+      <div class="brand-cloud">{brands.map((brand) => <span>{brand}</span>)}</div>
+      <p class="fine-print">To dane syntetyczne. Nie stanowią informacji o realnych produktach.</p>
+      <p><a href="/katalog/">Przejrzyj cały zweryfikowany katalog →</a></p>
+    </div>
+  </section>
+
+  <section class="method-strip">
+    <div class="shell grid-two">
+      <div><span class="kicker">Metodologia</span><h2>AI proponuje. Człowiek zatwierdza.</h2></div>
+      <div><p>Automaty mogą wykryć kandydaturę lub konflikt, ale nie mogą samodzielnie opublikować kompatybilności.</p><a href="/metodologia/">Poznaj politykę weryfikacji →</a></div>
+    </div>
+  </section>
+  <aside class="affiliate-note shell"><strong>Informacja afiliacyjna:</strong> link do sklepu może być afiliacyjny. Nie wpływa to na kompatybilność ani kolejność dopasowań. <a href="/afiliacja/">Szczegóły</a>.</aside>
+    </>
+  )}
+</BaseLayout>

@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import CorrectionForm from '../../components/CorrectionForm.astro';
+import { snapshot } from '../../lib/data';
+import { buildDeviceCompatibilityView, isDevicePageIndexable } from '@filtermatch/compatibility-core';
+import {
+  compatibilityRelationLabel,
+  consumableCategoryLabel,
+  formatDatePl,
+  formatMoneyPl,
+  verificationLabel
+} from '@filtermatch/shared-ui';
+import type { Offer } from '@filtermatch/domain';
+
+export function getStaticPaths() {
+  return snapshot.devices.map((device) => ({ params: { id: device.id } }));
+}
+
+const { id } = Astro.params;
+const view = id ? buildDeviceCompatibilityView(snapshot, id, new Date('2026-07-17T12:00:00.000Z')) : null;
+if (!view) return Astro.redirect('/404');
+const { device, compatible, groups, lastVerifiedAt } = view;
+const indexable = isDevicePageIndexable(view);
+const requiredCount = groups.required.length;
+const alternativeCount = groups.alternative.length;
+const accessoryCount = groups.optional.length;
+
+const relationSections = [
+  {
+    id: 'wymagane',
+    title: 'Wymagane materiały',
+    items: groups.required,
+    note: 'Materiały eksploatacyjne potrzebne do prawidłowej pracy urządzenia.'
+  },
+  {
+    id: 'alternatywy',
+    title: 'Zweryfikowane alternatywy',
+    items: groups.alternative,
+    note: 'Zamienniki dopuszczone zamiast materiału wymaganego, z zachowanym dowodem.'
+  },
+  {
+    id: 'akcesoria',
+    title: 'Opcjonalne akcesoria',
+    items: groups.optional,
+    note: 'Nie są wymagane do zgodności ani do wymiany filtrów.'
+  }
+].filter((section) => section.items.length > 0);
+
+function currentOffer(offer: Offer): boolean {
+  return offer.status === 'active' && (!offer.expiresAt || new Date(offer.expiresAt) > new Date('2026-07-17T12:00:00.000Z'));
+}
+
+function orderedOffers(consumableId: string): Offer[] {
+  return snapshot.offers
+    .filter((offer) => offer.consumableId === consumableId)
+    .sort((left, right) => {
+      const freshness = Number(currentOffer(right)) - Number(currentOffer(left));
+      const leftTotal = (left.priceMinor ?? Number.MAX_SAFE_INTEGER) + (left.shippingMinor ?? 0);
+      const rightTotal = (right.priceMinor ?? Number.MAX_SAFE_INTEGER) + (right.shippingMinor ?? 0);
+      return freshness || leftTotal - rightTotal || left.merchant.localeCompare(right.merchant, 'pl');
+    });
+}
+
+const fullModel = device.canonicalModel;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: `${device.brand} ${fullModel}`,
+  brand: { '@type': 'Brand', name: device.brand },
+  category: 'Oczyszczacz powietrza',
+  additionalProperty: [{ '@type': 'PropertyValue', name: 'Model', value: fullModel }]
+};
+---
+<BaseLayout
+  title={`Filtry do ${device.brand} ${fullModel} — FilterMatch`}
+  description={`Zweryfikowane filtry kompatybilne z ${device.brand} ${fullModel}, dowody i daty sprawdzenia.`}
+  canonicalPath={`/urzadzenia/${device.id}/`}
+  noindex={!indexable}
+  schema={schema}
+>
+  <div class="demo-banner" role="note"><strong>Dane syntetyczne:</strong> {device.brand} i pokazane oferty są fikcyjne.</div>
+  <div class="shell page-shell">
+    <nav class="breadcrumbs" aria-label="Okruszki"><a href="/">Strona główna</a><span>/</span><span>{device.brand}</span><span>/</span><span aria-current="page">{fullModel}</span></nav>
+    <header class="device-header">
+      <div>
+        <span class="kicker">Oczyszczacz powietrza</span>
+        <h1>{device.brand} {fullModel}</h1>
+        <p class="series">{device.series}</p>
+      </div>
+      <div class="verification-card">
+        <span class="verified-badge">✓ {verificationLabel(device.verificationStatus)}</span>
+        <dl>
+          <div><dt>Ostatnia weryfikacja</dt><dd>{lastVerifiedAt ? formatDatePl(lastVerifiedAt) : 'brak daty'}</dd></div>
+          <div><dt>Pokrycie katalogu</dt><dd>{compatible.length} zweryfikowanych pozycji</dd></div>
+          <div><dt>Identyfikator</dt><dd><code>{device.id}</code></dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <section class="alias-line" aria-label="Znane oznaczenia"><strong>Rozpoznawane aliasy:</strong> {device.aliases.join(' · ')}</section>
+    <AdSlot label="po nagłówku urządzenia" />
+
+    <section class="results-section" aria-labelledby="filters-title">
+      <div class="section-heading"><div><span class="kicker">Wynik kompatybilności</span><h2 id="filters-title">Materiały i akcesoria ({compatible.length})</h2></div><p>Pokazujemy wyłącznie relacje dopuszczone przez politykę publikacji.</p></div>
+      <dl class="coverage-summary" aria-label="Zakres zweryfikowanego katalogu">
+        <div><dt>Wymagane</dt><dd>{requiredCount}</dd></div>
+        <div><dt>Alternatywy</dt><dd>{alternativeCount}</dd></div>
+        <div><dt>Akcesoria opcjonalne</dt><dd>{accessoryCount}</dd></div>
+      </dl>
+      <aside class="result-guide" aria-labelledby="jak-czytac-wynik">
+        <strong id="jak-czytac-wynik">Jak czytać ten wynik?</strong>
+        <ul>
+          <li><b>Wymagane materiały</b> — te elementy są potrzebne do prawidłowej wymiany.</li>
+          <li><b>Zweryfikowane alternatywy</b> — możesz wybrać je zamiast odpowiedniego oryginału.</li>
+          <li><b>Opcjonalne akcesoria</b> — nie są konieczne do działania ani zgodności filtrów.</li>
+        </ul>
+      </aside>
+      {relationSections.map((section) => (
+      <section class="relation-group" aria-labelledby={`grupa-${section.id}`}>
+        <div class="relation-heading">
+          <h3 id={`grupa-${section.id}`}>{section.title} ({section.items.length})</h3>
+          <p>{section.note}</p>
+        </div>
+        <div class="filter-list">
+        {section.items.map(({ edge, consumable, evidence }) => {
+          const offers = orderedOffers(consumable.id);
+          return (
+            <article class="filter-card">
+              <div class="filter-summary">
+                <div class="filter-icon" aria-hidden="true">▦</div>
+                <div>
+                  <div class="tag-row"><span class:list={['tag', consumable.originalOrReplacement === 'original' ? 'tag-original' : 'tag-replacement']}>{consumable.originalOrReplacement === 'original' ? 'Oryginał' : 'Zamiennik'}</span><span class="tag tag-category">{consumableCategoryLabel(consumable.category)}</span><span class="tag tag-relation">{compatibilityRelationLabel(edge.relationType)}</span><span class="tag tag-verified">{verificationLabel(edge.verificationStatus)}</span></div>
+                  <h4><a href={`/materialy/${consumable.id}/`}>{consumable.brand} {consumable.canonicalName}</a></h4>
+                  <p>SKU: <strong>{consumable.sku}</strong>{consumable.ean ? ` · EAN: ${consumable.ean}` : ''}</p>
+                  <div class="included-elements"><strong>Komplet zawiera:</strong><ul class="elements">{consumable.includedElements.map((element) => <li>{element.quantity} × {element.name}</li>)}</ul></div>
+                  {edge.notes && <p class="edge-note">{edge.notes}</p>}
+                </div>
+              </div>
+              <details class="evidence" open>
+                <summary>Dowody i data weryfikacji</summary>
+                <p>Zweryfikowano: <strong>{edge.lastVerifiedAt ? formatDatePl(edge.lastVerifiedAt) : 'brak daty'}</strong></p>
+                <ul>{evidence.map((source) => <li><strong>{source.title}</strong><span>{source.evidenceSummary}</span>{source.url && <a href={source.url} rel="nofollow noopener noreferrer" target="_blank">Otwórz źródło ↗</a>}<small>Dostęp: {formatDatePl(source.accessedAt)}{source.pageReference ? ` · ${source.pageReference}` : ''}</small></li>)}</ul>
+              </details>
+              <div class="offers">
+                <h5>Oferty demonstracyjne</h5>
+                {offers.length === 0 ? <p>Brak aktualnych ofert.</p> : <ul>{offers.map((offer) => {
+                  const fresh = currentOffer(offer);
+                  const href = offer.affiliateUrl ?? offer.destinationUrl;
+                  return <li class:list={{ stale: !fresh }}>
+                    <div><strong>{offer.merchant}</strong>{offer.sponsored && <span class="sponsored">Sponsorowane</span>}<small>Aktualizacja: {formatDatePl(offer.fetchedAt)}</small></div>
+                    <div class="offer-action">{fresh && offer.priceMinor !== undefined ? <strong>{formatMoneyPl(offer.priceMinor, offer.currency)}</strong> : <span>Cena nieaktualna</span>}{fresh ? <a href={href} rel="sponsored nofollow noopener noreferrer" target="_blank">Do sklepu ↗</a> : <span class="disabled-link">Oferta wygasła</span>}</div>
+                  </li>;
+                })}</ul>}
+                <p class="fine-print">Domyślnie: aktualność, dostępność i łączna cena. Sponsorowanie nie zmienia kompatybilności.</p>
+              </div>
+            </article>
+          );
+        })}
+        </div>
+      </section>
+      ))}
+    </section>
+    <CorrectionForm entityId={device.id} />
+  </div>
+</BaseLayout>

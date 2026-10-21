@@ -1,0 +1,375 @@
+{
+  "schemaVersion": 2,
+  "kind": "consumables",
+  "records": [
+    {
+      "id": "airpure-purefilter-100",
+      "brand": "AirPure",
+      "canonicalName": "PureFilter 100 — kompletny zestaw demonstracyjny",
+      "sku": "SYN-PF-100",
+      "ean": "0000000000107",
+      "category": "air-purifier-filter-set",
+      "originalOrReplacement": "original",
+      "includedElements": [
+        {
+          "name": "zintegrowany filtr HEPA i węglowy — element demonstracyjny",
+          "quantity": 1
+        }
+      ],
+      "dimensions": {
+        "widthMm": 210,
+        "heightMm": 300,
+        "depthMm": 45
+      },
+      "attributes": {
+        "fixtureVariant": "complete-integrated-set",
+        "syntheticClaim": true
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-original-filter"
+      ],
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "cleanflow-cf100-replacement",
+      "brand": "CleanFlow",
+      "canonicalName": "CF100 — demonstracyjny zestaw zamienny",
+      "sku": "SYN-CF-100",
+      "ean": "0000000000206",
+      "category": "air-purifier-filter-set",
+      "originalOrReplacement": "replacement",
+      "includedElements": [
+        {
+          "name": "filtr HEPA — element demonstracyjny",
+          "quantity": 1
+        },
+        {
+          "name": "filtr węglowy — element demonstracyjny",
+          "quantity": 1
+        }
+      ],
+      "attributes": {
+        "fixtureVariant": "two-piece-replacement-set",
+        "syntheticClaim": true
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-replacement-filter"
+      ],
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "homebreeze-hb100-candidate",
+      "brand": "HomeBreeze",
+      "canonicalName": "HB100 — niezweryfikowany zestaw demonstracyjny",
+      "sku": "SYN-HB-100-CANDIDATE",
+      "category": "air-purifier-filter-set",
+      "originalOrReplacement": "replacement",
+      "includedElements": [
+        {
+          "name": "filtr — element demonstracyjny",
+          "quantity": 1
+        }
+      ],
+      "attributes": {
+        "fixtureVariant": "candidate",
+        "syntheticClaim": true
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-candidate-mention"
+      ],
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "homebreeze-hb101-conflict",
+      "brand": "HomeBreeze",
+      "canonicalName": "HB101 — zestaw demonstracyjny ze sprzecznymi źródłami",
+      "sku": "SYN-HB-101-CONFLICT",
+      "category": "air-purifier-filter-set",
+      "originalOrReplacement": "replacement",
+      "includedElements": [
+        {
+          "name": "filtr — element demonstracyjny",
+          "quantity": 1
+        }
+      ],
+      "attributes": {
+        "fixtureVariant": "conflicting",
+        "syntheticClaim": true
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-conflicting-mention"
+      ],
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "homebreeze-breeze200-service-kit",
+      "brand": "HomeBreeze",
+      "canonicalName": "Breeze 200 — oryginalny zestaw serwisowy (dane demonstracyjne)",
+      "sku": "SYN-HB-KIT-200",
+      "ean": "0000000000305",
+      "category": "air-purifier-filter-set",
+      "originalOrReplacement": "original",
+      "includedElements": [
+        {
+          "name": "filtr HEPA Breeze 200 — element demonstracyjny",
+          "quantity": 1
+        },
+        {
+          "name": "filtr węglowy Breeze 200 — element demonstracyjny",
+          "quantity": 1
+        }
+      ],
+      "dimensions": {
+        "widthMm": 240,
+        "heightMm": 320,
+        "depthMm": 52
+      },
+      "attributes": {
+        "fixtureVariant": "complete-original-set",
+        "syntheticClaim": true
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-hb200-original-components"
+      ],
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "homebreeze-breeze200-hepa",
+      "brand": "HomeBreeze",
+      "canonicalName": "Breeze 200 — oryginalny filtr HEPA (dane demonstracyjne)",
+      "sku": "SYN-HB-HEPA-200",
+      "ean": "0000000000312",
+      "category": "air-purifier-hepa-filter",
+      "originalOrReplacement": "original",
+      "includedElements": [
+        {
+          "name": "filtr HEPA Breeze 200 — element demonstracyjny",
+          "quantity": 1
+        }
+      ],
+      "dimensions": {
+        "widthMm": 240,
+        "heightMm": 260,
+        "depthMm": 40
+      },
+      "attributes": {
+        "fixtureVariant": "single-original-hepa",
+        "syntheticClaim": true
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-hb200-original-components"
+      ],
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "homebreeze-breeze200-carbon",
+      "brand": "HomeBreeze",
+      "canonicalName": "Breeze 200 — oryginalny filtr węglowy (dane demonstracyjne)",
+      "sku": "SYN-HB-CARBON-200",
+      "ean": "0000000000329",
+      "category": "air-purifier-carbon-filter",
+      "originalOrReplacement": "original",
+      "includedElements": [
+        {
+          "name": "filtr węglowy Breeze 200 — element demonstracyjny",
+          "quantity": 1
+        }
+      ],
+      "dimensions": {
+        "widthMm": 240,
+        "heightMm": 260,
+        "depthMm": 12
+      },
+      "attributes": {
+        "fixtureVariant": "single-original-carbon",
+        "syntheticClaim": true
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-hb200-original-components"
+      ],
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "cleanflow-cf200-replacement-kit",
+      "brand": "CleanFlow",
+      "canonicalName": "CF200 — zamienny zestaw serwisowy (dane demonstracyjne)",
+      "sku": "SYN-CF-KIT-200",
+      "ean": "0000000000336",
+      "category": "air-purifier-filter-set",
+      "originalOrReplacement": "replacement",
+      "includedElements": [
+        {
+          "name": "zamienny filtr HEPA — element demonstracyjny",
+          "quantity": 1
+        },
+        {
+          "name": "zamienny filtr węglowy — element demonstracyjny",
+          "quantity": 1
+        }
+      ],
+      "attributes": {
+        "fixtureVariant": "complete-replacement-set",
+        "syntheticClaim": true
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-hb200-replacement-kit"
+      ],
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "cleanflow-cf200-hepa-candidate",
+      "brand": "CleanFlow",
+      "canonicalName": "CF200 HEPA — niezweryfikowany kandydat demonstracyjny",
+      "sku": "SYN-CF-HEPA-200-CANDIDATE",
+      "category": "air-purifier-hepa-filter",
+      "originalOrReplacement": "replacement",
+      "includedElements": [
+        {
+          "name": "zamienny filtr HEPA — element demonstracyjny",
+          "quantity": 1
+        }
+      ],
+      "attributes": {
+        "fixtureVariant": "candidate-single-hepa",
+        "syntheticClaim": true
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-hb200-candidate-mention"
+      ],
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "cleanflow-airguard300-service-kit",
+      "brand": "CleanFlow",
+      "canonicalName": "AirGuard 300 — oryginalny zestaw serwisowy (dane demonstracyjne)",
+      "sku": "SYN-CF-KIT-300",
+      "ean": "0000000000404",
+      "category": "air-purifier-filter-set",
+      "originalOrReplacement": "original",
+      "includedElements": [
+        {
+          "name": "zintegrowany filtr HEPA i węglowy AirGuard 300 — element demonstracyjny",
+          "quantity": 1
+        },
+        {
+          "name": "prefiltr zmywalny — element demonstracyjny",
+          "quantity": 1
+        }
+      ],
+      "dimensions": {
+        "diameterMm": 230,
+        "heightMm": 310
+      },
+      "attributes": {
+        "fixtureVariant": "complete-original-set",
+        "syntheticClaim": true
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-cf300-original-kit"
+      ],
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "homebreeze-hb300-replacement-kit",
+      "brand": "HomeBreeze",
+      "canonicalName": "HB300 — zamienny zestaw serwisowy (dane demonstracyjne)",
+      "sku": "SYN-HB-KIT-300",
+      "ean": "0000000000411",
+      "category": "air-purifier-filter-set",
+      "originalOrReplacement": "replacement",
+      "includedElements": [
+        {
+          "name": "zamienny filtr zintegrowany — element demonstracyjny",
+          "quantity": 1
+        },
+        {
+          "name": "zamienny prefiltr — element demonstracyjny",
+          "quantity": 1
+        }
+      ],
+      "attributes": {
+        "fixtureVariant": "complete-replacement-set",
+        "syntheticClaim": true
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-cf300-replacement-kit"
+      ],
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "airpure-ap300-candidate-kit",
+      "brand": "AirPure",
+      "canonicalName": "AP300 — niezweryfikowany zestaw demonstracyjny",
+      "sku": "SYN-AP-KIT-300-CANDIDATE",
+      "category": "air-purifier-filter-set",
+      "originalOrReplacement": "replacement",
+      "includedElements": [
+        {
+          "name": "filtr zintegrowany — element demonstracyjny",
+          "quantity": 1
+        }
+      ],
+      "attributes": {
+        "fixtureVariant": "candidate-replacement-set",
+        "syntheticClaim": true
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-cf300-candidate-mention"
+      ],
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "homebreeze-breeze200-seal-frame",
+      "brand": "HomeBreeze",
+      "canonicalName": "Breeze 200 — ramka montażowa i uszczelka (dane demonstracyjne)",
+      "sku": "SYN-HB-ACC-200",
+      "ean": "0000000000343",
+      "category": "air-purifier-accessory",
+      "originalOrReplacement": "original",
+      "includedElements": [
+        {
+          "name": "ramka montażowa — element demonstracyjny",
+          "quantity": 1
+        },
+        {
+          "name": "uszczelka obwodowa — element demonstracyjny",
+          "quantity": 1
+        }
+      ],
+      "attributes": {
+        "fixtureVariant": "optional-seal-frame",
+        "syntheticClaim": true
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-hb200-seal-frame"
+      ],
+      "synthetic": true,
+      "notForProduction": true
+    }
+  ]
+}

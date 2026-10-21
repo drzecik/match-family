@@ -1,0 +1,46 @@
+{
+  "name": "creatorrig-match",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "pnpm data:validate && pnpm data:build && pnpm --filter @creatorrig/web build && pnpm --filter @creatorrig/widget-demo build",
+    "dev": "pnpm --filter @creatorrig/web dev",
+    "lint": "eslint apps packages scripts middleware.ts --max-warnings=0",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "data:validate": "tsx scripts/validate-data.ts && pnpm offers:import",
+    "data:build": "tsx scripts/build-graph/index.ts && tsx scripts/build-search-index/index.ts",
+    "data:build:candidates": "tsx scripts/build-candidate-catalog/index.ts",
+    "data:build:production": "tsx scripts/build-production-catalog/index.ts",
+    "data:report": "tsx scripts/report-conflicts/index.ts && tsx scripts/report-stale-data/index.ts && tsx scripts/report-missing-relations/index.ts",
+    "rig:validate": "tsx scripts/validate-rig-fixtures/index.ts",
+    "offers:import": "tsx scripts/import-offers/index.ts",
+    "check": "pnpm lint && pnpm typecheck && pnpm data:validate && pnpm rig:validate && pnpm data:build && pnpm test && pnpm build",
+    "e2e": "playwright test"
+  },
+  "dependencies": {
+    "@creatorrig/affiliate-offers": "workspace:*"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.61.1",
+    "@types/node": "^24.0.0",
+    "eslint": "10.7.0",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "fast-check": "4.9.0",
+    "globals": "^17.0.0",
+    "prettier": "3.9.5",
+    "tsx": "^4.20.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.56.0",
+    "vitest": "4.1.10"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import catalog from '../../../../../data/fixtures/demo-catalog.json';
+import { evidenceHeading, evidenceSourceLabel, formatEvidenceDate, localizeTechnicalCopy, relationTypeLabel } from '../../lib/polish-labels';
+
+export function getStaticPaths() {
+  return catalog.compatibilityEdges
+    .filter((edge) => edge.verificationStatus === 'verified' && edge.evidenceIds.length > 0 && edge.relationType !== 'candidate')
+    .map((edge) => ({ params: { id: edge.id }, props: { edge } }));
+}
+
+const { edge } = Astro.props;
+const source = catalog.products.find((product) => product.id === edge.sourceProductId);
+const target = catalog.products.find((product) => product.id === edge.targetProductId);
+if (!source || !target) throw new Error('Dangling compatibility page edge.');
+const evidence = edge.evidenceIds.map((id) => catalog.evidence.find((item) => item.id === id)).filter(Boolean);
+---
+
+<BaseLayout title={`${source.canonicalName} → ${target.canonicalName}`} description="Wielowymiarowa, dowodowa relacja kompatybilności CreatorRig Match.">
+  <article class="public-page">
+    <p class="eyebrow">Zweryfikowana relacja syntetyczna</p>
+    <h1>{source.canonicalName}<br />→ {target.canonicalName}</h1>
+    <p class={`relation-badge relation-${edge.relationType}`}>{relationTypeLabel(edge.relationType)}</p>
+    {edge.limitations.map((limitation) => <p>Ograniczenie: {localizeTechnicalCopy(limitation)}</p>)}
+    <h2>Elementy wymagane</h2>
+    <ul>{edge.requiredProductIds.map((id) => <li>{catalog.products.find((item) => item.id === id)?.canonicalName ?? id}</li>)}</ul>
+    <h2>Dowody</h2>
+    <ul class="public-list">{evidence.map((item) => item && <li><strong>{evidenceHeading(item.sourceType)}</strong><span>{evidenceSourceLabel(item.sourceType)} · sprawdzono {formatEvidenceDate(item.verifiedAt)}</span></li>)}</ul>
+  </article>
+</BaseLayout>

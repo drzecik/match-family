@@ -1,0 +1,1272 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-17T00:00:00.000Z",
+  "data": {
+    "devices": [
+      {
+        "id": "airpure-ap100-pl",
+        "brand": "AirPure",
+        "canonicalModel": "AP100/PL",
+        "regionalVariant": "/PL",
+        "series": "Seria demonstracyjna PureAir 100",
+        "category": "air-purifier",
+        "aliases": [
+          "AP100/PL",
+          "AP 100 / PL",
+          "AirPure AP100/PL",
+          "PureAir 100 AP100/PL"
+        ],
+        "identifiers": {
+          "productCode": "SYN-AP100PL"
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-device-ap100"
+        ],
+        "verificationStatus": "verified_official",
+        "lastVerifiedAt": "2026-07-10T09:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "airpure-ap101-pl",
+        "brand": "AirPure",
+        "canonicalModel": "AP101/PL",
+        "regionalVariant": "/PL",
+        "series": "Seria demonstracyjna PureAir 100",
+        "category": "air-purifier",
+        "aliases": [
+          "AP101/PL",
+          "AP 101 / PL",
+          "AirPure AP101/PL"
+        ],
+        "identifiers": {
+          "productCode": "SYN-AP101PL"
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-device-ap101"
+        ],
+        "verificationStatus": "verified_official",
+        "lastVerifiedAt": "2026-07-10T09:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "homebreeze-hb200-pl",
+        "brand": "HomeBreeze",
+        "canonicalModel": "HB200/PL",
+        "regionalVariant": "/PL",
+        "series": "Seria demonstracyjna Breeze 200",
+        "category": "air-purifier",
+        "aliases": [
+          "HB200/PL",
+          "HB 200 / PL",
+          "HomeBreeze HB200/PL",
+          "Breeze 200 HB200/PL"
+        ],
+        "identifiers": {
+          "productCode": "SYN-HB200PL"
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-device-hb200-pl"
+        ],
+        "verificationStatus": "verified_official",
+        "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "homebreeze-hb200-de",
+        "brand": "HomeBreeze",
+        "canonicalModel": "HB200/DE",
+        "regionalVariant": "/DE",
+        "series": "Seria demonstracyjna Breeze 200",
+        "category": "air-purifier",
+        "aliases": [
+          "HB200/DE",
+          "HB 200 / DE",
+          "HomeBreeze HB200/DE"
+        ],
+        "identifiers": {
+          "productCode": "SYN-HB200DE"
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-device-hb200-de"
+        ],
+        "verificationStatus": "verified_official",
+        "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "cleanflow-cf300-10",
+        "brand": "CleanFlow",
+        "canonicalModel": "CF300/10",
+        "regionalVariant": "/10",
+        "series": "Seria demonstracyjna AirGuard 300",
+        "category": "air-purifier",
+        "aliases": [
+          "CF300/10",
+          "CF 300 / 10",
+          "CleanFlow CF300/10",
+          "AirGuard 300 CF300/10"
+        ],
+        "identifiers": {
+          "productCode": "SYN-CF30010"
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-device-cf300"
+        ],
+        "verificationStatus": "verified_official",
+        "lastVerifiedAt": "2026-07-13T10:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      }
+    ],
+    "consumables": [
+      {
+        "id": "airpure-purefilter-100",
+        "brand": "AirPure",
+        "canonicalName": "PureFilter 100 — kompletny zestaw demonstracyjny",
+        "sku": "SYN-PF-100",
+        "ean": "0000000000107",
+        "category": "air-purifier-filter-set",
+        "originalOrReplacement": "original",
+        "includedElements": [
+          {
+            "name": "zintegrowany filtr HEPA i węglowy — element demonstracyjny",
+            "quantity": 1
+          }
+        ],
+        "dimensions": {
+          "widthMm": 210,
+          "heightMm": 300,
+          "depthMm": 45
+        },
+        "attributes": {
+          "fixtureVariant": "complete-integrated-set",
+          "syntheticClaim": true
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-original-filter"
+        ],
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "cleanflow-cf100-replacement",
+        "brand": "CleanFlow",
+        "canonicalName": "CF100 — demonstracyjny zestaw zamienny",
+        "sku": "SYN-CF-100",
+        "ean": "0000000000206",
+        "category": "air-purifier-filter-set",
+        "originalOrReplacement": "replacement",
+        "includedElements": [
+          {
+            "name": "filtr HEPA — element demonstracyjny",
+            "quantity": 1
+          },
+          {
+            "name": "filtr węglowy — element demonstracyjny",
+            "quantity": 1
+          }
+        ],
+        "attributes": {
+          "fixtureVariant": "two-piece-replacement-set",
+          "syntheticClaim": true
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-replacement-filter"
+        ],
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "homebreeze-breeze200-service-kit",
+        "brand": "HomeBreeze",
+        "canonicalName": "Breeze 200 — oryginalny zestaw serwisowy (dane demonstracyjne)",
+        "sku": "SYN-HB-KIT-200",
+        "ean": "0000000000305",
+        "category": "air-purifier-filter-set",
+        "originalOrReplacement": "original",
+        "includedElements": [
+          {
+            "name": "filtr HEPA Breeze 200 — element demonstracyjny",
+            "quantity": 1
+          },
+          {
+            "name": "filtr węglowy Breeze 200 — element demonstracyjny",
+            "quantity": 1
+          }
+        ],
+        "dimensions": {
+          "widthMm": 240,
+          "heightMm": 320,
+          "depthMm": 52
+        },
+        "attributes": {
+          "fixtureVariant": "complete-original-set",
+          "syntheticClaim": true
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-hb200-original-components"
+        ],
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "homebreeze-breeze200-hepa",
+        "brand": "HomeBreeze",
+        "canonicalName": "Breeze 200 — oryginalny filtr HEPA (dane demonstracyjne)",
+        "sku": "SYN-HB-HEPA-200",
+        "ean": "0000000000312",
+        "category": "air-purifier-hepa-filter",
+        "originalOrReplacement": "original",
+        "includedElements": [
+          {
+            "name": "filtr HEPA Breeze 200 — element demonstracyjny",
+            "quantity": 1
+          }
+        ],
+        "dimensions": {
+          "widthMm": 240,
+          "heightMm": 260,
+          "depthMm": 40
+        },
+        "attributes": {
+          "fixtureVariant": "single-original-hepa",
+          "syntheticClaim": true
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-hb200-original-components"
+        ],
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "homebreeze-breeze200-carbon",
+        "brand": "HomeBreeze",
+        "canonicalName": "Breeze 200 — oryginalny filtr węglowy (dane demonstracyjne)",
+        "sku": "SYN-HB-CARBON-200",
+        "ean": "0000000000329",
+        "category": "air-purifier-carbon-filter",
+        "originalOrReplacement": "original",
+        "includedElements": [
+          {
+            "name": "filtr węglowy Breeze 200 — element demonstracyjny",
+            "quantity": 1
+          }
+        ],
+        "dimensions": {
+          "widthMm": 240,
+          "heightMm": 260,
+          "depthMm": 12
+        },
+        "attributes": {
+          "fixtureVariant": "single-original-carbon",
+          "syntheticClaim": true
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-hb200-original-components"
+        ],
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "cleanflow-cf200-replacement-kit",
+        "brand": "CleanFlow",
+        "canonicalName": "CF200 — zamienny zestaw serwisowy (dane demonstracyjne)",
+        "sku": "SYN-CF-KIT-200",
+        "ean": "0000000000336",
+        "category": "air-purifier-filter-set",
+        "originalOrReplacement": "replacement",
+        "includedElements": [
+          {
+            "name": "zamienny filtr HEPA — element demonstracyjny",
+            "quantity": 1
+          },
+          {
+            "name": "zamienny filtr węglowy — element demonstracyjny",
+            "quantity": 1
+          }
+        ],
+        "attributes": {
+          "fixtureVariant": "complete-replacement-set",
+          "syntheticClaim": true
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-hb200-replacement-kit"
+        ],
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "cleanflow-airguard300-service-kit",
+        "brand": "CleanFlow",
+        "canonicalName": "AirGuard 300 — oryginalny zestaw serwisowy (dane demonstracyjne)",
+        "sku": "SYN-CF-KIT-300",
+        "ean": "0000000000404",
+        "category": "air-purifier-filter-set",
+        "originalOrReplacement": "original",
+        "includedElements": [
+          {
+            "name": "zintegrowany filtr HEPA i węglowy AirGuard 300 — element demonstracyjny",
+            "quantity": 1
+          },
+          {
+            "name": "prefiltr zmywalny — element demonstracyjny",
+            "quantity": 1
+          }
+        ],
+        "dimensions": {
+          "heightMm": 310,
+          "diameterMm": 230
+        },
+        "attributes": {
+          "fixtureVariant": "complete-original-set",
+          "syntheticClaim": true
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-cf300-original-kit"
+        ],
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "homebreeze-hb300-replacement-kit",
+        "brand": "HomeBreeze",
+        "canonicalName": "HB300 — zamienny zestaw serwisowy (dane demonstracyjne)",
+        "sku": "SYN-HB-KIT-300",
+        "ean": "0000000000411",
+        "category": "air-purifier-filter-set",
+        "originalOrReplacement": "replacement",
+        "includedElements": [
+          {
+            "name": "zamienny filtr zintegrowany — element demonstracyjny",
+            "quantity": 1
+          },
+          {
+            "name": "zamienny prefiltr — element demonstracyjny",
+            "quantity": 1
+          }
+        ],
+        "attributes": {
+          "fixtureVariant": "complete-replacement-set",
+          "syntheticClaim": true
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-cf300-replacement-kit"
+        ],
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "homebreeze-breeze200-seal-frame",
+        "brand": "HomeBreeze",
+        "canonicalName": "Breeze 200 — ramka montażowa i uszczelka (dane demonstracyjne)",
+        "sku": "SYN-HB-ACC-200",
+        "ean": "0000000000343",
+        "category": "air-purifier-accessory",
+        "originalOrReplacement": "original",
+        "includedElements": [
+          {
+            "name": "ramka montażowa — element demonstracyjny",
+            "quantity": 1
+          },
+          {
+            "name": "uszczelka obwodowa — element demonstracyjny",
+            "quantity": 1
+          }
+        ],
+        "attributes": {
+          "fixtureVariant": "optional-seal-frame",
+          "syntheticClaim": true
+        },
+        "lifecycleStatus": "active",
+        "sourceReferences": [
+          "evidence-hb200-seal-frame"
+        ],
+        "synthetic": true,
+        "notForProduction": true
+      }
+    ],
+    "compatibilityEdges": [
+      {
+        "id": "compat-ap100-pf100",
+        "deviceId": "airpure-ap100-pl",
+        "consumableId": "airpure-purefilter-100",
+        "relationType": "required",
+        "verificationStatus": "verified_official",
+        "confidence": 1,
+        "evidenceIds": [
+          "evidence-original-filter"
+        ],
+        "notes": "Dane demonstracyjne: wymagany jest jeden zintegrowany, oryginalny zestaw filtrów.",
+        "validFrom": "2026-07-10T09:00:00.000Z",
+        "lastVerifiedAt": "2026-07-10T09:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "compat-ap100-cf100",
+        "deviceId": "airpure-ap100-pl",
+        "consumableId": "cleanflow-cf100-replacement",
+        "relationType": "alternative",
+        "verificationStatus": "verified_supplier",
+        "confidence": 0.9,
+        "evidenceIds": [
+          "evidence-replacement-filter"
+        ],
+        "notes": "Dane demonstracyjne: zweryfikowany zamiennik jest zestawem dwuelementowym.",
+        "validFrom": "2026-07-10T09:00:00.000Z",
+        "lastVerifiedAt": "2026-07-10T09:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "compat-hb200-pl-original-kit",
+        "deviceId": "homebreeze-hb200-pl",
+        "consumableId": "homebreeze-breeze200-service-kit",
+        "relationType": "required",
+        "verificationStatus": "verified_official",
+        "confidence": 1,
+        "evidenceIds": [
+          "evidence-hb200-original-components"
+        ],
+        "notes": "Dane demonstracyjne: HB200/PL wymaga kompletnego, oryginalnego zestawu serwisowego złożonego z dwóch elementów.",
+        "validFrom": "2026-07-12T10:00:00.000Z",
+        "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "compat-hb200-pl-cf200-kit",
+        "deviceId": "homebreeze-hb200-pl",
+        "consumableId": "cleanflow-cf200-replacement-kit",
+        "relationType": "alternative",
+        "verificationStatus": "verified_supplier",
+        "confidence": 0.9,
+        "evidenceIds": [
+          "evidence-hb200-replacement-kit"
+        ],
+        "notes": "Dane demonstracyjne: kompletny zestaw zamienny może zastąpić zestaw oryginalny.",
+        "validFrom": "2026-07-12T10:00:00.000Z",
+        "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "compat-hb200-pl-seal-frame",
+        "deviceId": "homebreeze-hb200-pl",
+        "consumableId": "homebreeze-breeze200-seal-frame",
+        "relationType": "optional",
+        "verificationStatus": "verified_official",
+        "confidence": 1,
+        "evidenceIds": [
+          "evidence-hb200-seal-frame"
+        ],
+        "notes": "Dane demonstracyjne: opcjonalne akcesorium serwisowe, które nie jest wymagane do zgodności filtrów.",
+        "validFrom": "2026-07-12T10:00:00.000Z",
+        "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "compat-hb200-de-original-hepa",
+        "deviceId": "homebreeze-hb200-de",
+        "consumableId": "homebreeze-breeze200-hepa",
+        "relationType": "required",
+        "verificationStatus": "verified_official",
+        "confidence": 1,
+        "evidenceIds": [
+          "evidence-hb200-original-components"
+        ],
+        "notes": "Dane demonstracyjne: HB200/DE wymaga tego pojedynczego, oryginalnego filtra HEPA.",
+        "validFrom": "2026-07-12T10:00:00.000Z",
+        "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "compat-hb200-de-original-carbon",
+        "deviceId": "homebreeze-hb200-de",
+        "consumableId": "homebreeze-breeze200-carbon",
+        "relationType": "required",
+        "verificationStatus": "verified_official",
+        "confidence": 1,
+        "evidenceIds": [
+          "evidence-hb200-original-components"
+        ],
+        "notes": "Dane demonstracyjne: HB200/DE wymaga również tego pojedynczego, oryginalnego filtra węglowego.",
+        "validFrom": "2026-07-12T10:00:00.000Z",
+        "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "compat-hb200-de-cf200-kit",
+        "deviceId": "homebreeze-hb200-de",
+        "consumableId": "cleanflow-cf200-replacement-kit",
+        "relationType": "alternative",
+        "verificationStatus": "verified_supplier",
+        "confidence": 0.9,
+        "evidenceIds": [
+          "evidence-hb200-replacement-kit"
+        ],
+        "notes": "Dane demonstracyjne: zestaw zamienny zastępuje oba wymagane elementy oryginalne.",
+        "validFrom": "2026-07-12T10:00:00.000Z",
+        "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "compat-cf300-original-kit",
+        "deviceId": "cleanflow-cf300-10",
+        "consumableId": "cleanflow-airguard300-service-kit",
+        "relationType": "required",
+        "verificationStatus": "verified_official",
+        "confidence": 1,
+        "evidenceIds": [
+          "evidence-cf300-original-kit"
+        ],
+        "notes": "Dane demonstracyjne: CF300/10 wymaga kompletnego, oryginalnego zestawu serwisowego.",
+        "validFrom": "2026-07-13T10:00:00.000Z",
+        "lastVerifiedAt": "2026-07-13T10:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "compat-cf300-hb300-kit",
+        "deviceId": "cleanflow-cf300-10",
+        "consumableId": "homebreeze-hb300-replacement-kit",
+        "relationType": "alternative",
+        "verificationStatus": "verified_supplier",
+        "confidence": 0.9,
+        "evidenceIds": [
+          "evidence-cf300-replacement-kit"
+        ],
+        "notes": "Dane demonstracyjne: zweryfikowany przez dostawcę zestaw zamienny może zastąpić zestaw oryginalny.",
+        "validFrom": "2026-07-13T10:00:00.000Z",
+        "lastVerifiedAt": "2026-07-13T10:00:00.000Z",
+        "synthetic": true,
+        "notForProduction": true
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "id": "evidence-device-ap100",
+        "sourceType": "official_product_page",
+        "title": "Demonstracyjny dokument identyfikacyjny AirPure AP100",
+        "url": "https://docs.airpure.example/fixtures/ap100-pl",
+        "manufacturer": "AirPure (fikcyjna marka demonstracyjna)",
+        "documentVersion": "fixture-v1",
+        "accessedAt": "2026-07-10T08:00:00.000Z",
+        "evidenceSummary": "Dokument demonstracyjny potwierdza wyłącznie tożsamość urządzenia i jego sufiks regionalny.",
+        "reviewer": "fixture-reviewer",
+        "verifiedAt": "2026-07-10T09:00:00.000Z",
+        "verificationDecision": "verified_official",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "evidence-device-ap101",
+        "sourceType": "official_product_page",
+        "title": "Demonstracyjny dokument identyfikacyjny AirPure AP101",
+        "url": "https://docs.airpure.example/fixtures/ap101-pl",
+        "manufacturer": "AirPure (fikcyjna marka demonstracyjna)",
+        "documentVersion": "fixture-v1",
+        "accessedAt": "2026-07-10T08:00:00.000Z",
+        "evidenceSummary": "Dokument demonstracyjny potwierdza odrębny model, którego numer różni się jedną cyfrą.",
+        "reviewer": "fixture-reviewer",
+        "verifiedAt": "2026-07-10T09:00:00.000Z",
+        "verificationDecision": "verified_official",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "evidence-original-filter",
+        "sourceType": "official_manual",
+        "title": "Demonstracyjna instrukcja zgodności modelu AP100",
+        "url": "https://docs.airpure.example/fixtures/ap100-manual",
+        "manufacturer": "AirPure (fikcyjna marka demonstracyjna)",
+        "documentVersion": "fixture-v1",
+        "pageReference": "12",
+        "accessedAt": "2026-07-10T08:00:00.000Z",
+        "evidenceSummary": "Instrukcja demonstracyjna wskazuje, że AP100/PL wymaga jednego zintegrowanego zestawu filtrów SYN-PF-100.",
+        "reviewer": "fixture-reviewer",
+        "verifiedAt": "2026-07-10T09:00:00.000Z",
+        "verificationDecision": "verified_official",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "evidence-replacement-filter",
+        "sourceType": "replacement_manufacturer",
+        "title": "Demonstracyjna deklaracja zgodności CleanFlow CF100",
+        "url": "https://docs.cleanflow.example/fixtures/cf100",
+        "manufacturer": "CleanFlow (fikcyjna marka demonstracyjna)",
+        "documentVersion": "fixture-v2",
+        "accessedAt": "2026-07-10T08:00:00.000Z",
+        "evidenceSummary": "Deklaracja demonstracyjna dostawcy wskazuje model AP100/PL oraz dwuelementowy zestaw SYN-CF-100.",
+        "reviewer": "fixture-reviewer",
+        "verifiedAt": "2026-07-10T09:00:00.000Z",
+        "verificationDecision": "verified_supplier",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "evidence-device-hb200-pl",
+        "sourceType": "official_product_page",
+        "title": "Demonstracyjny dokument identyfikacyjny HomeBreeze HB200/PL",
+        "url": "https://docs.homebreeze.example/fixtures/hb200-pl",
+        "manufacturer": "HomeBreeze (fikcyjna marka demonstracyjna)",
+        "documentVersion": "fixture-v1",
+        "accessedAt": "2026-07-12T08:00:00.000Z",
+        "evidenceSummary": "Oficjalny dokument demonstracyjny identyfikuje wariant regionalny HB200/PL.",
+        "reviewer": "fixture-reviewer",
+        "verifiedAt": "2026-07-12T10:00:00.000Z",
+        "verificationDecision": "verified_official",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "evidence-device-hb200-de",
+        "sourceType": "official_product_page",
+        "title": "Demonstracyjny dokument identyfikacyjny HomeBreeze HB200/DE",
+        "url": "https://docs.homebreeze.example/fixtures/hb200-de",
+        "manufacturer": "HomeBreeze (fikcyjna marka demonstracyjna)",
+        "documentVersion": "fixture-v1",
+        "accessedAt": "2026-07-12T08:00:00.000Z",
+        "evidenceSummary": "Oficjalny dokument demonstracyjny identyfikuje odrębny wariant regionalny HB200/DE.",
+        "reviewer": "fixture-reviewer",
+        "verifiedAt": "2026-07-12T10:00:00.000Z",
+        "verificationDecision": "verified_official",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "evidence-hb200-original-components",
+        "sourceType": "official_manual",
+        "title": "Demonstracyjna tabela serwisowa Breeze 200",
+        "url": "https://docs.homebreeze.example/fixtures/hb200-service-matrix",
+        "manufacturer": "HomeBreeze (fikcyjna marka demonstracyjna)",
+        "documentVersion": "fixture-v3",
+        "pageReference": "18–19",
+        "accessedAt": "2026-07-12T08:30:00.000Z",
+        "evidenceSummary": "Tabela demonstracyjna wskazuje, że HB200/PL używa kompletnego zestawu SYN-HB-KIT-200, a HB200/DE wymaga osobno filtra HEPA SYN-HB-HEPA-200 i filtra węglowego SYN-HB-CARBON-200.",
+        "reviewer": "fixture-reviewer",
+        "verifiedAt": "2026-07-12T10:00:00.000Z",
+        "verificationDecision": "verified_official",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "evidence-hb200-replacement-kit",
+        "sourceType": "replacement_manufacturer",
+        "title": "Demonstracyjna deklaracja zgodności CleanFlow CF200",
+        "url": "https://docs.cleanflow.example/fixtures/cf200-hb200",
+        "manufacturer": "CleanFlow (fikcyjna marka demonstracyjna)",
+        "documentVersion": "fixture-v1",
+        "accessedAt": "2026-07-12T09:00:00.000Z",
+        "evidenceSummary": "Deklaracja demonstracyjna dostawcy wskazuje zestaw zamienny SYN-CF-KIT-200 dla modeli HB200/PL i HB200/DE.",
+        "reviewer": "fixture-reviewer",
+        "verifiedAt": "2026-07-12T10:00:00.000Z",
+        "verificationDecision": "verified_supplier",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "evidence-hb200-seal-frame",
+        "sourceType": "official_product_page",
+        "title": "Demonstracyjny dokument opcjonalnej ramki i uszczelki Breeze 200",
+        "url": "https://docs.homebreeze.example/fixtures/hb200-seal-frame",
+        "manufacturer": "HomeBreeze (fikcyjna marka demonstracyjna)",
+        "documentVersion": "fixture-v1",
+        "accessedAt": "2026-07-12T09:30:00.000Z",
+        "evidenceSummary": "Oficjalny dokument demonstracyjny wymienia SYN-HB-ACC-200 jako opcjonalne akcesorium serwisowe do HB200/PL.",
+        "reviewer": "fixture-reviewer",
+        "verifiedAt": "2026-07-12T10:00:00.000Z",
+        "verificationDecision": "verified_official",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "evidence-device-cf300",
+        "sourceType": "official_product_page",
+        "title": "Demonstracyjny dokument identyfikacyjny CleanFlow CF300/10",
+        "url": "https://docs.cleanflow.example/fixtures/cf300-10",
+        "manufacturer": "CleanFlow (fikcyjna marka demonstracyjna)",
+        "documentVersion": "fixture-v1",
+        "accessedAt": "2026-07-13T08:00:00.000Z",
+        "evidenceSummary": "Oficjalny dokument demonstracyjny identyfikuje model AirGuard 300 CF300/10.",
+        "reviewer": "fixture-reviewer",
+        "verifiedAt": "2026-07-13T10:00:00.000Z",
+        "verificationDecision": "verified_official",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "evidence-cf300-original-kit",
+        "sourceType": "official_manual",
+        "title": "Demonstracyjna instrukcja wymiany filtrów AirGuard 300",
+        "url": "https://docs.cleanflow.example/fixtures/cf300-filter-instruction",
+        "manufacturer": "CleanFlow (fikcyjna marka demonstracyjna)",
+        "documentVersion": "fixture-v2",
+        "pageReference": "22",
+        "accessedAt": "2026-07-13T08:30:00.000Z",
+        "evidenceSummary": "Instrukcja demonstracyjna wymaga oryginalnego kompletnego zestawu SYN-CF-KIT-300 dla modelu CF300/10.",
+        "reviewer": "fixture-reviewer",
+        "verifiedAt": "2026-07-13T10:00:00.000Z",
+        "verificationDecision": "verified_official",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "evidence-cf300-replacement-kit",
+        "sourceType": "replacement_manufacturer",
+        "title": "Demonstracyjna deklaracja zgodności HomeBreeze HB300",
+        "url": "https://docs.homebreeze.example/fixtures/hb300-cf300",
+        "manufacturer": "HomeBreeze (fikcyjna marka demonstracyjna)",
+        "documentVersion": "fixture-v1",
+        "accessedAt": "2026-07-13T09:00:00.000Z",
+        "evidenceSummary": "Deklaracja demonstracyjna dostawcy wskazuje zestaw zamienny SYN-HB-KIT-300 dla modelu CF300/10.",
+        "reviewer": "fixture-reviewer",
+        "verifiedAt": "2026-07-13T10:00:00.000Z",
+        "verificationDecision": "verified_supplier",
+        "synthetic": true,
+        "notForProduction": true
+      }
+    ],
+    "searchAliases": [
+      {
+        "id": "alias-ap100-canonical",
+        "entityType": "device",
+        "entityId": "airpure-ap100-pl",
+        "rawAlias": "AP100/PL",
+        "normalizedAlias": "AP100/PL",
+        "aliasType": "canonical",
+        "approved": true,
+        "source": "evidence-device-ap100",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-ap100-spaces",
+        "entityType": "device",
+        "entityId": "airpure-ap100-pl",
+        "rawAlias": "AP 100 / PL",
+        "normalizedAlias": "AP100/PL",
+        "aliasType": "separator_variant",
+        "approved": true,
+        "source": "manual-fixture-review",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-ap100-brand",
+        "entityType": "device",
+        "entityId": "airpure-ap100-pl",
+        "rawAlias": "AirPure AP100/PL",
+        "normalizedAlias": "AIRPURE AP100/PL",
+        "aliasType": "series_name",
+        "approved": true,
+        "source": "manual-fixture-review",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-ap100-product-code",
+        "entityType": "device",
+        "entityId": "airpure-ap100-pl",
+        "rawAlias": "SYN-AP100PL",
+        "normalizedAlias": "SYN-AP100PL",
+        "aliasType": "product_code",
+        "approved": true,
+        "source": "evidence-device-ap100",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-ap101-canonical",
+        "entityType": "device",
+        "entityId": "airpure-ap101-pl",
+        "rawAlias": "AP101/PL",
+        "normalizedAlias": "AP101/PL",
+        "aliasType": "canonical",
+        "approved": true,
+        "source": "evidence-device-ap101",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-ap101-spaces",
+        "entityType": "device",
+        "entityId": "airpure-ap101-pl",
+        "rawAlias": "AP 101 / PL",
+        "normalizedAlias": "AP101/PL",
+        "aliasType": "separator_variant",
+        "approved": true,
+        "source": "manual-fixture-review",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-filter-original-sku",
+        "entityType": "consumable",
+        "entityId": "airpure-purefilter-100",
+        "rawAlias": "SYN-PF-100",
+        "normalizedAlias": "SYN-PF-100",
+        "aliasType": "product_code",
+        "approved": true,
+        "source": "evidence-original-filter",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-filter-replacement-sku",
+        "entityType": "consumable",
+        "entityId": "cleanflow-cf100-replacement",
+        "rawAlias": "SYN-CF-100",
+        "normalizedAlias": "SYN-CF-100",
+        "aliasType": "product_code",
+        "approved": true,
+        "source": "evidence-replacement-filter",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-hb200-pl-canonical",
+        "entityType": "device",
+        "entityId": "homebreeze-hb200-pl",
+        "rawAlias": "HB200/PL",
+        "normalizedAlias": "HB200/PL",
+        "aliasType": "canonical",
+        "approved": true,
+        "source": "evidence-device-hb200-pl",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-hb200-pl-spaces",
+        "entityType": "device",
+        "entityId": "homebreeze-hb200-pl",
+        "rawAlias": "HB 200 / PL",
+        "normalizedAlias": "HB200/PL",
+        "aliasType": "separator_variant",
+        "approved": true,
+        "source": "manual-fixture-review",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-hb200-pl-brand",
+        "entityType": "device",
+        "entityId": "homebreeze-hb200-pl",
+        "rawAlias": "HomeBreeze HB200/PL",
+        "normalizedAlias": "HOMEBREEZE HB200/PL",
+        "aliasType": "series_name",
+        "approved": true,
+        "source": "manual-fixture-review",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-hb200-pl-product-code",
+        "entityType": "device",
+        "entityId": "homebreeze-hb200-pl",
+        "rawAlias": "SYN-HB200PL",
+        "normalizedAlias": "SYN-HB200PL",
+        "aliasType": "product_code",
+        "approved": true,
+        "source": "evidence-device-hb200-pl",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-hb200-de-canonical",
+        "entityType": "device",
+        "entityId": "homebreeze-hb200-de",
+        "rawAlias": "HB200/DE",
+        "normalizedAlias": "HB200/DE",
+        "aliasType": "canonical",
+        "approved": true,
+        "source": "evidence-device-hb200-de",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-hb200-de-spaces",
+        "entityType": "device",
+        "entityId": "homebreeze-hb200-de",
+        "rawAlias": "HB 200 / DE",
+        "normalizedAlias": "HB200/DE",
+        "aliasType": "separator_variant",
+        "approved": true,
+        "source": "manual-fixture-review",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-hb200-de-brand",
+        "entityType": "device",
+        "entityId": "homebreeze-hb200-de",
+        "rawAlias": "HomeBreeze HB200/DE",
+        "normalizedAlias": "HOMEBREEZE HB200/DE",
+        "aliasType": "series_name",
+        "approved": true,
+        "source": "manual-fixture-review",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-hb200-de-product-code",
+        "entityType": "device",
+        "entityId": "homebreeze-hb200-de",
+        "rawAlias": "SYN-HB200DE",
+        "normalizedAlias": "SYN-HB200DE",
+        "aliasType": "product_code",
+        "approved": true,
+        "source": "evidence-device-hb200-de",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-cf300-canonical",
+        "entityType": "device",
+        "entityId": "cleanflow-cf300-10",
+        "rawAlias": "CF300/10",
+        "normalizedAlias": "CF300/10",
+        "aliasType": "canonical",
+        "approved": true,
+        "source": "evidence-device-cf300",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-cf300-spaces",
+        "entityType": "device",
+        "entityId": "cleanflow-cf300-10",
+        "rawAlias": "CF 300 / 10",
+        "normalizedAlias": "CF300/10",
+        "aliasType": "separator_variant",
+        "approved": true,
+        "source": "manual-fixture-review",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-cf300-brand",
+        "entityType": "device",
+        "entityId": "cleanflow-cf300-10",
+        "rawAlias": "CleanFlow CF300/10",
+        "normalizedAlias": "CLEANFLOW CF300/10",
+        "aliasType": "series_name",
+        "approved": true,
+        "source": "manual-fixture-review",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-cf300-product-code",
+        "entityType": "device",
+        "entityId": "cleanflow-cf300-10",
+        "rawAlias": "SYN-CF30010",
+        "normalizedAlias": "SYN-CF30010",
+        "aliasType": "product_code",
+        "approved": true,
+        "source": "evidence-device-cf300",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-hb200-kit-sku",
+        "entityType": "consumable",
+        "entityId": "homebreeze-breeze200-service-kit",
+        "rawAlias": "SYN-HB-KIT-200",
+        "normalizedAlias": "SYN-HB-KIT-200",
+        "aliasType": "product_code",
+        "approved": true,
+        "source": "evidence-hb200-original-components",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-hb200-hepa-sku",
+        "entityType": "consumable",
+        "entityId": "homebreeze-breeze200-hepa",
+        "rawAlias": "SYN-HB-HEPA-200",
+        "normalizedAlias": "SYN-HB-HEPA-200",
+        "aliasType": "product_code",
+        "approved": true,
+        "source": "evidence-hb200-original-components",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-hb200-carbon-sku",
+        "entityType": "consumable",
+        "entityId": "homebreeze-breeze200-carbon",
+        "rawAlias": "SYN-HB-CARBON-200",
+        "normalizedAlias": "SYN-HB-CARBON-200",
+        "aliasType": "product_code",
+        "approved": true,
+        "source": "evidence-hb200-original-components",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-cf200-kit-sku",
+        "entityType": "consumable",
+        "entityId": "cleanflow-cf200-replacement-kit",
+        "rawAlias": "SYN-CF-KIT-200",
+        "normalizedAlias": "SYN-CF-KIT-200",
+        "aliasType": "product_code",
+        "approved": true,
+        "source": "evidence-hb200-replacement-kit",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-hb200-accessory-sku",
+        "entityType": "consumable",
+        "entityId": "homebreeze-breeze200-seal-frame",
+        "rawAlias": "SYN-HB-ACC-200",
+        "normalizedAlias": "SYN-HB-ACC-200",
+        "aliasType": "product_code",
+        "approved": true,
+        "source": "evidence-hb200-seal-frame",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-cf300-kit-sku",
+        "entityType": "consumable",
+        "entityId": "cleanflow-airguard300-service-kit",
+        "rawAlias": "SYN-CF-KIT-300",
+        "normalizedAlias": "SYN-CF-KIT-300",
+        "aliasType": "product_code",
+        "approved": true,
+        "source": "evidence-cf300-original-kit",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "alias-hb300-kit-sku",
+        "entityType": "consumable",
+        "entityId": "homebreeze-hb300-replacement-kit",
+        "rawAlias": "SYN-HB-KIT-300",
+        "normalizedAlias": "SYN-HB-KIT-300",
+        "aliasType": "product_code",
+        "approved": true,
+        "source": "evidence-cf300-replacement-kit",
+        "synthetic": true,
+        "notForProduction": true
+      }
+    ],
+    "offers": [
+      {
+        "id": "offer-fixture-original-current",
+        "consumableId": "airpure-purefilter-100",
+        "merchant": "Rynek Filtrów — sklep demonstracyjny",
+        "merchantProductId": "SYN-OFFER-PF100",
+        "sku": "SYN-PF-100",
+        "ean": "0000000000107",
+        "priceMinor": 12999,
+        "currency": "PLN",
+        "shippingMinor": 999,
+        "availability": "in_stock",
+        "destinationUrl": "https://shop.filtermatch.example/fixtures/pf100",
+        "affiliateUrl": "https://shop.filtermatch.example/fixtures/pf100?ref=filtermatch-demo",
+        "sponsored": false,
+        "fetchedAt": "2026-07-15T08:00:00.000Z",
+        "expiresAt": "2026-08-15T08:00:00.000Z",
+        "status": "active",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "offer-fixture-replacement-current",
+        "consumableId": "cleanflow-cf100-replacement",
+        "merchant": "Filtry Pokazowe — sklep demonstracyjny",
+        "merchantProductId": "SYN-OFFER-CF100",
+        "sku": "SYN-CF-100",
+        "ean": "0000000000206",
+        "priceMinor": 8999,
+        "currency": "PLN",
+        "availability": "in_stock",
+        "destinationUrl": "https://demo.cleanflow.example/offers/cf100",
+        "sponsored": true,
+        "fetchedAt": "2026-07-15T08:00:00.000Z",
+        "expiresAt": "2026-08-15T08:00:00.000Z",
+        "status": "active",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "offer-fixture-original-expired",
+        "consumableId": "airpure-purefilter-100",
+        "merchant": "Dawny Sklep z Filtrami — oferta historyczna",
+        "merchantProductId": "SYN-OLD-PF100",
+        "sku": "SYN-PF-100",
+        "priceMinor": 7999,
+        "currency": "PLN",
+        "availability": "unknown",
+        "destinationUrl": "https://old-shop.filtermatch.example/fixtures/pf100",
+        "sponsored": false,
+        "fetchedAt": "2025-01-01T08:00:00.000Z",
+        "expiresAt": "2025-01-15T08:00:00.000Z",
+        "status": "expired",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "offer-fixture-hb200-original-kit",
+        "consumableId": "homebreeze-breeze200-service-kit",
+        "merchant": "Sklep Breeze — sklep demonstracyjny",
+        "merchantProductId": "SYN-OFFER-HB-KIT-200",
+        "sku": "SYN-HB-KIT-200",
+        "ean": "0000000000305",
+        "priceMinor": 15999,
+        "currency": "PLN",
+        "shippingMinor": 0,
+        "availability": "in_stock",
+        "destinationUrl": "https://shop.homebreeze.example/fixtures/hb-kit-200",
+        "sponsored": false,
+        "fetchedAt": "2026-07-16T08:00:00.000Z",
+        "expiresAt": "2026-08-16T08:00:00.000Z",
+        "status": "active",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "offer-fixture-hb200-hepa",
+        "consumableId": "homebreeze-breeze200-hepa",
+        "merchant": "Sklep Breeze — sklep demonstracyjny",
+        "merchantProductId": "SYN-OFFER-HB-HEPA-200",
+        "sku": "SYN-HB-HEPA-200",
+        "ean": "0000000000312",
+        "priceMinor": 9999,
+        "currency": "PLN",
+        "shippingMinor": 899,
+        "availability": "in_stock",
+        "destinationUrl": "https://shop.homebreeze.example/fixtures/hb-hepa-200",
+        "sponsored": false,
+        "fetchedAt": "2026-07-16T08:00:00.000Z",
+        "expiresAt": "2026-08-16T08:00:00.000Z",
+        "status": "active",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "offer-fixture-hb200-carbon",
+        "consumableId": "homebreeze-breeze200-carbon",
+        "merchant": "Sklep Breeze — sklep demonstracyjny",
+        "merchantProductId": "SYN-OFFER-HB-CARBON-200",
+        "sku": "SYN-HB-CARBON-200",
+        "ean": "0000000000329",
+        "priceMinor": 5999,
+        "currency": "PLN",
+        "shippingMinor": 899,
+        "availability": "in_stock",
+        "destinationUrl": "https://shop.homebreeze.example/fixtures/hb-carbon-200",
+        "sponsored": false,
+        "fetchedAt": "2026-07-16T08:00:00.000Z",
+        "expiresAt": "2026-08-16T08:00:00.000Z",
+        "status": "active",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "offer-fixture-cf200-replacement-kit",
+        "consumableId": "cleanflow-cf200-replacement-kit",
+        "merchant": "Filtry Pokazowe — sklep demonstracyjny",
+        "merchantProductId": "SYN-OFFER-CF-KIT-200",
+        "sku": "SYN-CF-KIT-200",
+        "ean": "0000000000336",
+        "priceMinor": 11999,
+        "currency": "PLN",
+        "shippingMinor": 0,
+        "availability": "in_stock",
+        "destinationUrl": "https://demo.cleanflow.example/offers/cf-kit-200",
+        "affiliateUrl": "https://demo.cleanflow.example/offers/cf-kit-200?ref=filtermatch-demo",
+        "sponsored": true,
+        "fetchedAt": "2026-07-16T08:00:00.000Z",
+        "expiresAt": "2026-08-16T08:00:00.000Z",
+        "status": "active",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "offer-fixture-hb200-accessory",
+        "consumableId": "homebreeze-breeze200-seal-frame",
+        "merchant": "Sklep Breeze — sklep demonstracyjny",
+        "merchantProductId": "SYN-OFFER-HB-ACC-200",
+        "sku": "SYN-HB-ACC-200",
+        "ean": "0000000000343",
+        "priceMinor": 3999,
+        "currency": "PLN",
+        "shippingMinor": 899,
+        "availability": "in_stock",
+        "destinationUrl": "https://shop.homebreeze.example/fixtures/hb-accessory-200",
+        "sponsored": false,
+        "fetchedAt": "2026-07-16T08:00:00.000Z",
+        "expiresAt": "2026-08-16T08:00:00.000Z",
+        "status": "active",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "offer-fixture-cf300-original-kit",
+        "consumableId": "cleanflow-airguard300-service-kit",
+        "merchant": "Sklep AirGuard — sklep demonstracyjny",
+        "merchantProductId": "SYN-OFFER-CF-KIT-300",
+        "sku": "SYN-CF-KIT-300",
+        "ean": "0000000000404",
+        "priceMinor": 14999,
+        "currency": "PLN",
+        "shippingMinor": 0,
+        "availability": "in_stock",
+        "destinationUrl": "https://shop.cleanflow.example/fixtures/cf-kit-300",
+        "sponsored": false,
+        "fetchedAt": "2026-07-16T08:00:00.000Z",
+        "expiresAt": "2026-08-16T08:00:00.000Z",
+        "status": "active",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "offer-fixture-hb300-replacement-kit",
+        "consumableId": "homebreeze-hb300-replacement-kit",
+        "merchant": "Rynek Filtrów — sklep demonstracyjny",
+        "merchantProductId": "SYN-OFFER-HB-KIT-300",
+        "sku": "SYN-HB-KIT-300",
+        "ean": "0000000000411",
+        "priceMinor": 10999,
+        "currency": "PLN",
+        "shippingMinor": 999,
+        "availability": "in_stock",
+        "destinationUrl": "https://shop.filtermatch.example/fixtures/hb-kit-300",
+        "affiliateUrl": "https://shop.filtermatch.example/fixtures/hb-kit-300?ref=filtermatch-demo",
+        "sponsored": false,
+        "fetchedAt": "2026-07-16T08:00:00.000Z",
+        "expiresAt": "2026-08-16T08:00:00.000Z",
+        "status": "active",
+        "synthetic": true,
+        "notForProduction": true
+      }
+    ],
+    "reviewDecisions": []
+  }
+}

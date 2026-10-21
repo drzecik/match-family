@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify compatibility edge"
+  short_description: "Prepare evidence-led compatibility review"
+  default_prompt: "Use $verify-compatibility-edge to review a compatibility edge using the supplied evidence and decision authority."

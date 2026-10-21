@@ -1,0 +1,633 @@
+{
+  "status": "SOURCE_COPY_ONLY_NOT_PUBLISHED",
+  "excluded_original_paths": [
+    {
+      "project": "filtermatch",
+      "path": ".env.example",
+      "reason": "Excluded environment/dependency/private artifact"
+    },
+    {
+      "project": "filtermatch",
+      "path": ".github/workflows/ci.yml",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "filtermatch",
+      "path": "AGENTS.md",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "filtermatch",
+      "path": "README.md",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "filtermatch",
+      "path": "WORKSHOP_PROJECT.json",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "filtermatch",
+      "path": "apps/web/e2e/private-review.spec.ts",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/candidates/catalogs/other-brands.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/candidates/catalogs/philips.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/candidates/catalogs/xiaomi.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/generated/alias-collisions-report.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/generated/catalog-coverage-report.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/generated/conflicts-report.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/generated/devices-without-consumables-report.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/generated/missing-evidence-report.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/generated/missing-offers-report.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/generated/model-search-index.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/generated/public-snapshot.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/generated/review-packet.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/generated/snapshot.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/generated/source-links-report.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/generated/stale-report.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "data/generated/validation-report.json",
+      "reason": "Generated/private catalog or private catalog acceptance test"
+    },
+    {
+      "project": "filtermatch",
+      "path": "docs/ASSUMPTIONS.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "filtermatch",
+      "path": "docs/DATA_OPERATIONS.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "filtermatch",
+      "path": "docs/DEPLOYMENT.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "filtermatch",
+      "path": "docs/PRODUCT.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "filtermatch",
+      "path": "docs/REAL_DATA_SCOPE.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "filtermatch",
+      "path": "docs/RELEASE.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "filtermatch",
+      "path": "docs/ROADMAP.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "filtermatch",
+      "path": "docs/SEO_POLICY.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "filtermatch",
+      "path": "docs/research/OTHER_BRANDS_CANDIDATES.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "filtermatch",
+      "path": "docs/research/PHILIPS_CANDIDATES.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "filtermatch",
+      "path": "docs/research/XIAOMI_CANDIDATES.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "filtermatch",
+      "path": "vercel.json",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": ".github/workflows/ci.yml",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "AGENTS.md",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "ASSUMPTIONS.md",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "README.md",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "WORKSHOP_PROJECT.json",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "apps/web/e2e/candidate-catalog.spec.ts",
+      "reason": "Private catalog presentation, not part of synthetic public demo"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "apps/web/e2e/candidate-quick-match.spec.ts",
+      "reason": "Private catalog presentation, not part of synthetic public demo"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "apps/web/e2e/research-rig.spec.ts",
+      "reason": "Private catalog presentation, not part of synthetic public demo"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "apps/web/src/components/CandidateQuickMatch.tsx",
+      "reason": "Private catalog presentation, not part of synthetic public demo"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "apps/web/src/components/ResearchRigBuilder.tsx",
+      "reason": "Private catalog presentation, not part of synthetic public demo"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "apps/web/src/lib/candidate-product.test.ts",
+      "reason": "Test requires excluded private catalog"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "apps/web/src/pages/katalog-badawczy.astro",
+      "reason": "Private catalog presentation, not part of synthetic public demo"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "apps/web/src/pages/katalog-badawczy/[id].astro",
+      "reason": "Private catalog presentation, not part of synthetic public demo"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "apps/web/src/pages/planer-rigu.astro",
+      "reason": "Private catalog presentation, not part of synthetic public demo"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "apps/web/src/pages/szybkie-sprawdzenie.astro",
+      "reason": "Private catalog presentation, not part of synthetic public demo"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "data/candidates/README.md",
+      "reason": "Private researched catalog or derived data"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "data/candidates/canon-rf-optics-media.REVIEW.md",
+      "reason": "Private researched catalog or derived data"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "data/candidates/canon-rf-optics-media.json",
+      "reason": "Private researched catalog or derived data"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "data/candidates/real-accessories-expansion.json",
+      "reason": "Private researched catalog or derived data"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "data/candidates/real-audio-mobile.json",
+      "reason": "Private researched catalog or derived data"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "data/candidates/real-capture-optics-storage-expansion.json",
+      "reason": "Private researched catalog or derived data"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "data/candidates/real-workflow-accessories-expansion.json",
+      "reason": "Private researched catalog or derived data"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "data/generated/candidate-catalog.json",
+      "reason": "Private researched catalog or derived data"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "data/generated/compatibility-graph.json",
+      "reason": "Private researched catalog or derived data"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "data/generated/search-index.json",
+      "reason": "Private researched catalog or derived data"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "docs/ASSUMPTIONS.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "docs/CATALOG_COVERAGE.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "docs/DATA_OPERATIONS.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "docs/PRODUCT.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "docs/ROADMAP.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "docs/SEO_POLICY.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "docs/reviews/real-audio-mobile-candidate.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "scripts/candidate-quick-match.integration.test.ts",
+      "reason": "Test requires excluded private catalog"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "scripts/real-accessories-expansion.integration.test.ts",
+      "reason": "Test requires excluded private catalog"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "scripts/real-audio-mobile.integration.test.ts",
+      "reason": "Test requires excluded private catalog"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "scripts/real-canon-candidate.integration.test.ts",
+      "reason": "Test requires excluded private catalog"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "scripts/real-capture-optics-storage-expansion.integration.test.ts",
+      "reason": "Test requires excluded private catalog"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "scripts/real-workflow-accessories-expansion.integration.test.ts",
+      "reason": "Test requires excluded private catalog"
+    },
+    {
+      "project": "creatorrig-match",
+      "path": "vercel.json",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": ".codex/skills/add-vertical-pack/SKILL.md",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": ".codex/skills/add-vertical-pack/agents/openai.yaml",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": ".codex/skills/build-wordpress-release/SKILL.md",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": ".codex/skills/build-wordpress-release/agents/openai.yaml",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": ".codex/skills/review-pricing-rules/SKILL.md",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": ".codex/skills/review-pricing-rules/agents/openai.yaml",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": ".codex/skills/run-calculation-regression/SKILL.md",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": ".codex/skills/run-calculation-regression/agents/openai.yaml",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": ".codex/skills/validate-import-file/SKILL.md",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": ".codex/skills/validate-import-file/agents/openai.yaml",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": ".github/workflows/ci.yml",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": "AGENTS.md",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": "CHANGELOG.md",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": "README.md",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": "api/private-site.mjs",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/index.html",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/package.json",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/playwright.config.ts",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/src/data/catalog-types.ts",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/src/data/pergo-catalog.ts",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/src/data/production-catalog.test.ts",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/src/data/production-catalog.ts",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/src/data/production-catalogs.test.ts",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/src/data/production-catalogs.ts",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/src/data/quick-step-catalog.ts",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/src/main.ts",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/src/styles.css",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/src/vite-env.d.ts",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/tests/project-flow.spec.ts",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/tsconfig.json",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "apps/private-store/vite.config.ts",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "docs/ASSUMPTIONS.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "materialmatch",
+      "path": "docs/DEMO_DISTRIBUTION.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "materialmatch",
+      "path": "docs/PRIVATE_DEPLOYMENT.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "materialmatch",
+      "path": "docs/PRODUCT.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "materialmatch",
+      "path": "docs/RELEASE.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "materialmatch",
+      "path": "docs/ROADMAP.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "materialmatch",
+      "path": "docs/SOURCE_AUDIT.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "materialmatch",
+      "path": "docs/legal/PRIVACY_POLICY_TEMPLATE.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "materialmatch",
+      "path": "docs/legal/TERMS_TEMPLATE.md",
+      "reason": "Private project narrative/research/release scope; excluded"
+    },
+    {
+      "project": "materialmatch",
+      "path": "examples/generated/flooring-configuration.json",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "examples/generated/flooring-reference-scenario.json",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "examples/generated/flooring-vertical-pack.json",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "examples/generated/manifest.json",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "examples/generated/product-metadata.csv",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "release/materialmatch-0.1.0.zip.sha256",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": "release/materialmatch-demo-0.1.0.zip.sha256",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    },
+    {
+      "project": "materialmatch",
+      "path": "scripts/test-private-vercel-auth/index.test.mjs",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "scripts/test-vercel-demo-auth/index.test.mjs",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "scripts/vercel-demo-site.mjs",
+      "reason": "Private store/deployment or generated example (regenerated from fixture)"
+    },
+    {
+      "project": "materialmatch",
+      "path": "vercel.json",
+      "reason": "Private workspace, release or deployment metadata; replaced with standalone documentation"
+    }
+  ],
+  "production_code_changes": "none in originals; copy-only demo bootstrap, navigation, ports, private-catalog-dependent acceptance fixtures and publish metadata adjusted",
+  "known_test_adjustments": [
+    "FilterMatch asserts all shipped catalog records are synthetic, replacing private catalog count expectation.",
+    "FilterMatch cross-catalog provenance rejection is tested with invented in-memory malformed import instead of private Philips input.",
+    "CreatorRig Polish UI and accessibility tests use retained synthetic demo pages.",
+    "Tests tied to removed private catalogs/store are excluded and listed above; no failing generic test was silently disabled."
+  ],
+  "preserved": "All 26 first-party package modules across 3 independent workspaces, flooring vertical pack and both PHP integrations; synthetic web/widget demos and generic import/review/production gates."
+}

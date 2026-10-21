@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MaterialMatch oblicza ilość materiału, pełne opakowania i kompatybilne akcesoria, a następnie dodaje cały zestaw do koszyka."
+    />
+    <meta name="theme-color" content="#13271f" />
+    <title>MaterialMatch — od wymiarów do kompletnego koszyka</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#live-demo">Przejdź do kalkulatora</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="MaterialMatch — strona główna">
+        <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
+          <path d="M6 7h10v10H6zM20 7h10v10H20zM6 21h10v8H6z" />
+          <path class="brand-mark-accent" d="m20 25 4 4 7-9" />
+        </svg>
+        <span>MaterialMatch</span>
+      </a>
+      <nav class="site-nav" aria-label="Główna nawigacja">
+        <a href="#capabilities">Możliwości</a>
+        <a href="#how-it-works">Jak działa</a>
+        <a href="#integrations">Integracje</a>
+      </nav>
+      <a class="header-cta" href="#live-demo"
+        >Wypróbuj kalkulator <span aria-hidden="true">↘</span></a
+      >
+      <button class="cart-button" type="button" aria-controls="demo-cart" aria-expanded="false">
+        <span class="cart-label">Koszyk</span>
+        <span id="cart-count" aria-live="polite">0</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Kalkulator materiałów dla sprzedaży internetowej</p>
+          <h1 id="hero-title">Mniej zgadywania.<br /><em>Więcej gotowych</em><br />koszyków.</h1>
+          <p class="hero-lead">
+            MaterialMatch zamienia wymiary projektu w dokładną listę materiałów, pełnych opakowań i
+            dopasowanych akcesoriów — gotową do dodania do koszyka jednym kliknięciem.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#live-demo">Policz przykładowy projekt</a>
+            <a class="button button-text" href="#capabilities"
+              >Poznaj możliwości <span aria-hidden="true">→</span></a
+            >
+          </div>
+          <ul class="hero-proof" aria-label="Najważniejsze cechy">
+            <li><span aria-hidden="true">✓</span> Bez zewnętrznej usługi</li>
+            <li><span aria-hidden="true">✓</span> Bez kont klientów</li>
+            <li><span aria-hidden="true">✓</span> Dane zostają w sklepie</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-label="Przykład działania MaterialMatch">
+          <div class="visual-orbit visual-orbit-one" aria-hidden="true"></div>
+          <div class="visual-orbit visual-orbit-two" aria-hidden="true"></div>
+          <article class="project-card">
+            <header>
+              <div>
+                <span class="card-kicker">Projekt #MM-001</span>
+                <h2>Salon</h2>
+              </div>
+              <span class="status-dot">Gotowy</span>
+            </header>
+            <div class="room-plan" aria-hidden="true">
+              <div class="dimension dimension-top">5,00 m</div>
+              <div class="dimension dimension-side">4,00 m</div>
+              <div class="room-grid">
+                <span class="door"></span>
+                <span class="area-label"><strong>20</strong> m²</span>
+              </div>
+            </div>
+            <div class="project-metrics">
+              <div><span>Powierzchnia z zapasem</span><strong>21,6 m²</strong></div>
+              <div><span>Wymagany zapas</span><strong>8%</strong></div>
+            </div>
+          </article>
+          <article class="result-float">
+            <span class="result-icon" aria-hidden="true">↗</span>
+            <div><strong>10 opakowań</strong><span>22 m² w koszyku</span></div>
+          </article>
+          <div class="compatibility-float">
+            <span aria-hidden="true">●</span> Akcesoria dopasowane
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-bar" aria-label="Właściwości produktu">
+        <p>Jeden silnik. Każdy kanał sprzedaży.</p>
+        <ul>
+          <li>WooCommerce</li>
+          <li>Do osadzenia na stronie</li>
+          <li>Dokładne obliczenia</li>
+          <li>Własna marka</li>
+        </ul>
+      </section>
+
+      <section id="how-it-works" class="section process-section" aria-labelledby="process-title">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow eyebrow-dark"><span></span> Od pomiaru do zamówienia</p>
+            <h2 id="process-title">Cały proces w jednym, prostym przepływie.</h2>
+          </div>
+          <p>
+            Klient nie musi znać wydajności paczki ani samodzielnie dobierać dodatków. Sklep
+            kontroluje reguły, a MaterialMatch wyjaśnia każdą liczbę.
+          </p>
+        </div>
+        <ol class="process-grid">
+          <li>
+            <span class="step-number">01</span>
+            <div class="step-visual measure-visual" aria-hidden="true">
+              <span class="measure-line"></span><span>4 × 5 m</span>
+            </div>
+            <h3>Klient podaje wymiary</h3>
+            <p>Jedno lub wiele pomieszczeń, drzwi, wykluczone obszary i wybrany zapas.</p>
+          </li>
+          <li>
+            <span class="step-number">02</span>
+            <div class="step-visual package-visual" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <h3>Silnik liczy pełne opakowania</h3>
+            <p>Jawne zaokrąglenia, rzeczywiście kupowana powierzchnia i przewidywana nadwyżka.</p>
+          </li>
+          <li>
+            <span class="step-number">03</span>
+            <div class="step-visual cart-visual" aria-hidden="true">
+              <span>10</span><span>3</span><span>8</span>
+            </div>
+            <h3>Kompletny zestaw trafia do koszyka</h3>
+            <p>
+              Materiał główny i kompatybilne akcesoria z dokładnymi ilościami każdego kodu produktu.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section
+        id="capabilities"
+        class="section capabilities-section"
+        aria-labelledby="capabilities-title"
+      >
+        <div class="section-heading center-heading">
+          <p class="eyebrow"><span></span> Zaprojektowany do realnej sprzedaży</p>
+          <h2 id="capabilities-title">Kalkulator, który rozumie produkt.</h2>
+          <p>Nie tylko dzieli metry przez wydajność opakowania.</p>
+        </div>
+        <div class="bento-grid">
+          <article class="feature-card feature-card-large feature-packages">
+            <div class="feature-copy">
+              <span class="feature-tag">Precyzyjne ilości</span>
+              <h3>Pełne opakowania, bez niespodzianek przy montażu.</h3>
+              <p>
+                Wynik pokazuje powierzchnię netto, zapas, zakupioną powierzchnię i nadwyżkę. Klient
+                od razu rozumie, skąd wzięła się liczba paczek.
+              </p>
+            </div>
+            <div class="package-stack" aria-hidden="true">
+              <div><span>2,2 m²</span></div>
+              <div><span>2,2 m²</span></div>
+              <div><span>× 10</span></div>
+            </div>
+          </article>
+          <article class="feature-card feature-compatibility">
+            <span class="feature-tag">Kompatybilność</span>
+            <h3>Właściwe akcesoria do właściwego produktu.</h3>
+            <div class="compatibility-map" aria-hidden="true">
+              <span class="map-main">Panel</span>
+              <span class="map-line line-a"></span><span class="map-node node-a">Podkład</span>
+              <span class="map-line line-b"></span><span class="map-node node-b">Listwa</span>
+              <span class="map-line line-c"></span><span class="map-node node-c">Profil</span>
+            </div>
+          </article>
+          <article class="feature-card feature-explain">
+            <span class="feature-tag">Transparentność</span>
+            <h3>Każdy wynik ma swoje wyjaśnienie.</h3>
+            <ul class="formula-list" aria-label="Przykładowe kroki obliczenia">
+              <li><span>01</span> 20 m² × 8% = 1,6 m²</li>
+              <li><span>02</span> 20 + 1,6 = 21,6 m²</li>
+              <li><span>03</span> 21,6 ÷ 2,2 = 9,82 → 10 paczek</li>
+            </ul>
+          </article>
+          <article class="feature-card feature-card-wide feature-admin">
+            <div>
+              <span class="feature-tag">Kontrola sklepu</span>
+              <h3>Reguły, wygląd marki i dane produktowe pod Twoją kontrolą.</h3>
+              <p>
+                Konfiguracja pozostaje w instalacji klienta. Bez centralnego panelu, śledzenia
+                użytkowników i uzależnienia podstawowych obliczeń od zewnętrznego serwera.
+              </p>
+            </div>
+            <div class="control-list" aria-hidden="true">
+              <span><i></i> Zapas domyślny <b>8%</b></span>
+              <span><i></i> Kolor marki <b class="color-swatch"></b></span>
+              <span><i></i> Częściowy koszyk <b>Włączony</b></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="live-demo" class="demo-section" aria-labelledby="demo-title">
+        <div class="demo-intro">
+          <div>
+            <p class="eyebrow eyebrow-dark"><span></span> Sprawdź na żywo</p>
+            <h2 id="demo-title">Przelicz sprawdzony scenariusz krok po kroku.</h2>
+          </div>
+          <div class="demo-brief">
+            <p>
+              Wpisz <strong>4 × 5 m</strong>, szerokość drzwi <strong>0,9 m</strong> i zapas
+              <strong>8%</strong>. Otrzymasz kompletny zestaw paneli, podkładu i listew.
+            </p>
+            <span><i></i> Obliczenia działają lokalnie w przeglądarce</span>
+          </div>
+        </div>
+        <div class="demo-frame">
+          <div class="demo-frame-bar">
+            <div class="demo-brand">
+              <span class="mini-mark" aria-hidden="true">M</span> Twój sklep
+            </div>
+            <span class="demo-label">Wersja demonstracyjna · dane fikcyjne</span>
+            <span id="demo-event" class="demo-event" aria-live="polite">Kalkulator gotowy</span>
+          </div>
+          <material-match id="material-calculator"></material-match>
+        </div>
+      </section>
+
+      <section
+        id="integrations"
+        class="section integrations-section"
+        aria-labelledby="integrations-title"
+      >
+        <div class="integration-copy">
+          <p class="eyebrow eyebrow-dark"><span></span> Jeden fundament, wiele wdrożeń</p>
+          <h2 id="integrations-title">Dopasuje się do sposobu, w jaki sprzedajesz.</h2>
+          <p>
+            Ten sam sprawdzony silnik może zasilać wtyczkę WooCommerce, kalkulator osadzony na
+            dowolnej stronie i kolejne pakiety branżowe — bez powielania zasad obliczeń.
+          </p>
+          <a class="button button-dark" href="#live-demo">Zobacz działający przepływ</a>
+        </div>
+        <div class="architecture-visual" aria-label="Architektura wdrożenia MaterialMatch">
+          <div class="engine-node">
+            <span>RDZEŃ</span><strong>Silnik<br />obliczeniowy</strong>
+          </div>
+          <div class="connector connector-one" aria-hidden="true"></div>
+          <div class="connector connector-two" aria-hidden="true"></div>
+          <div class="connector connector-three" aria-hidden="true"></div>
+          <div class="surface-node surface-wordpress">
+            <span>W</span><strong>WooCommerce</strong>
+          </div>
+          <div class="surface-node surface-widget">
+            <span>&lt;/&gt;</span><strong>Kalkulator<br />do osadzenia</strong>
+          </div>
+          <div class="surface-node surface-pack">
+            <span>＋</span><strong>Pakiety branżowe</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="audiences-section" aria-labelledby="audiences-title">
+        <div class="section-heading center-heading">
+          <p class="eyebrow"><span></span> Dla całego procesu sprzedaży</p>
+          <h2 id="audiences-title">Pomaga klientom. Daje kontrolę zespołom.</h2>
+        </div>
+        <div class="audience-grid">
+          <article>
+            <span>01</span>
+            <h3>Sklepy internetowe</h3>
+            <p>Większa pewność zakupu i kompletny zestaw produktów w jednym przepływie.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Producenci i dystrybutorzy</h3>
+            <p>Spójne reguły obliczeń oraz kontrolowane relacje kompatybilności.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Agencje handlu internetowego</h3>
+            <p>Powtarzalne wdrożenia, konfiguracja bez zmian kodu i neutralny wygląd marki.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta" aria-labelledby="cta-title">
+        <div>
+          <p class="eyebrow"><span></span> MaterialMatch</p>
+          <h2 id="cta-title">
+            Nie sprzedawaj samych paczek.<br />Sprzedawaj <em>gotowy projekt.</em>
+          </h2>
+        </div>
+        <a class="button button-light" href="#live-demo"
+          >Wypróbuj kalkulator <span aria-hidden="true">↗</span></a
+        >
+      </section>
+
+      <aside
+        id="demo-cart"
+        class="demo-cart"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cart-heading"
+        hidden
+      >
+        <div class="cart-heading-row">
+          <div>
+            <span class="cart-kicker">Podsumowanie</span>
+            <h2 id="cart-heading" tabindex="-1">Twój zestaw</h2>
+          </div>
+          <button id="close-cart" class="close-cart" type="button" aria-label="Zamknij koszyk">
+            ×
+          </button>
+        </div>
+        <p class="cart-note">Lokalna symulacja. Żadne dane nie opuszczają przeglądarki.</p>
+        <ul id="cart-lines"></ul>
+        <div class="cart-success">
+          <span aria-hidden="true">✓</span> Wszystkie dostępne pozycje zostały dodane.
+        </div>
+        <button class="cart-primary" type="button">Przejdź do koszyka demonstracyjnego</button>
+      </aside>
+      <div id="cart-backdrop" class="cart-backdrop" hidden aria-hidden="true"></div>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand brand-footer" href="#top">
+        <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
+          <path d="M6 7h10v10H6zM20 7h10v10H20zM6 21h10v8H6z" />
+          <path class="brand-mark-accent" d="m20 25 4 4 7-9" />
+        </svg>
+        <span>MaterialMatch</span>
+      </a>
+      <p>Dokładne ilości. Kompletne zestawy. Lepsze decyzje zakupowe.</p>
+      <p class="footer-note">Demonstrator wykorzystuje wyłącznie fikcyjne dane produktowe.</p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

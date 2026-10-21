@@ -1,0 +1,37 @@
+{
+  "name": "@filtermatch/data-pipeline",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json",
+    "validate:data": "tsx src/validate-cli.ts --root ../.. --at 2026-07-17T00:00:00.000Z",
+    "report:missing-evidence": "tsx ../../scripts/report-missing-evidence/src/index.ts --root ../.. --output ../../data/generated/missing-evidence-report.json --at 2026-07-17T00:00:00.000Z",
+    "report:alias-collisions": "tsx ../../scripts/report-alias-collisions/src/index.ts --root ../.. --output ../../data/generated/alias-collisions-report.json --at 2026-07-17T00:00:00.000Z",
+    "report:devices-without-consumables": "tsx ../../scripts/report-devices-without-consumables/src/index.ts --root ../.. --output ../../data/generated/devices-without-consumables-report.json --at 2026-07-17T00:00:00.000Z",
+    "report:conflicts": "tsx ../../scripts/report-conflicts/src/index.ts --root ../.. --output ../../data/generated/conflicts-report.json --at 2026-07-17T00:00:00.000Z",
+    "report:stale": "tsx ../../scripts/report-stale-data/src/index.ts --root ../.. --output ../../data/generated/stale-report.json --at 2026-07-17T00:00:00.000Z --max-age-days 365",
+    "report:missing-offers": "tsx ../../scripts/report-missing-offers/src/index.ts --root ../.. --output ../../data/generated/missing-offers-report.json --at 2026-07-17T00:00:00.000Z",
+    "report:catalog-coverage": "tsx ../../scripts/report-catalog-coverage/src/index.ts --root ../.. --matrix ../../data/fixtures/demo-catalog-v1.json --output ../../data/generated/catalog-coverage-report.json --at 2026-07-17T00:00:00.000Z",
+    "check:source-links": "tsx ../../scripts/check-source-links/src/index.ts --root ../.. --output ../../data/generated/source-links-report.json --at 2026-07-17T00:00:00.000Z --timeout-ms 5000 --max-redirects 5 --min-host-delay-ms 250",
+    "prepare:review": "tsx ../../scripts/prepare-compatibility-review/src/index.ts --root ../.. --edge-id compat-ap100-hb100-candidate --output ../../data/generated/review-packet.json --at 2026-07-17T00:00:00.000Z",
+    "apply:review": "tsx ../../scripts/apply-compatibility-review/src/index.ts",
+    "migrate:schema:v1-to-v2": "tsx ../../scripts/migrate-schema-v1-to-v2/src/index.ts",
+    "check:production-readiness": "tsx src/production-readiness-cli.ts --root ../.. --at 2026-07-18T00:00:00.000Z"
+  },
+  "dependencies": {
+    "@filtermatch/data-schema": "workspace:*",
+    "@filtermatch/domain": "workspace:*",
+    "@filtermatch/model-search": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "tsx": "^4.19.4",
+    "vitest": "^3.2.4"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,82 @@
+{
+  "status": "PASS_FOR_LOCAL_SANITIZED_SOURCE_REVIEW",
+  "verified_at": "2026-10-21T07:28:42.873713+00:00",
+  "node": "24.18.0",
+  "package_managers": {
+    "filtermatch": "pnpm 9.15.9",
+    "creatorrig-match": "pnpm 11.9.0",
+    "materialmatch": "pnpm 11.9.0"
+  },
+  "checks": {
+    "filtermatch": {
+      "typescript_tests": 155,
+      "php_tests": 0,
+      "browser_tests": 12,
+      "lint": "PASS",
+      "typecheck": "PASS",
+      "data_validation": "PASS",
+      "build": "PASS",
+      "clean_offline_install_and_build": "PASS"
+    },
+    "creatorrig-match": {
+      "typescript_tests": 374,
+      "php_tests": 0,
+      "browser_tests": 58,
+      "lint": "PASS",
+      "typecheck": "PASS",
+      "data_validation": "PASS",
+      "build": "PASS",
+      "clean_offline_install_and_build": "PASS"
+    },
+    "materialmatch": {
+      "typescript_tests": 82,
+      "php_tests": 64,
+      "browser_tests": 12,
+      "lint": "PASS",
+      "typecheck": "PASS",
+      "data_validation": "fictional demo generation and schema/calculation tests passed",
+      "build": "PASS",
+      "clean_offline_install_and_build": "PASS"
+    }
+  },
+  "totals": {
+    "typescript_tests": 611,
+    "php_tests": 64,
+    "browser_tests": 82
+  },
+  "originals": {
+    "tracked_and_untracked_nonignored_regular_files": "UNCHANGED",
+    "git_heads_and_dirty_state": "UNCHANGED",
+    "package_implementation_files_unchanged": 85
+  },
+  "privacy": {
+    "export_guard": "PASS",
+    "detector": "TruffleHog 3.99.2, no verification",
+    "findings": 3,
+    "reviewed_as_deliberate_negative_test_URI_fixtures": 3,
+    "actual_credentials_identified": 0,
+    "private_catalogs_or_store_or_deployments_included": false,
+    "git_history_included": false,
+    "dependencies_or_bundles_included": false
+  },
+  "limits": [
+    "Checks cover exported synthetic/generic scope, not removed private catalogs or stores.",
+    "Automated accessibility checks are not a complete manual accessibility audit.",
+    "New WordPress/WooCommerce full installation was not provisioned; 64 PHP contracts and local widget/demo flows were verified.",
+    "GitHub CI is a prepared template; no remote run occurred.",
+    "Dependency metadata inventory is not a complete legal/supply-chain audit.",
+    "No universal claim of absence of secrets is made.",
+    "License, public release and application remain owner-controlled."
+  ],
+  "publication": false,
+  "application_submitted": false,
+  "license_grant_approved": true,
+  "license_update": {
+    "approved_at": "2026-10-21T07:38:42.211176+00:00",
+    "copyright_holder": "drzecik",
+    "source": "Explicit owner reply in this chat",
+    "scope": "MIT for first-party code/demos except the two PHP integrations, GPL-2.0-or-later for those integrations",
+    "implementation_changes": false,
+    "not_publication_approval": true
+  }
+}

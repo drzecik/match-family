@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import catalog from '../../../../data/fixtures/demo-catalog.json';
+import { categoryLabel, subcategoryLabel } from '../lib/polish-labels';
+
+const grouped: Record<string, (typeof catalog.products)[number][]> = {};
+for (const product of catalog.products) {
+  (grouped[product.category] ??= []).push(product);
+}
+const groups = Object.entries(grouped).sort(([left], [right]) => left.localeCompare(right));
+---
+
+<BaseLayout title="Katalog demonstracyjny — CreatorRig Match" description="Syntetyczny katalog produktów zasilający mechanizm sprawdzania zgodności CreatorRig Match.">
+  <article class="public-page">
+    <p class="eyebrow">{catalog.products.length} produktów · wszystkie syntetyczne</p>
+    <h1>Katalog, który podlega walidacji.</h1>
+    <p class="lede">Każdy rekord służy działającemu przepływowi, testowi niezgodności albo bezpiecznemu wynikowi niepotwierdzonemu. Nie są to prawdziwe produkty ani rekomendacje zakupowe.</p>
+    <div class="catalog-groups">
+      {groups.map(([category, products]) => (
+        <section>
+          <h2>{categoryLabel(category)}</h2>
+          <ul class="public-list">
+            {products.map((product) => (
+              <li>
+                <a href={`/produkt/${product.id}`}>
+                  <strong>{product.canonicalName}</strong>
+                  <span>{subcategoryLabel(product.subcategory)} · {product.weightGrams} g</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </article>
+</BaseLayout>

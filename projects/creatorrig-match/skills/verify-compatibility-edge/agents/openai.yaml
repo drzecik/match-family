@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify Compatibility Edge"
+  short_description: "Review one edge against original evidence"
+  default_prompt: "Use $verify-compatibility-edge to review one candidate edge and prepare a human approval decision."

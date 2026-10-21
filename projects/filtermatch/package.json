@@ -1,0 +1,47 @@
+{
+  "name": "filtermatch",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=20.18"
+  },
+  "scripts": {
+    "dev": "corepack pnpm --filter @filtermatch/web dev",
+    "build": "corepack pnpm run generate && corepack pnpm -r --if-present build && node scripts/check-web-build-boundary.mjs",
+    "generate": "corepack pnpm run validate:data && corepack pnpm run report:data-ops && corepack pnpm --filter @filtermatch/model-search build:index",
+    "validate:data": "corepack pnpm --filter @filtermatch/data-pipeline validate:data",
+    "report:missing-evidence": "corepack pnpm --filter @filtermatch/data-pipeline report:missing-evidence",
+    "report:alias-collisions": "corepack pnpm --filter @filtermatch/data-pipeline report:alias-collisions",
+    "report:devices-without-consumables": "corepack pnpm --filter @filtermatch/data-pipeline report:devices-without-consumables",
+    "report:conflicts": "corepack pnpm --filter @filtermatch/data-pipeline report:conflicts",
+    "report:stale": "corepack pnpm --filter @filtermatch/data-pipeline report:stale",
+    "report:missing-offers": "corepack pnpm --filter @filtermatch/data-pipeline report:missing-offers",
+    "report:catalog-coverage": "corepack pnpm --filter @filtermatch/data-pipeline report:catalog-coverage",
+    "report:data-gaps": "corepack pnpm run report:missing-evidence && corepack pnpm run report:alias-collisions && corepack pnpm run report:devices-without-consumables",
+    "report:data-ops": "corepack pnpm run report:data-gaps && corepack pnpm run report:conflicts && corepack pnpm run report:stale && corepack pnpm run report:missing-offers && corepack pnpm run report:catalog-coverage",
+    "check:source-links": "corepack pnpm --filter @filtermatch/data-pipeline check:source-links",
+    "check:production-readiness": "corepack pnpm --filter @filtermatch/data-pipeline check:production-readiness",
+    "prepare:review": "corepack pnpm --filter @filtermatch/data-pipeline prepare:review",
+    "apply:review": "corepack pnpm --filter @filtermatch/data-pipeline apply:review",
+    "migrate:schema:v1-to-v2": "corepack pnpm --filter @filtermatch/data-pipeline migrate:schema:v1-to-v2",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.deployment.json && corepack pnpm -r --if-present typecheck",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check": "corepack pnpm run generate && corepack pnpm run lint && corepack pnpm run typecheck && corepack pnpm run test && corepack pnpm run build"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@eslint/js": "^9.31.0",
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^22.15.30",
+    "@vercel/functions": "^3.7.5",
+    "eslint": "^9.31.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0",
+    "vitest": "^2.1.9"
+  },
+  "license": "MIT"
+}

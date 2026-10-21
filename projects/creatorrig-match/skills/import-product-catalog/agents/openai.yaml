@@ -1,0 +1,4 @@
+interface:
+  display_name: "Import Product Catalog"
+  short_description: "Normalize licensed product catalog files"
+  default_prompt: "Use $import-product-catalog to validate and stage a licensed product catalog without approving compatibility."

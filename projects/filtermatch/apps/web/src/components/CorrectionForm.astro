@@ -1,0 +1,66 @@
+---
+interface Props { entityId?: string; query?: string }
+const rawEndpoint = import.meta.env.PUBLIC_CORRECTION_ENDPOINT as string | undefined;
+const { entityId = '', query = '' } = Astro.props;
+
+function safeEndpoint(value: string | undefined): string | null {
+  if (!value) return null;
+  const parsed = new URL(value);
+  const localDevelopment = import.meta.env.DEV && parsed.protocol === 'http:' && ['127.0.0.1', 'localhost'].includes(parsed.hostname);
+  if (parsed.protocol !== 'https:' && !localDevelopment) {
+    throw new Error('PUBLIC_CORRECTION_ENDPOINT must use HTTPS (HTTP is allowed only for localhost in development)');
+  }
+  if (parsed.username || parsed.password) throw new Error('PUBLIC_CORRECTION_ENDPOINT must not contain credentials');
+  return parsed.href;
+}
+
+const endpoint = safeEndpoint(rawEndpoint);
+---
+<section class="correction-box" aria-labelledby="correction-title">
+  <h2 id="correction-title">Widzisz błąd lub brak?</h2>
+  {endpoint ? (
+    <form method="post" action={endpoint}>
+      <input type="hidden" name="entityId" value={entityId} />
+      <input type="hidden" name="query" value={query} />
+      <label for="correction-message">Opisz problem</label>
+      <textarea id="correction-message" name="message" minlength="10" maxlength="2000" required></textarea>
+      <label class="honeypot" aria-hidden="true">Nie wypełniaj <input name="website" tabindex="-1" autocomplete="off" /></label>
+      <button type="submit">Wyślij zgłoszenie</button>
+      <p class="fine-print">Zgłoszenie zostanie wysłane do skonfigurowanego operatora korekt. Nie podawaj danych osobowych.</p>
+    </form>
+  ) : (
+    <form class="local-correction-form" data-entity-id={entityId} data-query={query}>
+      <label for={`correction-message-${entityId || 'query'}`}>Opisz problem</label>
+      <textarea id={`correction-message-${entityId || 'query'}`} name="message" minlength="10" maxlength="2000" required></textarea>
+      <label class="honeypot" aria-hidden="true">Nie wypełniaj <input name="website" tabindex="-1" autocomplete="off" /></label>
+      <button type="submit">Skopiuj przygotowane zgłoszenie</button>
+      <p class="fine-print">Demonstrator niczego nie wysyła. Skopiowany raport możesz przekazać operatorowi danych bez zakładania konta.</p>
+      <p class="correction-status" role="status" aria-live="polite"></p>
+    </form>
+  )}
+</section>
+
+<script>
+  for (const form of document.querySelectorAll<HTMLFormElement>('.local-correction-form')) {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      if (String(data.get('website') ?? '')) return;
+      const message = String(data.get('message') ?? '').trim();
+      if (message.length < 10) return;
+      const report = [
+        'FilterMatch — zgłoszenie korekty',
+        `Encja: ${form.dataset.entityId || 'brak'}`,
+        `Zapytanie: ${form.dataset.query || 'brak'}`,
+        `Opis: ${message}`
+      ].join('\n');
+      const status = form.querySelector<HTMLElement>('.correction-status');
+      try {
+        await navigator.clipboard.writeText(report);
+        if (status) status.textContent = 'Zgłoszenie skopiowane do schowka.';
+      } catch {
+        if (status) status.textContent = report;
+      }
+    });
+  }
+</script>

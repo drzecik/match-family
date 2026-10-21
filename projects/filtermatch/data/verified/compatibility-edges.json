@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 2,
+  "kind": "compatibilityEdges",
+  "records": [
+    {
+      "id": "compat-ap100-pf100",
+      "deviceId": "airpure-ap100-pl",
+      "consumableId": "airpure-purefilter-100",
+      "relationType": "required",
+      "verificationStatus": "verified_official",
+      "confidence": 1,
+      "evidenceIds": [
+        "evidence-original-filter"
+      ],
+      "notes": "Dane demonstracyjne: wymagany jest jeden zintegrowany, oryginalny zestaw filtrów.",
+      "validFrom": "2026-07-10T09:00:00.000Z",
+      "lastVerifiedAt": "2026-07-10T09:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "compat-ap100-cf100",
+      "deviceId": "airpure-ap100-pl",
+      "consumableId": "cleanflow-cf100-replacement",
+      "relationType": "alternative",
+      "verificationStatus": "verified_supplier",
+      "confidence": 0.9,
+      "evidenceIds": [
+        "evidence-replacement-filter"
+      ],
+      "notes": "Dane demonstracyjne: zweryfikowany zamiennik jest zestawem dwuelementowym.",
+      "validFrom": "2026-07-10T09:00:00.000Z",
+      "lastVerifiedAt": "2026-07-10T09:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "compat-hb200-pl-original-kit",
+      "deviceId": "homebreeze-hb200-pl",
+      "consumableId": "homebreeze-breeze200-service-kit",
+      "relationType": "required",
+      "verificationStatus": "verified_official",
+      "confidence": 1,
+      "evidenceIds": [
+        "evidence-hb200-original-components"
+      ],
+      "notes": "Dane demonstracyjne: HB200/PL wymaga kompletnego, oryginalnego zestawu serwisowego złożonego z dwóch elementów.",
+      "validFrom": "2026-07-12T10:00:00.000Z",
+      "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "compat-hb200-pl-cf200-kit",
+      "deviceId": "homebreeze-hb200-pl",
+      "consumableId": "cleanflow-cf200-replacement-kit",
+      "relationType": "alternative",
+      "verificationStatus": "verified_supplier",
+      "confidence": 0.9,
+      "evidenceIds": [
+        "evidence-hb200-replacement-kit"
+      ],
+      "notes": "Dane demonstracyjne: kompletny zestaw zamienny może zastąpić zestaw oryginalny.",
+      "validFrom": "2026-07-12T10:00:00.000Z",
+      "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "compat-hb200-pl-seal-frame",
+      "deviceId": "homebreeze-hb200-pl",
+      "consumableId": "homebreeze-breeze200-seal-frame",
+      "relationType": "optional",
+      "verificationStatus": "verified_official",
+      "confidence": 1,
+      "evidenceIds": [
+        "evidence-hb200-seal-frame"
+      ],
+      "notes": "Dane demonstracyjne: opcjonalne akcesorium serwisowe, które nie jest wymagane do zgodności filtrów.",
+      "validFrom": "2026-07-12T10:00:00.000Z",
+      "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "compat-hb200-de-original-hepa",
+      "deviceId": "homebreeze-hb200-de",
+      "consumableId": "homebreeze-breeze200-hepa",
+      "relationType": "required",
+      "verificationStatus": "verified_official",
+      "confidence": 1,
+      "evidenceIds": [
+        "evidence-hb200-original-components"
+      ],
+      "notes": "Dane demonstracyjne: HB200/DE wymaga tego pojedynczego, oryginalnego filtra HEPA.",
+      "validFrom": "2026-07-12T10:00:00.000Z",
+      "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "compat-hb200-de-original-carbon",
+      "deviceId": "homebreeze-hb200-de",
+      "consumableId": "homebreeze-breeze200-carbon",
+      "relationType": "required",
+      "verificationStatus": "verified_official",
+      "confidence": 1,
+      "evidenceIds": [
+        "evidence-hb200-original-components"
+      ],
+      "notes": "Dane demonstracyjne: HB200/DE wymaga również tego pojedynczego, oryginalnego filtra węglowego.",
+      "validFrom": "2026-07-12T10:00:00.000Z",
+      "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "compat-hb200-de-cf200-kit",
+      "deviceId": "homebreeze-hb200-de",
+      "consumableId": "cleanflow-cf200-replacement-kit",
+      "relationType": "alternative",
+      "verificationStatus": "verified_supplier",
+      "confidence": 0.9,
+      "evidenceIds": [
+        "evidence-hb200-replacement-kit"
+      ],
+      "notes": "Dane demonstracyjne: zestaw zamienny zastępuje oba wymagane elementy oryginalne.",
+      "validFrom": "2026-07-12T10:00:00.000Z",
+      "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "compat-cf300-original-kit",
+      "deviceId": "cleanflow-cf300-10",
+      "consumableId": "cleanflow-airguard300-service-kit",
+      "relationType": "required",
+      "verificationStatus": "verified_official",
+      "confidence": 1,
+      "evidenceIds": [
+        "evidence-cf300-original-kit"
+      ],
+      "notes": "Dane demonstracyjne: CF300/10 wymaga kompletnego, oryginalnego zestawu serwisowego.",
+      "validFrom": "2026-07-13T10:00:00.000Z",
+      "lastVerifiedAt": "2026-07-13T10:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "compat-cf300-hb300-kit",
+      "deviceId": "cleanflow-cf300-10",
+      "consumableId": "homebreeze-hb300-replacement-kit",
+      "relationType": "alternative",
+      "verificationStatus": "verified_supplier",
+      "confidence": 0.9,
+      "evidenceIds": [
+        "evidence-cf300-replacement-kit"
+      ],
+      "notes": "Dane demonstracyjne: zweryfikowany przez dostawcę zestaw zamienny może zastąpić zestaw oryginalny.",
+      "validFrom": "2026-07-13T10:00:00.000Z",
+      "lastVerifiedAt": "2026-07-13T10:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    }
+  ]
+}

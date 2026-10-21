@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Demonstrator widgetu FilterMatch</title>
+    <style>
+      body { margin: 0; background: #eef2ee; font-family: system-ui; color: #17231f; }
+      .shell { max-width: 820px; margin: 64px auto; padding: 20px; }
+      .notice { background: #e9ff78; padding: 10px; text-align: center; }
+      pre { min-height: 90px; background: #17231f; color: #d9eee6; padding: 16px; border-radius: 10px; overflow: auto; }
+      .privacy { font-size: 13px; color: #5e6d67; }
+    </style>
+  </head>
+  <body>
+    <aside class="notice"><strong>Demonstrator:</strong> wyłącznie dane syntetyczne.</aside>
+    <main class="shell">
+      <h1>Sklep demonstracyjny</h1>
+      <p>Wpisz <code>AP 420 /10</code>. Widget pokaże oryginał, zweryfikowany zamiennik i opcjonalne akcesorium. Kandydat pozostaje ukryty.</p>
+      <filter-match-widget id="fixture-widget" data-config-url="/widget-config.json"></filter-match-widget>
+      <h2>Informacje o działaniu widgetu</h2>
+      <p class="privacy">Informacja o braku wyniku jest włączona w tym demonstratorze, ale nie zawiera treści zapytania ani identyfikatora użytkownika.</p>
+      <pre id="events">Uruchamianie widgetu…</pre>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

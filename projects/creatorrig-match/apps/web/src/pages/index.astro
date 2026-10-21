@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RigBuilder from '../components/RigBuilder';
+---
+<BaseLayout title="CreatorRig Match — demonstracja" description="Konfigurator sprzętu na jawnie fikcyjnych danych: zgodność, dowody i obliczenia.">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Graf zgodności · dane demonstracyjne</p>
+      <h1>Sprawdź, co do siebie pasuje.</h1>
+      <p class="lede">Poznaj wielowymiarową ocenę zgodności i ograniczenia zestawów na fikcyjnych urządzeniach. Ten katalog nie jest rekomendacją prawdziwego sprzętu.</p>
+      <a class="primary-link" href="#builder">Otwórz konfigurator</a>
+    </div>
+    <div class="hero-graph" aria-label="Schemat zgodności fikcyjnych urządzeń">
+      <span class="node node-main">KORPUS</span><span class="node node-lens">OBIEKTYW</span><span class="node node-audio">DŹWIĘK</span><span class="node node-media">PAMIĘĆ</span>
+      <i class="line line-a"></i><i class="line line-b"></i><i class="line line-c"></i>
+    </div>
+  </section>
+  <section id="builder" class="builder-section">
+    <div class="section-heading"><p class="eyebrow">Dane fikcyjne · nie do produkcji</p><h2>Przetestuj pełny przepływ konfiguratora</h2><p>Wszystkie urządzenia i dowody w tej demonstracji są syntetyczne.</p></div>
+    <RigBuilder client:load />
+  </section>
+</BaseLayout>

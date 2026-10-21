@@ -1,0 +1,21 @@
+packages:
+  - apps/*
+  - packages/*
+  - integrations/*
+  - vertical-packs/*
+
+allowBuilds:
+  esbuild: true
+  fs-ext-extra-prebuilt: true
+
+catalog:
+  '@axe-core/playwright': 4.12.1
+  '@playwright/test': 1.61.1
+  '@types/node': 20.19.43
+  fast-check: 4.9.0
+  happy-dom: 20.10.6
+  tsx: 4.23.1
+  typescript: 6.0.3
+  vite: 8.1.5
+  vitest: 4.1.10
+  zod: 4.4.3

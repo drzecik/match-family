@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate Rig"
+  short_description: "Validate a rig across compatibility dimensions"
+  default_prompt: "Use $validate-rig to deterministically validate a rig and report conflicts, missing parts, and unknowns."

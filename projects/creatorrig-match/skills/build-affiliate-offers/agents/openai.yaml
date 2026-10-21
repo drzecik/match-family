@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Affiliate Offers"
+  short_description: "Import offers without affecting compatibility"
+  default_prompt: "Use $build-affiliate-offers to validate merchant offers while isolating them from compatibility ranking."

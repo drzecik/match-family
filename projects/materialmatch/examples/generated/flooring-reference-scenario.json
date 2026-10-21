@@ -1,0 +1,42 @@
+{
+  "notice": "FICTIONAL DEMONSTRATION DATA — NOT A REAL BRAND OR PRODUCT CATALOGUE",
+  "project": {
+    "id": "fictional-reference-project-4x5",
+    "wasteBasisPoints": 800,
+    "installationPattern": "straight",
+    "rooms": [
+      {
+        "id": "room-1",
+        "name": "Fikcyjny pokój referencyjny",
+        "geometry": {
+          "kind": "rectangle",
+          "widthMillimeters": 4000,
+          "lengthMillimeters": 5000
+        },
+        "excludedAreas": [],
+        "doors": [
+          {
+            "id": "door-1",
+            "widthMillimeters": 900
+          }
+        ],
+        "corners": {
+          "internal": 4,
+          "external": 0
+        }
+      }
+    ]
+  },
+  "expected": {
+    "netAreaSquareMillimeters": 20000000,
+    "wasteAreaSquareMillimeters": 1600000,
+    "grossAreaSquareMillimeters": 21600000,
+    "mainPackages": 10,
+    "purchasedAreaSquareMillimeters": 22000000,
+    "underlayRolls": 3,
+    "perimeterMillimeters": 18000,
+    "doorWidthMillimeters": 900,
+    "skirtingLengthMillimeters": 17100,
+    "skirtingPieces": 8
+  }
+}

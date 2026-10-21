@@ -1,0 +1,23 @@
+# Keep local environments, dependencies and generated test output out of Git.
+.DS_Store
+.env
+.env.*
+**/node_modules/
+**/vendor/
+**/dist/
+**/.astro/
+**/.vite/
+**/.vercel/
+**/test-results/
+**/playwright-report/
+*.log
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Application/contact details and owner approval files stay outside this repo.
+/application/
+/owner-private/
+/license-proposal/
+

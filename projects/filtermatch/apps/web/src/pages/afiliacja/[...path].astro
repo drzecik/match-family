@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export function getStaticPaths() {
+  return import.meta.env.FILTERMATCH_BUILD_PROFILE === 'private-review'
+    ? []
+    : [{ params: { path: undefined } }];
+}
+---
+<BaseLayout title="Polityka afiliacyjna — FilterMatch" description="Jak FilterMatch oznacza linki afiliacyjne i sponsorowane oferty."><article class="shell page-shell prose-page"><span class="kicker">Przejrzystość</span><h1>Afiliacja nie zmienia kompatybilności</h1><p class="lead">Możemy otrzymać prowizję po przejściu do sklepu. Użytkownik nie płaci przez to więcej.</p><h2>Kolejność ofert</h2><p>Reguła domyślna bierze pod uwagę aktualność, dostępność i łączną cenę. Wyniki sponsorowane są jawnie oznaczone. Sponsorowanie nigdy nie dodaje ani nie usuwa relacji kompatybilności.</p><h2>Aktualność</h2><p>Przy ofercie podajemy datę aktualizacji. Po wygaśnięciu nie przedstawiamy zapisanej ceny jako bieżącej.</p></article></BaseLayout>

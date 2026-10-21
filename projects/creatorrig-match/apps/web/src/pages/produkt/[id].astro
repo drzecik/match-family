@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  assessOffer,
+  safeMerchantAffiliateUrl,
+  type AffiliateOffer,
+  type MerchantUrlPolicy,
+} from '@creatorrig/affiliate-offers';
+import catalog from '../../../../../data/fixtures/demo-catalog.json';
+import offerFeed from '../../../../../data/offers/synthetic-offers.json';
+import { relationTypeLabel, subcategoryLabel } from '../../lib/polish-labels';
+
+export function getStaticPaths() {
+  return catalog.products.map((product) => ({ params: { id: product.id }, props: { product } }));
+}
+
+const { product } = Astro.props;
+const relations = catalog.compatibilityEdges.filter(
+  (edge) =>
+    edge.verificationStatus === 'verified' &&
+    edge.evidenceIds.length > 0 &&
+    (edge.sourceProductId === product.id || edge.targetProductId === product.id),
+);
+const merchantPolicies: readonly MerchantUrlPolicy[] = [
+  { merchant: 'Creator Supply Demo', host: 'creator-supply.synthetic.example', allowedPathPrefixes: ['/products/'] },
+  { merchant: 'Rig Outlet Demo', host: 'rig-outlet.synthetic.example', allowedPathPrefixes: ['/catalog/'] },
+];
+const staleThreshold = Date.parse('2026-06-17T20:00:00.000Z');
+const offers = (offerFeed.offers as readonly AffiliateOffer[])
+  .filter((offer) => offer.productId === product.id)
+  .map((offer) => ({
+    offer,
+    safeUrl: safeMerchantAffiliateUrl(offer.affiliateUrl, offer.merchant, merchantPolicies),
+    assessment: assessOffer(offer, {
+      now: '2026-07-17T20:00:00.000Z',
+      staleAfterDays: 30,
+      allowedMerchantHosts: merchantPolicies.map(({ host }) => host),
+    }),
+  }))
+  .filter(({ safeUrl, assessment }) => safeUrl !== undefined && assessment.publishable)
+  .sort((left, right) =>
+    (left.offer.priceMinor ?? Number.MAX_SAFE_INTEGER) -
+    (right.offer.priceMinor ?? Number.MAX_SAFE_INTEGER)
+  );
+---
+
+<BaseLayout title={`${product.canonicalName} — CreatorRig Match`} description={`Syntetyczny rekord i potwierdzone relacje produktu ${product.canonicalName}.`}>
+  <article class="public-page">
+    <p class="eyebrow">{product.brand} · {subcategoryLabel(product.subcategory)}</p>
+    <h1>{product.canonicalName}</h1>
+    <div class="demo-warning"><b>DANE SYNTETYCZNE</b><span>Ten rekord nie opisuje prawdziwego produktu.</span></div>
+    <dl class="fact-grid">
+      <dt>Model</dt><dd>{product.model}</dd>
+      <dt>Masa</dt><dd>{product.weightGrams} g</dd>
+      <dt>Cena demonstracyjna</dt><dd>{(product.priceMinor / 100).toFixed(2)} {product.currency}</dd>
+      <dt>Aliasy</dt><dd>{product.aliases.join(', ') || 'brak'}</dd>
+    </dl>
+    <h2>Oferty demonstracyjne</h2>
+    {offers.length ? (
+      <ul class="public-list">
+        {offers.map(({ offer, safeUrl }) => (
+          <li>
+            <a href={safeUrl} rel="nofollow sponsored noopener noreferrer">
+              <strong>{offer.merchant}</strong>
+              <span>
+                {offer.priceMinor === undefined ? 'Brak aktualnej ceny' : `${(offer.priceMinor / 100).toFixed(2)} ${offer.currency}`}
+                {offer.sponsored ? ' · pozycja sponsorowana' : ''}
+                {Date.parse(offer.updatedAt) < staleThreshold ? ' · cena nieaktualna' : ''}
+                {offer.availability === 'out_of_stock' ? ' · niedostępne' : ''}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    ) : <p>Brak aktualnej oferty. Status kompatybilności pozostaje bez zmian.</p>}
+    <h2>Potwierdzone relacje</h2>
+    {relations.length ? (
+      <ul class="public-list">
+        {relations.map((edge) => (
+          <li><a href={`/zgodnosc/${edge.id}`}><strong>{catalog.products.find((item) => item.id === (edge.sourceProductId === product.id ? edge.targetProductId : edge.sourceProductId))?.canonicalName ?? 'Powiązany produkt'}</strong><span>{relationTypeLabel(edge.relationType)}</span></a></li>
+        ))}
+      </ul>
+    ) : <p>Brak publicznej relacji dla tego rekordu. Nie tworzymy domyślnej kompatybilności.</p>}
+    <details><summary>Jak wykorzystywane są parametry techniczne?</summary><p>Walidator korzysta z deklaratywnych parametrów tego rekordu, ale pokazuje użytkownikowi wynik osobno dla mechaniki, elektryki, sygnału, optyki i pamięci. Samo podobieństwo złącza nie tworzy rekomendacji.</p></details>
+  </article>
+</BaseLayout>

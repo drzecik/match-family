@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Recording Mode"
+  short_description: "Add sourced media requirements and bitrate"
+  default_prompt: "Use $add-recording-mode to add and regression-test an evidence-backed recording mode candidate."

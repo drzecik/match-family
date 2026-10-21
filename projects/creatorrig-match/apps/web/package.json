@@ -1,0 +1,28 @@
+{
+  "name": "@creatorrig/web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "typecheck": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/react": "4.4.2",
+    "@astrojs/check": "0.9.9",
+    "@creatorrig/calculation-engine": "workspace:*",
+    "@creatorrig/affiliate-offers": "workspace:*",
+    "@creatorrig/compatibility-evaluator": "workspace:*",
+    "@creatorrig/model-search": "workspace:*",
+    "@creatorrig/rig-exchange": "workspace:*",
+    "astro": "5.18.2",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Report stale compatibility"
+  short_description: "Report compatibility due for review"
+  default_prompt: "Use $report-stale-compatibility to report stale compatibility records for a supplied cutoff date."

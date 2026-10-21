@@ -1,0 +1,14 @@
+{
+  "valid": true,
+  "generatedAt": "2026-07-17T00:00:00.000Z",
+  "counts": {
+    "devices": 5,
+    "consumables": 13,
+    "compatibilityEdges": 14,
+    "sourceEvidence": 16,
+    "searchAliases": 27,
+    "offers": 10,
+    "reviewDecisions": 11
+  },
+  "issues": []
+}

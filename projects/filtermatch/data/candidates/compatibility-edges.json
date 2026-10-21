@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "kind": "compatibilityEdges",
+  "records": [
+    {
+      "id": "compat-ap100-hb100-candidate",
+      "deviceId": "airpure-ap100-pl",
+      "consumableId": "homebreeze-hb100-candidate",
+      "relationType": "alternative",
+      "verificationStatus": "candidate",
+      "confidence": 0.42,
+      "evidenceIds": [
+        "evidence-candidate-mention"
+      ],
+      "notes": "Synthetic candidate. Must not be shown as compatible.",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "compat-ap101-hb101-conflicting",
+      "deviceId": "airpure-ap101-pl",
+      "consumableId": "homebreeze-hb101-conflict",
+      "relationType": "alternative",
+      "verificationStatus": "conflicting",
+      "confidence": 0.2,
+      "evidenceIds": [
+        "evidence-conflicting-mention"
+      ],
+      "notes": "Synthetic conflict. Must not be shown as compatible.",
+      "lastVerifiedAt": "2026-07-11T09:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "compat-hb200-pl-cf200-hepa-candidate",
+      "deviceId": "homebreeze-hb200-pl",
+      "consumableId": "cleanflow-cf200-hepa-candidate",
+      "relationType": "alternative",
+      "verificationStatus": "candidate",
+      "confidence": 0.38,
+      "evidenceIds": [
+        "evidence-hb200-candidate-mention"
+      ],
+      "notes": "Synthetic candidate does not prove that a single element replaces the required complete set.",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "compat-cf300-ap300-candidate",
+      "deviceId": "cleanflow-cf300-10",
+      "consumableId": "airpure-ap300-candidate-kit",
+      "relationType": "alternative",
+      "verificationStatus": "candidate",
+      "confidence": 0.35,
+      "evidenceIds": [
+        "evidence-cf300-candidate-mention"
+      ],
+      "notes": "Synthetic weak match remains a non-public candidate.",
+      "synthetic": true,
+      "notForProduction": true
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review source evidence"
+  short_description: "Review source metadata and evidence quality"
+  default_prompt: "Use $review-source-evidence to assess supplied source evidence and produce a structured review report."

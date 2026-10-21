@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+.vite/
+test-results/
+playwright-report/
+.env*
+.vercel/
+**/vendor/
+*.log

@@ -1,0 +1,36 @@
+{
+  "name": "@materialmatch/materialmatch-widget",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./standalone": "./src/standalone.ts"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "test": "vitest run",
+    "test:e2e": "pnpm build && playwright test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@materialmatch/calculation-engine": "workspace:*",
+    "@materialmatch/domain": "workspace:*",
+    "@materialmatch/shared-ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "catalog:",
+    "@materialmatch/test-fixtures": "workspace:*",
+    "@playwright/test": "catalog:",
+    "happy-dom": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  },
+  "license": "MIT"
+}

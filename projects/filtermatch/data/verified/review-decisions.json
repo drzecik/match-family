@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 2,
+  "kind": "reviewDecisions",
+  "records": [
+    {
+      "id": "review-compat-ap100-pf100-v1",
+      "edgeId": "compat-ap100-pf100",
+      "previousStatus": "candidate",
+      "decision": "verified_official",
+      "evidenceIds": [
+        "evidence-original-filter"
+      ],
+      "reviewer": "fixture-reviewer",
+      "decisionAuthority": "authorized_human_reviewer",
+      "decidedAt": "2026-07-10T09:00:00.000Z",
+      "rationale": "Synthetic fixture review records the explicit official-evidence decision.",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "review-compat-ap100-cf100-v1",
+      "edgeId": "compat-ap100-cf100",
+      "previousStatus": "candidate",
+      "decision": "verified_supplier",
+      "evidenceIds": [
+        "evidence-replacement-filter"
+      ],
+      "reviewer": "fixture-reviewer",
+      "decisionAuthority": "authorized_human_reviewer",
+      "decidedAt": "2026-07-10T09:00:00.000Z",
+      "rationale": "Synthetic fixture review records the explicit supplier-evidence decision.",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "review-compat-ap101-hb101-conflict-v1",
+      "edgeId": "compat-ap101-hb101-conflicting",
+      "previousStatus": "candidate",
+      "decision": "conflicting",
+      "evidenceIds": [
+        "evidence-conflicting-mention"
+      ],
+      "reviewer": "fixture-reviewer",
+      "decisionAuthority": "authorized_human_reviewer",
+      "decidedAt": "2026-07-11T09:00:00.000Z",
+      "rationale": "Synthetic fixture review records an unresolved conflict and keeps it non-public.",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "review-compat-hb200-pl-original-kit-v1",
+      "edgeId": "compat-hb200-pl-original-kit",
+      "previousStatus": "candidate",
+      "decision": "verified_official",
+      "evidenceIds": [
+        "evidence-hb200-original-components"
+      ],
+      "reviewer": "fixture-reviewer",
+      "decisionAuthority": "authorized_human_reviewer",
+      "decidedAt": "2026-07-12T10:00:00.000Z",
+      "rationale": "Synthetic human review confirms the official complete-set requirement for HB200/PL.",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "review-compat-hb200-pl-cf200-kit-v1",
+      "edgeId": "compat-hb200-pl-cf200-kit",
+      "previousStatus": "candidate",
+      "decision": "verified_supplier",
+      "evidenceIds": [
+        "evidence-hb200-replacement-kit"
+      ],
+      "reviewer": "fixture-reviewer",
+      "decisionAuthority": "authorized_human_reviewer",
+      "decidedAt": "2026-07-12T10:00:00.000Z",
+      "rationale": "Synthetic human review confirms the supplier declaration for the HB200/PL replacement set.",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "review-compat-hb200-pl-seal-frame-v1",
+      "edgeId": "compat-hb200-pl-seal-frame",
+      "previousStatus": "candidate",
+      "decision": "verified_official",
+      "evidenceIds": [
+        "evidence-hb200-seal-frame"
+      ],
+      "reviewer": "fixture-reviewer",
+      "decisionAuthority": "authorized_human_reviewer",
+      "decidedAt": "2026-07-12T10:00:00.000Z",
+      "rationale": "Synthetic human review confirms this accessory is optional and officially listed for HB200/PL.",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "review-compat-hb200-de-original-hepa-v1",
+      "edgeId": "compat-hb200-de-original-hepa",
+      "previousStatus": "candidate",
+      "decision": "verified_official",
+      "evidenceIds": [
+        "evidence-hb200-original-components"
+      ],
+      "reviewer": "fixture-reviewer",
+      "decisionAuthority": "authorized_human_reviewer",
+      "decidedAt": "2026-07-12T10:00:00.000Z",
+      "rationale": "Synthetic human review confirms the required individual HEPA element for HB200/DE.",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "review-compat-hb200-de-original-carbon-v1",
+      "edgeId": "compat-hb200-de-original-carbon",
+      "previousStatus": "candidate",
+      "decision": "verified_official",
+      "evidenceIds": [
+        "evidence-hb200-original-components"
+      ],
+      "reviewer": "fixture-reviewer",
+      "decisionAuthority": "authorized_human_reviewer",
+      "decidedAt": "2026-07-12T10:00:00.000Z",
+      "rationale": "Synthetic human review confirms the required individual carbon element for HB200/DE.",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "review-compat-hb200-de-cf200-kit-v1",
+      "edgeId": "compat-hb200-de-cf200-kit",
+      "previousStatus": "candidate",
+      "decision": "verified_supplier",
+      "evidenceIds": [
+        "evidence-hb200-replacement-kit"
+      ],
+      "reviewer": "fixture-reviewer",
+      "decisionAuthority": "authorized_human_reviewer",
+      "decidedAt": "2026-07-12T10:00:00.000Z",
+      "rationale": "Synthetic human review confirms the supplier replacement set for HB200/DE.",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "review-compat-cf300-original-kit-v1",
+      "edgeId": "compat-cf300-original-kit",
+      "previousStatus": "candidate",
+      "decision": "verified_official",
+      "evidenceIds": [
+        "evidence-cf300-original-kit"
+      ],
+      "reviewer": "fixture-reviewer",
+      "decisionAuthority": "authorized_human_reviewer",
+      "decidedAt": "2026-07-13T10:00:00.000Z",
+      "rationale": "Synthetic human review confirms the official complete-set requirement for CF300/10.",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "review-compat-cf300-hb300-kit-v1",
+      "edgeId": "compat-cf300-hb300-kit",
+      "previousStatus": "candidate",
+      "decision": "verified_supplier",
+      "evidenceIds": [
+        "evidence-cf300-replacement-kit"
+      ],
+      "reviewer": "fixture-reviewer",
+      "decisionAuthority": "authorized_human_reviewer",
+      "decidedAt": "2026-07-13T10:00:00.000Z",
+      "rationale": "Synthetic human review confirms the supplier replacement set for CF300/10.",
+      "synthetic": true,
+      "notForProduction": true
+    }
+  ]
+}

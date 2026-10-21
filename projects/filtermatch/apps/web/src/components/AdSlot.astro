@@ -1,0 +1,6 @@
+---
+interface Props { label: string }
+const enabled = !import.meta.env.DEV && import.meta.env.PUBLIC_ENABLE_ADS === 'true';
+const { label } = Astro.props;
+---
+{enabled && <aside class="ad-slot" aria-label={`Reklama: ${label}`}>Miejsce reklamowe — {label}</aside>}

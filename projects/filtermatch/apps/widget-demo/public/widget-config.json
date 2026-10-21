@@ -1,0 +1,164 @@
+{
+  "synthetic": true,
+  "notForProduction": true,
+  "catalog": {
+    "synthetic": true,
+    "notForProduction": true,
+    "devices": [
+      {
+        "id": "device-airpure-ap420-10",
+        "brand": "AirPure",
+        "canonicalModel": "AP420",
+        "regionalVariant": "/10",
+        "series": "Seria demonstracyjna Breathe 400",
+        "synthetic": true,
+        "notForProduction": true
+      }
+    ],
+    "aliases": [
+      {
+        "entityType": "device",
+        "entityId": "device-airpure-ap420-10",
+        "rawAlias": "AP 420 /10",
+        "approved": true,
+        "source": "synthetic fixture",
+        "synthetic": true,
+        "notForProduction": true
+      }
+    ],
+    "products": [
+      {
+        "id": "filter-airpure-pure-420",
+        "name": "AirPure Pure 420 — filtr oryginalny",
+        "url": "https://fixture-shop.example/filter/420",
+        "kind": "original",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "filter-cleanflow-cf420",
+        "name": "CleanFlow CF420 — filtr zamienny",
+        "url": "https://fixture-shop.example/filter/cf420",
+        "kind": "replacement",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "accessory-airpure-seal-420",
+        "name": "AirPure 420 — zestaw uszczelniający",
+        "url": "https://fixture-shop.example/accessory/seal-420",
+        "kind": "original",
+        "category": "accessory",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "filter-homebreeze-maybe420",
+        "name": "HomeBreeze 420 — niezweryfikowany kandydat",
+        "url": "https://fixture-shop.example/filter/maybe",
+        "kind": "replacement",
+        "synthetic": true,
+        "notForProduction": true
+      }
+    ],
+    "compatibility": [
+      {
+        "deviceId": "device-airpure-ap420-10",
+        "productId": "filter-airpure-pure-420",
+        "status": "verified_official",
+        "relationType": "required",
+        "evidenceIds": ["evidence-airpure-420-official"],
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "deviceId": "device-airpure-ap420-10",
+        "productId": "filter-cleanflow-cf420",
+        "status": "verified_supplier",
+        "relationType": "alternative",
+        "evidenceIds": ["evidence-cleanflow-420-supplier"],
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "deviceId": "device-airpure-ap420-10",
+        "productId": "accessory-airpure-seal-420",
+        "status": "verified_official",
+        "relationType": "optional",
+        "evidenceIds": ["evidence-airpure-420-official"],
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "deviceId": "device-airpure-ap420-10",
+        "productId": "filter-homebreeze-maybe420",
+        "status": "candidate",
+        "relationType": "alternative",
+        "evidenceIds": ["evidence-homebreeze-420-candidate"],
+        "synthetic": true,
+        "notForProduction": true
+      }
+    ],
+    "evidence": [
+      {
+        "id": "evidence-airpure-420-official",
+        "sourceType": "official_compatibility_list",
+        "title": "Demonstracyjna lista zgodności AirPure AP420",
+        "publisher": "AirPure — fikcyjny producent demonstracyjny",
+        "url": "https://docs.airpure.example/fixtures/ap420",
+        "accessedAt": "2026-07-12T00:00:00.000Z",
+        "evidenceSummary": "Oficjalny dokument demonstracyjny potwierdza filtr oryginalny i opcjonalny zestaw uszczelniający do AP420/10.",
+        "reviewer": "fixture-human-reviewer",
+        "reviewerType": "human",
+        "verifiedAt": "2026-07-12T00:00:00.000Z",
+        "verificationDecision": "verified_official",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "evidence-cleanflow-420-supplier",
+        "sourceType": "replacement_manufacturer",
+        "title": "Demonstracyjna deklaracja dostawcy CleanFlow CF420",
+        "publisher": "CleanFlow — fikcyjny producent demonstracyjny",
+        "url": "https://docs.cleanflow.example/fixtures/cf420",
+        "accessedAt": "2026-07-12T00:00:00.000Z",
+        "evidenceSummary": "Deklaracja demonstracyjna dostawcy wskazuje CF420 jako zamiennik do AP420/10.",
+        "reviewer": "fixture-human-reviewer",
+        "reviewerType": "human",
+        "verifiedAt": "2026-07-12T00:00:00.000Z",
+        "verificationDecision": "verified_supplier",
+        "synthetic": true,
+        "notForProduction": true
+      },
+      {
+        "id": "evidence-homebreeze-420-candidate",
+        "sourceType": "independent",
+        "title": "Niezweryfikowana notatka demonstracyjna",
+        "publisher": "HomeBreeze — fikcyjne notatki demonstracyjne",
+        "url": "https://notes.homebreeze.example/fixtures/maybe420",
+        "accessedAt": "2026-07-12T00:00:00.000Z",
+        "evidenceSummary": "To wyłącznie kandydat demonstracyjny; nie wolno przedstawiać go jako produktu zgodnego.",
+        "reviewer": "candidate-import-process",
+        "reviewerType": "approved_process",
+        "verifiedAt": "2026-07-12T00:00:00.000Z",
+        "verificationDecision": "candidate",
+        "synthetic": true,
+        "notForProduction": true
+      }
+    ]
+  },
+  "labels": {
+    "title": "Dobierz filtr lub akcesorium",
+    "submit": "Pokaż produkty"
+  },
+  "theme": {
+    "color": "#173f35",
+    "accent": "#dfff72",
+    "background": "#ffffff",
+    "borderRadiusPx": 20
+  },
+  "privacy": {
+    "emitNoResultEvents": true,
+    "includeNormalizedQueryInEvents": false
+  }
+}

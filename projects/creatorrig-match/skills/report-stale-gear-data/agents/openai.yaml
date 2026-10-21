@@ -1,0 +1,4 @@
+interface:
+  display_name: "Report Stale Gear Data"
+  short_description: "Report stale evidence, firmware, and prices"
+  default_prompt: "Use $report-stale-gear-data to produce a non-mutating review queue for stale gear data."

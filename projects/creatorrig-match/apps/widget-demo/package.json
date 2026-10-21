@@ -1,0 +1,16 @@
+{
+  "name": "@creatorrig/widget-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "astro check && astro build",
+    "typecheck": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/check": "0.9.9",
+    "@creatorrig/compatibility-widget": "workspace:*",
+    "astro": "5.18.2"
+  },
+  "license": "MIT"
+}

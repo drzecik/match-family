@@ -1,0 +1,3 @@
+kod_produktu;aktywny;typ_materialu;rodzina_produktowa;grubosc_mm;sposob_montazu;tagi_kompatybilnosci;powierzchnia_opakowania_m2;elementy_w_opakowaniu;minimalna_liczba_opakowan;wielokrotnosc_zamowienia;sprzedaz_otwartych_opakowan;domyslny_zapas_procent;minimalny_zapas_procent;maksymalny_zapas_procent
+FICTIONAL-MM-PANEL-NATURAL;tak;floor_panel;fictional_flooring_system;8;click;click_system;2,2;8;1;1;nie;8;0;20
+FICTIONAL-MM-UNDERLAY;tak;underlay;fictional_flooring_system;3;floating;flooring_compatible;10;1;0;1;nie;0;0;0

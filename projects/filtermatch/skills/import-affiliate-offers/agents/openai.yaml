@@ -1,0 +1,4 @@
+interface:
+  display_name: "Import affiliate offers"
+  short_description: "Validate and import controlled offer feeds"
+  default_prompt: "Use $import-affiliate-offers to validate a supplied offer CSV and produce a safe import report."

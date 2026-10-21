@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract Compatibility Candidates"
+  short_description: "Extract evidence-scoped candidate edges"
+  default_prompt: "Use $extract-compatibility-candidates to create candidate edges that require later human verification."

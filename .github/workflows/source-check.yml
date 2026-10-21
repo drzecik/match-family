@@ -1,0 +1,35 @@
+name: Source checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project: [filtermatch, creatorrig-match, materialmatch]
+    defaults:
+      run:
+        working-directory: projects/${{ matrix.project }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.18.0
+      - run: corepack enable
+      - run: corepack pnpm install --frozen-lockfile
+      - if: matrix.project == 'materialmatch'
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer
+      - if: matrix.project == 'materialmatch'
+        run: composer install --working-dir=integrations/woocommerce-adapter --no-interaction --prefer-dist && composer install --working-dir=integrations/wordpress-materialmatch --no-interaction --prefer-dist
+      - if: matrix.project == 'materialmatch'
+        run: corepack pnpm create:demo-data
+      - run: corepack pnpm check
+      - run: corepack pnpm exec playwright install --with-deps chromium
+      - if: matrix.project == 'creatorrig-match'
+        run: corepack pnpm e2e
+      - if: matrix.project != 'creatorrig-match'
+        run: corepack pnpm test:e2e

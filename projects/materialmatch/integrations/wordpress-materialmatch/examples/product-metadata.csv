@@ -1,0 +1,3 @@
+kod_produktu;aktywny;typ_materialu;rodzina_produktowa;grubosc_mm;sposob_montazu;tagi_kompatybilnosci;powierzchnia_opakowania_m2;elementy_w_opakowaniu;minimalna_liczba_opakowan;wielokrotnosc_zamowienia;sprzedaz_otwartych_opakowan;domyslny_zapas_procent;minimalny_zapas_procent;maksymalny_zapas_procent
+DEMO-PANEL-001;tak;flooring_panel;fictional_oak_family;8;click;underlay_compatible|dry_rooms;2,2;8;1;1;nie;8;5;15
+DEMO-UNDERLAY-001;tak;underlay;fictional_underlay_family;3;floating;underlay_compatible;10;1;1;1;nie;0;0;0

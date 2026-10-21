@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CorrectionForm from '../../components/CorrectionForm.astro';
+
+export function getStaticPaths() {
+  return import.meta.env.FILTERMATCH_BUILD_PROFILE === 'private-review'
+    ? []
+    : [{ params: { path: undefined } }];
+}
+const query = Astro.url.searchParams.get('query') ?? '';
+---
+<BaseLayout title="Korekty i aktualizacje — FilterMatch" description="Zgłoś brak urządzenia albo błąd w danych FilterMatch." noindex={Boolean(query)} canonicalPath="/korekty/"><div class="shell page-shell prose-page"><span class="kicker">Korekty</span><h1>Pomóż poprawić dane</h1><p class="lead">Zgłoszenie nigdy nie publikuje kompatybilności automatycznie. Trafia do procesu weryfikacji jako kandydat.</p><CorrectionForm query={query} /></div></BaseLayout>

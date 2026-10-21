@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SearchIsland from '../../components/SearchIsland';
+import { searchIndex } from '../../lib/data';
+
+export function getStaticPaths() {
+  return import.meta.env.FILTERMATCH_BUILD_PROFILE === 'private-review'
+    ? []
+    : [{ params: { path: undefined } }];
+}
+---
+<BaseLayout title="Wyszukiwanie modeli — FilterMatch" description="Wyszukaj dokładny model urządzenia." noindex={true} canonicalPath="/szukaj/">
+  <div class="shell page-shell"><h1 class="visually-hidden">Wyszukaj model urządzenia</h1><SearchIsland index={searchIndex} client:load /></div>
+</BaseLayout>

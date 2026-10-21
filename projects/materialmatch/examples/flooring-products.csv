@@ -1,0 +1,5 @@
+data_notice,product_id,sku,name_key,sale_unit,coverage_m2,item_length_m,price_minor,currency,available
+FICTIONAL DEMONSTRATION DATA,fictional-floor-panel,FICTIONAL-MM-PANEL-NATURAL,flooring.variant.panelNatural,package,2.2,,15999,PLN,true
+FICTIONAL DEMONSTRATION DATA,underlay,FICTIONAL-MM-UNDERLAY,flooring.accessory.underlay.standard,roll,10,,4999,PLN,true
+FICTIONAL DEMONSTRATION DATA,skirting,FICTIONAL-MM-SKIRTING,flooring.accessory.skirting.standard,piece,,2.4,2999,PLN,true
+

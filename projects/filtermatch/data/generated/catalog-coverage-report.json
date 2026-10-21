@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-07-17T00:00:00.000Z",
+  "schemaVersion": 2,
+  "normalizerVersion": "model-v1",
+  "dataRevision": "sha256:a93c65ad9e40b1529c2072f0cf4a83c18ff3ea56deb9f3773fc78272c0ecac3d",
+  "scopeId": "demo-catalog-v1",
+  "summary": {
+    "complete": true,
+    "requiredDevices": 5,
+    "expectedPublicEdges": 10,
+    "expectedNonPublicEdges": 4,
+    "issues": 0
+  },
+  "issues": []
+}

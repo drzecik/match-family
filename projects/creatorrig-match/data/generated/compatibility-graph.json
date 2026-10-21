@@ -1,0 +1,705 @@
+{
+  "schemaVersion": "1.0.0-demo",
+  "synthetic": true,
+  "notForProduction": true,
+  "products": [
+    {
+      "id": "novacam-n7",
+      "canonicalName": "NovaCam N7",
+      "category": "capture_device",
+      "subcategory": "camera"
+    },
+    {
+      "id": "novacam-x1",
+      "canonicalName": "NovaCam X1",
+      "category": "capture_device",
+      "subcategory": "camera"
+    },
+    {
+      "id": "novacam-pocket-c",
+      "canonicalName": "NovaCam Pocket C",
+      "category": "capture_device",
+      "subcategory": "phone"
+    },
+    {
+      "id": "clearlens-n23",
+      "canonicalName": "ClearLens N 23 mm F1.8",
+      "category": "optics",
+      "subcategory": "lens"
+    },
+    {
+      "id": "clearlens-l50",
+      "canonicalName": "ClearLens L 50 mm F1.4",
+      "category": "optics",
+      "subcategory": "lens"
+    },
+    {
+      "id": "clearlens-x-l-adapter",
+      "canonicalName": "ClearLens X–L Smart Adapter",
+      "category": "optics",
+      "subcategory": "lens_mount_adapter"
+    },
+    {
+      "id": "echomic-shot-s",
+      "canonicalName": "EchoMic Shot S",
+      "category": "audio",
+      "subcategory": "wired_microphone"
+    },
+    {
+      "id": "echomic-lav-r",
+      "canonicalName": "EchoMic Lav R",
+      "category": "audio",
+      "subcategory": "wired_microphone"
+    },
+    {
+      "id": "echomic-air-c-rx",
+      "canonicalName": "EchoMic Air C Receiver",
+      "category": "audio",
+      "subcategory": "audio_receiver"
+    },
+    {
+      "id": "echomic-trrs-trs-adapter",
+      "canonicalName": "EchoMic TRRS–TRS Adapter",
+      "category": "audio",
+      "subcategory": "trs_trrs_adapter"
+    },
+    {
+      "id": "echomic-patch-35",
+      "canonicalName": "EchoMic Patch 3.5 Cable",
+      "category": "audio",
+      "subcategory": "audio_cable"
+    },
+    {
+      "id": "swiftcard-v90-128",
+      "canonicalName": "SwiftCard V90 SDXC 128 GB",
+      "category": "memory_and_transfer",
+      "subcategory": "sd_card"
+    },
+    {
+      "id": "swiftcard-v90-256",
+      "canonicalName": "SwiftCard V90 SDXC 256 GB",
+      "category": "memory_and_transfer",
+      "subcategory": "sd_card"
+    },
+    {
+      "id": "swiftcard-v90-512",
+      "canonicalName": "SwiftCard V90 SDXC 512 GB",
+      "category": "memory_and_transfer",
+      "subcategory": "sd_card"
+    },
+    {
+      "id": "swiftcard-v90-1024",
+      "canonicalName": "SwiftCard V90 SDXC 1 TB",
+      "category": "memory_and_transfer",
+      "subcategory": "sd_card"
+    },
+    {
+      "id": "swiftcard-cfxb-256",
+      "canonicalName": "SwiftCard CFexpress B 256 GB",
+      "category": "memory_and_transfer",
+      "subcategory": "cfexpress_card"
+    },
+    {
+      "id": "swiftcard-cfxb-1024",
+      "canonicalName": "SwiftCard CFexpress B 1 TB",
+      "category": "memory_and_transfer",
+      "subcategory": "cfexpress_card"
+    },
+    {
+      "id": "powerframe-pd-72",
+      "canonicalName": "PowerFrame PD 72 Wh",
+      "category": "power",
+      "subcategory": "power_bank"
+    },
+    {
+      "id": "powerframe-legacy-5",
+      "canonicalName": "PowerFrame Legacy 5 V",
+      "category": "power",
+      "subcategory": "power_bank"
+    },
+    {
+      "id": "powerframe-usbc-pd-60-cable",
+      "canonicalName": "PowerFrame USB-C PD 60 W Cable",
+      "category": "power",
+      "subcategory": "usb_c_cable"
+    },
+    {
+      "id": "lumaforge-panel-p60",
+      "canonicalName": "LumaForge Panel P60",
+      "category": "lighting",
+      "subcategory": "led_panel"
+    },
+    {
+      "id": "lumaforge-cob-c120",
+      "canonicalName": "LumaForge COB C120",
+      "category": "lighting",
+      "subcategory": "cob_light"
+    },
+    {
+      "id": "lumaforge-softbox-s60",
+      "canonicalName": "LumaForge Softbox S60",
+      "category": "lighting",
+      "subcategory": "softbox"
+    },
+    {
+      "id": "lumaforge-grid-s60",
+      "canonicalName": "LumaForge Grid S60",
+      "category": "lighting",
+      "subcategory": "lighting_grid"
+    },
+    {
+      "id": "lumaforge-softbox-mini-q",
+      "canonicalName": "LumaForge Softbox Mini Q",
+      "category": "lighting",
+      "subcategory": "softbox"
+    },
+    {
+      "id": "motionrig-light-stand-air250",
+      "canonicalName": "MotionRig Light Stand Air 250",
+      "category": "stabilization_and_mounting",
+      "subcategory": "light_stand"
+    },
+    {
+      "id": "motionrig-light-stand-desk800",
+      "canonicalName": "MotionRig Desk Stand 800",
+      "category": "stabilization_and_mounting",
+      "subcategory": "light_stand"
+    },
+    {
+      "id": "powerframe-ac-75-15v",
+      "canonicalName": "PowerFrame AC 75 / 15 V",
+      "category": "power",
+      "subcategory": "ac_power_supply"
+    },
+    {
+      "id": "powerframe-ac-150-48v",
+      "canonicalName": "PowerFrame AC 150 / 48 V",
+      "category": "power",
+      "subcategory": "ac_power_supply"
+    },
+    {
+      "id": "lumaforge-control-bt",
+      "canonicalName": "LumaForge Control BT",
+      "category": "lighting",
+      "subcategory": "lighting_controller"
+    },
+    {
+      "id": "lumaforge-control-wifi-candidate",
+      "canonicalName": "LumaForge Control Wi-Fi Candidate",
+      "category": "lighting",
+      "subcategory": "lighting_controller"
+    },
+    {
+      "id": "viewframe-field-5",
+      "canonicalName": "ViewFrame Field 5",
+      "category": "monitoring_and_recording",
+      "subcategory": "field_monitor"
+    },
+    {
+      "id": "viewframe-recorder-7",
+      "canonicalName": "ViewFrame Recorder 7",
+      "category": "monitoring_and_recording",
+      "subcategory": "external_recorder"
+    },
+    {
+      "id": "signalbridge-micro-a-hdmi20",
+      "canonicalName": "SignalBridge Micro HDMI–A 2.0",
+      "category": "monitoring_and_recording",
+      "subcategory": "hdmi_cable"
+    },
+    {
+      "id": "signalbridge-micro-a-hdmi14",
+      "canonicalName": "SignalBridge Micro HDMI–A 1.4",
+      "category": "monitoring_and_recording",
+      "subcategory": "hdmi_cable"
+    },
+    {
+      "id": "signalbridge-a-a-hdmi21",
+      "canonicalName": "SignalBridge HDMI A–A 2.1",
+      "category": "monitoring_and_recording",
+      "subcategory": "hdmi_cable"
+    },
+    {
+      "id": "streambridge-capture-u4",
+      "canonicalName": "StreamBridge Capture U4",
+      "category": "monitoring_and_recording",
+      "subcategory": "capture_card"
+    },
+    {
+      "id": "streambridge-live-s1",
+      "canonicalName": "StreamBridge Live S1",
+      "category": "monitoring_and_recording",
+      "subcategory": "streaming_device"
+    },
+    {
+      "id": "motionrig-x1-side-grip",
+      "canonicalName": "MotionRig X1 Side Grip",
+      "category": "stabilization_and_mounting",
+      "subcategory": "grip"
+    },
+    {
+      "id": "motionrig-tripod-field-6",
+      "canonicalName": "MotionRig Tripod Field 6",
+      "category": "stabilization_and_mounting",
+      "subcategory": "tripod"
+    },
+    {
+      "id": "motionrig-tripod-desk-15",
+      "canonicalName": "MotionRig Tripod Desk 15",
+      "category": "stabilization_and_mounting",
+      "subcategory": "tripod"
+    },
+    {
+      "id": "motionrig-head-fluid-5",
+      "canonicalName": "MotionRig Fluid Head 5",
+      "category": "stabilization_and_mounting",
+      "subcategory": "tripod_head"
+    },
+    {
+      "id": "motionrig-head-mini-1",
+      "canonicalName": "MotionRig Mini Head 1",
+      "category": "stabilization_and_mounting",
+      "subcategory": "tripod_head"
+    },
+    {
+      "id": "promptframe-studio-12",
+      "canonicalName": "PromptFrame Studio 12",
+      "category": "studio_and_workflow",
+      "subcategory": "teleprompter"
+    },
+    {
+      "id": "promptframe-mobile-candidate",
+      "canonicalName": "PromptFrame Mobile Candidate",
+      "category": "studio_and_workflow",
+      "subcategory": "teleprompter"
+    },
+    {
+      "id": "flowcompute-studio-m2",
+      "canonicalName": "FlowCompute Studio M2",
+      "category": "studio_and_workflow",
+      "subcategory": "computer"
+    },
+    {
+      "id": "flowcompute-air-c",
+      "canonicalName": "FlowCompute Air C",
+      "category": "studio_and_workflow",
+      "subcategory": "computer"
+    },
+    {
+      "id": "datadock-pro-tb4",
+      "canonicalName": "DataDock Pro TB4",
+      "category": "memory_and_transfer",
+      "subcategory": "dock"
+    },
+    {
+      "id": "datadock-lite-c",
+      "canonicalName": "DataDock Lite C",
+      "category": "memory_and_transfer",
+      "subcategory": "dock"
+    },
+    {
+      "id": "swiftreader-cfxb-pro",
+      "canonicalName": "SwiftReader CFexpress B Pro",
+      "category": "memory_and_transfer",
+      "subcategory": "card_reader"
+    },
+    {
+      "id": "swiftreader-sd-uhsii",
+      "canonicalName": "SwiftReader SD UHS-II",
+      "category": "memory_and_transfer",
+      "subcategory": "card_reader"
+    },
+    {
+      "id": "datadock-nvme-enclosure",
+      "canonicalName": "DataDock NVMe Enclosure",
+      "category": "memory_and_transfer",
+      "subcategory": "card_reader"
+    },
+    {
+      "id": "swiftdrive-nvme-1tb",
+      "canonicalName": "SwiftDrive NVMe 1 TB",
+      "category": "memory_and_transfer",
+      "subcategory": "ssd"
+    },
+    {
+      "id": "swiftdrive-sata-500",
+      "canonicalName": "SwiftDrive SATA 500 GB",
+      "category": "memory_and_transfer",
+      "subcategory": "ssd"
+    },
+    {
+      "id": "powerframe-dock-100",
+      "canonicalName": "PowerFrame Dock 100 W",
+      "category": "power",
+      "subcategory": "workflow_power_supply"
+    },
+    {
+      "id": "echocast-duo-x",
+      "canonicalName": "EchoCast Duo X",
+      "category": "audio",
+      "subcategory": "audio_interface"
+    },
+    {
+      "id": "echocast-solo-c",
+      "canonicalName": "EchoCast Solo C",
+      "category": "audio",
+      "subcategory": "audio_interface"
+    },
+    {
+      "id": "echomic-studio-c1",
+      "canonicalName": "EchoMic Studio C1",
+      "category": "audio",
+      "subcategory": "xlr_microphone"
+    },
+    {
+      "id": "echomic-studio-c2",
+      "canonicalName": "EchoMic Studio C2",
+      "category": "audio",
+      "subcategory": "xlr_microphone"
+    },
+    {
+      "id": "echomic-dynamic-d1",
+      "canonicalName": "EchoMic Dynamic D1",
+      "category": "audio",
+      "subcategory": "xlr_microphone"
+    },
+    {
+      "id": "echomic-monitor-h80",
+      "canonicalName": "EchoMic Monitor H80",
+      "category": "audio",
+      "subcategory": "headphones"
+    },
+    {
+      "id": "echomic-xlr-cable-a",
+      "canonicalName": "EchoMic XLR Cable A",
+      "category": "audio",
+      "subcategory": "xlr_cable"
+    },
+    {
+      "id": "echomic-xlr-cable-b",
+      "canonicalName": "EchoMic XLR Cable B",
+      "category": "audio",
+      "subcategory": "xlr_cable"
+    },
+    {
+      "id": "echomic-xlr-cable-c",
+      "canonicalName": "EchoMic XLR Cable C",
+      "category": "audio",
+      "subcategory": "xlr_cable"
+    },
+    {
+      "id": "echomic-usbc-host-cable",
+      "canonicalName": "EchoMic USB-C Host Cable",
+      "category": "audio",
+      "subcategory": "usb_audio_cable"
+    },
+    {
+      "id": "powerframe-audio-30",
+      "canonicalName": "PowerFrame Audio 30 W",
+      "category": "power",
+      "subcategory": "workflow_power_supply"
+    },
+    {
+      "id": "clearfilter-protect-49",
+      "canonicalName": "ClearFilter Protect 49",
+      "category": "optics",
+      "subcategory": "round_filter"
+    },
+    {
+      "id": "clearfilter-vnd-67",
+      "canonicalName": "ClearFilter VND 2–5 67",
+      "category": "optics",
+      "subcategory": "round_filter"
+    },
+    {
+      "id": "clearfilter-cpl-82",
+      "canonicalName": "ClearFilter CPL 82",
+      "category": "optics",
+      "subcategory": "round_filter"
+    },
+    {
+      "id": "clearfilter-vnd-49-narrow",
+      "canonicalName": "ClearFilter VND Narrow 49",
+      "category": "optics",
+      "subcategory": "round_filter"
+    },
+    {
+      "id": "clearfilter-step-up-49-67",
+      "canonicalName": "ClearFilter Step-Up 49–67",
+      "category": "optics",
+      "subcategory": "step_up_ring"
+    },
+    {
+      "id": "clearfilter-step-up-67-82",
+      "canonicalName": "ClearFilter Step-Up 67–82",
+      "category": "optics",
+      "subcategory": "step_up_ring"
+    },
+    {
+      "id": "clearfilter-step-up-58-67",
+      "canonicalName": "ClearFilter Step-Up 58–67",
+      "category": "optics",
+      "subcategory": "step_up_ring"
+    },
+    {
+      "id": "motionrig-matte-mini-67",
+      "canonicalName": "MotionRig Matte Mini 67",
+      "category": "stabilization_and_mounting",
+      "subcategory": "matte_box"
+    },
+    {
+      "id": "motionrig-matte-cine-95-candidate",
+      "canonicalName": "MotionRig Matte Cine 95 Candidate",
+      "category": "stabilization_and_mounting",
+      "subcategory": "matte_box"
+    },
+    {
+      "id": "powerframe-pd-100",
+      "canonicalName": "PowerFrame PD 100",
+      "category": "power",
+      "subcategory": "power_bank"
+    },
+    {
+      "id": "powerframe-pd-18-mini",
+      "canonicalName": "PowerFrame PD 18 Mini",
+      "category": "power",
+      "subcategory": "power_bank"
+    },
+    {
+      "id": "powerframe-usbc-pd-100-cable",
+      "canonicalName": "PowerFrame USB-C PD 100 Cable",
+      "category": "power",
+      "subcategory": "usb_c_cable"
+    },
+    {
+      "id": "powerframe-usbc-fixed5-cable",
+      "canonicalName": "PowerFrame USB-C Fixed 5 V Cable",
+      "category": "power",
+      "subcategory": "usb_c_cable"
+    },
+    {
+      "id": "motionrig-flow-max",
+      "canonicalName": "MotionRig Flow Max",
+      "category": "stabilization_and_mounting",
+      "subcategory": "gimbal"
+    },
+    {
+      "id": "motionrig-travel-one",
+      "canonicalName": "MotionRig Travel One",
+      "category": "stabilization_and_mounting",
+      "subcategory": "gimbal"
+    },
+    {
+      "id": "motionrig-n7-air-cage",
+      "canonicalName": "MotionRig N7 Air Cage",
+      "category": "stabilization_and_mounting",
+      "subcategory": "cage"
+    },
+    {
+      "id": "motionrig-pocket-creator-cage",
+      "canonicalName": "MotionRig Pocket Creator Cage",
+      "category": "stabilization_and_mounting",
+      "subcategory": "cage"
+    },
+    {
+      "id": "motionrig-flow-pro",
+      "canonicalName": "MotionRig Flow Pro",
+      "category": "stabilization_and_mounting",
+      "subcategory": "gimbal"
+    },
+    {
+      "id": "motionrig-pocket-lite",
+      "canonicalName": "MotionRig Pocket Lite",
+      "category": "stabilization_and_mounting",
+      "subcategory": "gimbal"
+    },
+    {
+      "id": "motionrig-n7-form-cage",
+      "canonicalName": "MotionRig N7 Form Cage",
+      "category": "stabilization_and_mounting",
+      "subcategory": "cage"
+    },
+    {
+      "id": "motionrig-x1-form-cage",
+      "canonicalName": "MotionRig X1 Form Cage",
+      "category": "stabilization_and_mounting",
+      "subcategory": "cage"
+    }
+  ],
+  "edges": [
+    {
+      "id": "n7-shot-s",
+      "sourceProductId": "novacam-n7",
+      "targetProductId": "echomic-shot-s",
+      "relationType": "directly_compatible",
+      "dimensions": {
+        "mechanical": "compatible",
+        "electrical": "compatible",
+        "signal": "compatible",
+        "software": "not_applicable"
+      },
+      "requiredProductIds": [
+        "echomic-patch-35"
+      ],
+      "limitations": [
+        "Sygnał mono jest zapisany w jednym kanale wejścia stereo."
+      ],
+      "evidenceIds": [
+        "ev-n7-manual",
+        "ev-echomic-guide"
+      ],
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-07-17",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "x1-shot-s",
+      "sourceProductId": "novacam-x1",
+      "targetProductId": "echomic-shot-s",
+      "relationType": "directly_compatible",
+      "dimensions": {
+        "mechanical": "compatible",
+        "electrical": "compatible",
+        "signal": "compatible",
+        "software": "not_applicable"
+      },
+      "requiredProductIds": [
+        "echomic-patch-35"
+      ],
+      "limitations": [
+        "Sygnał mono jest zapisany w jednym kanale wejścia stereo."
+      ],
+      "evidenceIds": [
+        "ev-x1-manual",
+        "ev-echomic-guide"
+      ],
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-07-17",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "n7-lav-r",
+      "sourceProductId": "novacam-n7",
+      "targetProductId": "echomic-lav-r",
+      "relationType": "compatible_with_adapter",
+      "dimensions": {
+        "mechanical": "compatible_with_limitations",
+        "electrical": "compatible",
+        "signal": "compatible"
+      },
+      "requiredProductIds": [
+        "echomic-trrs-trs-adapter"
+      ],
+      "limitations": [
+        "Adapter musi być podłączony w kierunku TRRS → TRS."
+      ],
+      "evidenceIds": [
+        "ev-n7-manual",
+        "ev-echomic-guide"
+      ],
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-07-17",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "pocket-air-c",
+      "sourceProductId": "novacam-pocket-c",
+      "targetProductId": "echomic-air-c-rx",
+      "relationType": "conditionally_compatible",
+      "dimensions": {
+        "mechanical": "compatible",
+        "electrical": "compatible",
+        "signal": "compatible",
+        "software": "compatible_with_limitations"
+      },
+      "requiredProductIds": [],
+      "conditions": [
+        "Aplikacja musi obsługiwać zewnętrzne wejście USB Audio."
+      ],
+      "limitations": [
+        "Dwa kanały zależą od wybranej aplikacji."
+      ],
+      "evidenceIds": [
+        "ev-pocket-spec",
+        "ev-echomic-guide"
+      ],
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-07-17",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "n7-n23",
+      "sourceProductId": "novacam-n7",
+      "targetProductId": "clearlens-n23",
+      "relationType": "directly_compatible",
+      "dimensions": {
+        "mechanical": "compatible",
+        "optical": "compatible",
+        "software": "compatible"
+      },
+      "requiredProductIds": [],
+      "limitations": [],
+      "evidenceIds": [
+        "ev-n7-manual",
+        "ev-clearlens-chart"
+      ],
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-07-17",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "x1-l50",
+      "sourceProductId": "novacam-x1",
+      "targetProductId": "clearlens-l50",
+      "relationType": "compatible_with_adapter",
+      "dimensions": {
+        "mechanical": "compatible",
+        "optical": "compatible",
+        "software": "compatible_with_limitations"
+      },
+      "requiredProductIds": [
+        "clearlens-x-l-adapter"
+      ],
+      "limitations": [
+        "Autofocus nie działa; ustawianie ostrości jest ręczne.",
+        "Sterowanie przysłoną działa przez adapter."
+      ],
+      "evidenceIds": [
+        "ev-x1-manual",
+        "ev-clearlens-chart"
+      ],
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-07-17",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "x1-n23-conflict",
+      "sourceProductId": "novacam-x1",
+      "targetProductId": "clearlens-n23",
+      "relationType": "incompatible",
+      "dimensions": {
+        "mechanical": "incompatible",
+        "optical": "incompatible",
+        "software": "unknown"
+      },
+      "requiredProductIds": [],
+      "limitations": [
+        "Bagnety są różne i obraz APS-C nie pokrywa sensora full frame."
+      ],
+      "evidenceIds": [
+        "ev-x1-manual",
+        "ev-clearlens-chart"
+      ],
+      "verificationStatus": "verified",
+      "verifiedAt": "2026-07-17",
+      "synthetic": true,
+      "notForProduction": true
+    }
+  ]
+}

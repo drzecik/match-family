@@ -1,0 +1,486 @@
+{
+  "formatVersion": 1,
+  "checksum": "9f50cc52cef6dfc8ed7b355fe8363dc93fa47c11df635913a2dbcd741c231ec5",
+  "configuration": {
+    "id": "fictional-flooring-reference",
+    "version": {
+      "schemaVersion": 1,
+      "revision": 0,
+      "createdAt": "2026-07-17T00:00:00.000Z"
+    },
+    "locale": "pl-PL",
+    "currency": "PLN",
+    "mainProduct": {
+      "id": "fictional-floor-panel",
+      "nameKey": "flooring.product.panel",
+      "attributes": {
+        "materialType": "floor-panel",
+        "productFamily": "fictional-flooring-system",
+        "thicknessMillimeters": 8,
+        "grade": "domestic-commercial",
+        "installationMethod": "click",
+        "compatibilityTags": [
+          "click-system"
+        ],
+        "exclusionTags": []
+      },
+      "variants": [
+        {
+          "id": "fictional-panel-natural",
+          "sku": "FICTIONAL-MM-PANEL-NATURAL",
+          "nameKey": "flooring.variant.panelNatural",
+          "package": {
+            "saleUnit": "package",
+            "coverageAreaSquareMillimeters": 2200000,
+            "itemAreaSquareMillimeters": 275000,
+            "piecesPerPackage": 8,
+            "minimumPackages": 1,
+            "orderMultiple": 1,
+            "openedPackagesSold": false
+          },
+          "price": {
+            "minorUnits": 15999,
+            "currency": "PLN"
+          },
+          "available": true,
+          "materialType": "floor-panel",
+          "productFamily": "fictional-flooring-system",
+          "thicknessMillimeters": 8,
+          "grade": "domestic-commercial",
+          "installationMethod": "click",
+          "compatibilityTags": [
+            "click-system"
+          ],
+          "exclusionTags": []
+        }
+      ]
+    },
+    "defaultVariantId": "fictional-panel-natural",
+    "wasteRule": {
+      "defaultBasisPoints": 800,
+      "minimumBasisPoints": 0,
+      "maximumBasisPoints": 2000,
+      "patternOverrides": {
+        "straight": 800,
+        "diagonal": 1500
+      }
+    },
+    "accessories": [
+      {
+        "id": "underlay",
+        "nameKey": "flooring.accessory.underlay",
+        "variant": {
+          "id": "underlay-standard",
+          "sku": "FICTIONAL-MM-UNDERLAY",
+          "nameKey": "flooring.accessory.underlay.standard",
+          "package": {
+            "saleUnit": "roll",
+            "coverageAreaSquareMillimeters": 10000000,
+            "piecesPerPackage": 1,
+            "minimumPackages": 0,
+            "orderMultiple": 1,
+            "openedPackagesSold": false
+          },
+          "price": {
+            "minorUnits": 4999,
+            "currency": "PLN"
+          },
+          "available": true,
+          "materialType": "flooring-accessory",
+          "productFamily": "fictional-flooring-system",
+          "compatibilityTags": [
+            "flooring-compatible"
+          ],
+          "exclusionTags": []
+        }
+      },
+      {
+        "id": "vapor-barrier",
+        "nameKey": "flooring.accessory.vapor-barrier",
+        "variant": {
+          "id": "vapor-barrier-standard",
+          "sku": "FICTIONAL-MM-VAPOR-BARRIER",
+          "nameKey": "flooring.accessory.vapor-barrier.standard",
+          "package": {
+            "saleUnit": "roll",
+            "coverageAreaSquareMillimeters": 15000000,
+            "piecesPerPackage": 1,
+            "minimumPackages": 0,
+            "orderMultiple": 1,
+            "openedPackagesSold": false
+          },
+          "price": {
+            "minorUnits": 3999,
+            "currency": "PLN"
+          },
+          "available": true,
+          "materialType": "flooring-accessory",
+          "productFamily": "fictional-flooring-system",
+          "compatibilityTags": [
+            "flooring-compatible"
+          ],
+          "exclusionTags": []
+        }
+      },
+      {
+        "id": "skirting",
+        "nameKey": "flooring.accessory.skirting",
+        "variant": {
+          "id": "skirting-standard",
+          "sku": "FICTIONAL-MM-SKIRTING",
+          "nameKey": "flooring.accessory.skirting.standard",
+          "package": {
+            "saleUnit": "piece",
+            "itemLengthMillimeters": 2400,
+            "piecesPerPackage": 1,
+            "minimumPackages": 0,
+            "orderMultiple": 1,
+            "openedPackagesSold": false
+          },
+          "price": {
+            "minorUnits": 2999,
+            "currency": "PLN"
+          },
+          "available": true,
+          "materialType": "flooring-accessory",
+          "productFamily": "fictional-flooring-system",
+          "compatibilityTags": [
+            "flooring-compatible"
+          ],
+          "exclusionTags": []
+        }
+      },
+      {
+        "id": "internal-corner",
+        "nameKey": "flooring.accessory.internal-corner",
+        "variant": {
+          "id": "internal-corner-standard",
+          "sku": "FICTIONAL-MM-INTERNAL-CORNER",
+          "nameKey": "flooring.accessory.internal-corner.standard",
+          "package": {
+            "saleUnit": "piece",
+            "piecesPerPackage": 1,
+            "minimumPackages": 0,
+            "orderMultiple": 1,
+            "openedPackagesSold": false
+          },
+          "price": {
+            "minorUnits": 499,
+            "currency": "PLN"
+          },
+          "available": true,
+          "materialType": "flooring-accessory",
+          "productFamily": "fictional-flooring-system",
+          "compatibilityTags": [
+            "flooring-compatible"
+          ],
+          "exclusionTags": []
+        }
+      },
+      {
+        "id": "external-corner",
+        "nameKey": "flooring.accessory.external-corner",
+        "variant": {
+          "id": "external-corner-standard",
+          "sku": "FICTIONAL-MM-EXTERNAL-CORNER",
+          "nameKey": "flooring.accessory.external-corner.standard",
+          "package": {
+            "saleUnit": "piece",
+            "piecesPerPackage": 1,
+            "minimumPackages": 0,
+            "orderMultiple": 1,
+            "openedPackagesSold": false
+          },
+          "price": {
+            "minorUnits": 499,
+            "currency": "PLN"
+          },
+          "available": true,
+          "materialType": "flooring-accessory",
+          "productFamily": "fictional-flooring-system",
+          "compatibilityTags": [
+            "flooring-compatible"
+          ],
+          "exclusionTags": []
+        }
+      },
+      {
+        "id": "connector",
+        "nameKey": "flooring.accessory.connector",
+        "variant": {
+          "id": "connector-standard",
+          "sku": "FICTIONAL-MM-CONNECTOR",
+          "nameKey": "flooring.accessory.connector.standard",
+          "package": {
+            "saleUnit": "piece",
+            "piecesPerPackage": 1,
+            "minimumPackages": 0,
+            "orderMultiple": 1,
+            "openedPackagesSold": false
+          },
+          "price": {
+            "minorUnits": 399,
+            "currency": "PLN"
+          },
+          "available": true,
+          "materialType": "flooring-accessory",
+          "productFamily": "fictional-flooring-system",
+          "compatibilityTags": [
+            "flooring-compatible"
+          ],
+          "exclusionTags": []
+        }
+      },
+      {
+        "id": "end-cap",
+        "nameKey": "flooring.accessory.end-cap",
+        "variant": {
+          "id": "end-cap-standard",
+          "sku": "FICTIONAL-MM-END-CAP",
+          "nameKey": "flooring.accessory.end-cap.standard",
+          "package": {
+            "saleUnit": "piece",
+            "piecesPerPackage": 1,
+            "minimumPackages": 0,
+            "orderMultiple": 1,
+            "openedPackagesSold": false
+          },
+          "price": {
+            "minorUnits": 399,
+            "currency": "PLN"
+          },
+          "available": true,
+          "materialType": "flooring-accessory",
+          "productFamily": "fictional-flooring-system",
+          "compatibilityTags": [
+            "flooring-compatible"
+          ],
+          "exclusionTags": []
+        }
+      },
+      {
+        "id": "threshold-profile",
+        "nameKey": "flooring.accessory.threshold-profile",
+        "variant": {
+          "id": "threshold-profile-standard",
+          "sku": "FICTIONAL-MM-THRESHOLD-PROFILE",
+          "nameKey": "flooring.accessory.threshold-profile.standard",
+          "package": {
+            "saleUnit": "piece",
+            "piecesPerPackage": 1,
+            "minimumPackages": 0,
+            "orderMultiple": 1,
+            "openedPackagesSold": false
+          },
+          "price": {
+            "minorUnits": 6999,
+            "currency": "PLN"
+          },
+          "available": true,
+          "materialType": "flooring-accessory",
+          "productFamily": "fictional-flooring-system",
+          "compatibilityTags": [
+            "flooring-compatible"
+          ],
+          "exclusionTags": []
+        }
+      },
+      {
+        "id": "installation-tape",
+        "nameKey": "flooring.accessory.installation-tape",
+        "variant": {
+          "id": "installation-tape-standard",
+          "sku": "FICTIONAL-MM-INSTALLATION-TAPE",
+          "nameKey": "flooring.accessory.installation-tape.standard",
+          "package": {
+            "saleUnit": "roll",
+            "piecesPerPackage": 1,
+            "minimumPackages": 0,
+            "orderMultiple": 1,
+            "openedPackagesSold": false
+          },
+          "price": {
+            "minorUnits": 2499,
+            "currency": "PLN"
+          },
+          "available": true,
+          "materialType": "flooring-accessory",
+          "productFamily": "fictional-flooring-system",
+          "compatibilityTags": [
+            "flooring-compatible"
+          ],
+          "exclusionTags": []
+        }
+      }
+    ],
+    "accessoryRules": [
+      {
+        "id": "underlay-by-gross-area",
+        "accessoryProductId": "underlay",
+        "status": "required",
+        "calculation": {
+          "kind": "byArea",
+          "coverageAreaSquareMillimeters": 10000000
+        }
+      },
+      {
+        "id": "skirting-by-net-perimeter",
+        "accessoryProductId": "skirting",
+        "status": "required",
+        "calculation": {
+          "kind": "byPerimeter",
+          "itemLengthMillimeters": 2400,
+          "subtractDoorWidths": true
+        }
+      },
+      {
+        "id": "vapor-barrier-by-area",
+        "accessoryProductId": "vapor-barrier",
+        "status": "optional",
+        "calculation": {
+          "kind": "byArea",
+          "coverageAreaSquareMillimeters": 15000000
+        }
+      },
+      {
+        "id": "internal-corners",
+        "accessoryProductId": "internal-corner",
+        "status": "optional",
+        "calculation": {
+          "kind": "byCornerCount",
+          "cornerType": "internal",
+          "unitsPerCorner": 1
+        }
+      },
+      {
+        "id": "external-corners",
+        "accessoryProductId": "external-corner",
+        "status": "optional",
+        "calculation": {
+          "kind": "byCornerCount",
+          "cornerType": "external",
+          "unitsPerCorner": 1
+        }
+      },
+      {
+        "id": "connectors",
+        "accessoryProductId": "connector",
+        "status": "optional",
+        "calculation": {
+          "kind": "fixed",
+          "quantity": 0
+        }
+      },
+      {
+        "id": "end-caps",
+        "accessoryProductId": "end-cap",
+        "status": "optional",
+        "calculation": {
+          "kind": "fixed",
+          "quantity": 0
+        }
+      },
+      {
+        "id": "thresholds-per-door",
+        "accessoryProductId": "threshold-profile",
+        "status": "optional",
+        "calculation": {
+          "kind": "byDoorCount",
+          "unitsPerDoor": 1
+        }
+      },
+      {
+        "id": "installation-tape",
+        "accessoryProductId": "installation-tape",
+        "status": "optional",
+        "calculation": {
+          "kind": "optional",
+          "defaultQuantity": 1
+        }
+      }
+    ],
+    "compatibilityRules": [
+      {
+        "id": "flooring-requires-compatible-underlay",
+        "sourceProductId": "fictional-floor-panel",
+        "targetProductId": "underlay",
+        "status": "required",
+        "requiredTags": [
+          "flooring-compatible"
+        ]
+      },
+      {
+        "id": "flooring-requires-compatible-vapor-barrier",
+        "sourceProductId": "fictional-floor-panel",
+        "targetProductId": "vapor-barrier",
+        "status": "required",
+        "requiredTags": [
+          "flooring-compatible"
+        ]
+      },
+      {
+        "id": "flooring-requires-compatible-skirting",
+        "sourceProductId": "fictional-floor-panel",
+        "targetProductId": "skirting",
+        "status": "required",
+        "requiredTags": [
+          "flooring-compatible"
+        ]
+      },
+      {
+        "id": "flooring-requires-compatible-internal-corner",
+        "sourceProductId": "fictional-floor-panel",
+        "targetProductId": "internal-corner",
+        "status": "required",
+        "requiredTags": [
+          "flooring-compatible"
+        ]
+      },
+      {
+        "id": "flooring-requires-compatible-external-corner",
+        "sourceProductId": "fictional-floor-panel",
+        "targetProductId": "external-corner",
+        "status": "required",
+        "requiredTags": [
+          "flooring-compatible"
+        ]
+      },
+      {
+        "id": "flooring-requires-compatible-connector",
+        "sourceProductId": "fictional-floor-panel",
+        "targetProductId": "connector",
+        "status": "required",
+        "requiredTags": [
+          "flooring-compatible"
+        ]
+      },
+      {
+        "id": "flooring-requires-compatible-end-cap",
+        "sourceProductId": "fictional-floor-panel",
+        "targetProductId": "end-cap",
+        "status": "required",
+        "requiredTags": [
+          "flooring-compatible"
+        ]
+      },
+      {
+        "id": "flooring-requires-compatible-threshold-profile",
+        "sourceProductId": "fictional-floor-panel",
+        "targetProductId": "threshold-profile",
+        "status": "required",
+        "requiredTags": [
+          "flooring-compatible"
+        ]
+      },
+      {
+        "id": "flooring-requires-compatible-installation-tape",
+        "sourceProductId": "fictional-floor-panel",
+        "targetProductId": "installation-tape",
+        "status": "required",
+        "requiredTags": [
+          "flooring-compatible"
+        ]
+      }
+    ]
+  }
+}

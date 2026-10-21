@@ -1,0 +1,23 @@
+{
+  "name": "@filtermatch/compatibility-widget",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./auto-register": "./src/auto-register.ts"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@filtermatch/model-search": "workspace:*"
+  },
+  "devDependencies": {
+    "vite": "^6.1.0",
+    "vitest": "^2.1.9"
+  },
+  "license": "MIT"
+}

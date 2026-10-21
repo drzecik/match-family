@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 2,
+  "kind": "devices",
+  "records": [
+    {
+      "id": "airpure-ap100-pl",
+      "brand": "AirPure",
+      "canonicalModel": "AP100/PL",
+      "regionalVariant": "/PL",
+      "series": "Seria demonstracyjna PureAir 100",
+      "category": "air-purifier",
+      "aliases": [
+        "AP100/PL",
+        "AP 100 / PL",
+        "AirPure AP100/PL",
+        "PureAir 100 AP100/PL"
+      ],
+      "identifiers": {
+        "productCode": "SYN-AP100PL"
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-device-ap100"
+      ],
+      "verificationStatus": "verified_official",
+      "lastVerifiedAt": "2026-07-10T09:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "airpure-ap101-pl",
+      "brand": "AirPure",
+      "canonicalModel": "AP101/PL",
+      "regionalVariant": "/PL",
+      "series": "Seria demonstracyjna PureAir 100",
+      "category": "air-purifier",
+      "aliases": [
+        "AP101/PL",
+        "AP 101 / PL",
+        "AirPure AP101/PL"
+      ],
+      "identifiers": {
+        "productCode": "SYN-AP101PL"
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-device-ap101"
+      ],
+      "verificationStatus": "verified_official",
+      "lastVerifiedAt": "2026-07-10T09:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "homebreeze-hb200-pl",
+      "brand": "HomeBreeze",
+      "canonicalModel": "HB200/PL",
+      "regionalVariant": "/PL",
+      "series": "Seria demonstracyjna Breeze 200",
+      "category": "air-purifier",
+      "aliases": [
+        "HB200/PL",
+        "HB 200 / PL",
+        "HomeBreeze HB200/PL",
+        "Breeze 200 HB200/PL"
+      ],
+      "identifiers": {
+        "productCode": "SYN-HB200PL"
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-device-hb200-pl"
+      ],
+      "verificationStatus": "verified_official",
+      "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "homebreeze-hb200-de",
+      "brand": "HomeBreeze",
+      "canonicalModel": "HB200/DE",
+      "regionalVariant": "/DE",
+      "series": "Seria demonstracyjna Breeze 200",
+      "category": "air-purifier",
+      "aliases": [
+        "HB200/DE",
+        "HB 200 / DE",
+        "HomeBreeze HB200/DE"
+      ],
+      "identifiers": {
+        "productCode": "SYN-HB200DE"
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-device-hb200-de"
+      ],
+      "verificationStatus": "verified_official",
+      "lastVerifiedAt": "2026-07-12T10:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    },
+    {
+      "id": "cleanflow-cf300-10",
+      "brand": "CleanFlow",
+      "canonicalModel": "CF300/10",
+      "regionalVariant": "/10",
+      "series": "Seria demonstracyjna AirGuard 300",
+      "category": "air-purifier",
+      "aliases": [
+        "CF300/10",
+        "CF 300 / 10",
+        "CleanFlow CF300/10",
+        "AirGuard 300 CF300/10"
+      ],
+      "identifiers": {
+        "productCode": "SYN-CF30010"
+      },
+      "lifecycleStatus": "active",
+      "sourceReferences": [
+        "evidence-device-cf300"
+      ],
+      "verificationStatus": "verified_official",
+      "lastVerifiedAt": "2026-07-13T10:00:00.000Z",
+      "synthetic": true,
+      "notForProduction": true
+    }
+  ]
+}

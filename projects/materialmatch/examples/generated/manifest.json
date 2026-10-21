@@ -1,0 +1,10 @@
+{
+  "notice": "FICTIONAL DEMONSTRATION DATA — NOT A REAL BRAND OR PRODUCT CATALOGUE",
+  "formatVersion": 1,
+  "files": [
+    "flooring-configuration.json",
+    "flooring-reference-scenario.json",
+    "flooring-vertical-pack.json",
+    "product-metadata.csv"
+  ]
+}

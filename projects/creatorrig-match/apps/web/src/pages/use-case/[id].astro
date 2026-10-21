@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import catalog from '../../../../../data/fixtures/demo-catalog.json';
+import { localizeTechnicalCopy, subcategoryLabel } from '../../lib/polish-labels';
+
+export function getStaticPaths() {
+  return catalog.useCaseTemplates.map((template) => ({ params: { id: template.id }, props: { template } }));
+}
+const { template } = Astro.props;
+const products = template.defaultProductIds.map((id) => catalog.products.find((item) => item.id === id)).filter(Boolean);
+---
+
+<BaseLayout title={`${template.name} — CreatorRig Match`} description={localizeTechnicalCopy(template.description)}>
+  <article class="public-page">
+    <p class="eyebrow">Szablon zastosowania · syntetyczny</p>
+    <h1>{template.name}</h1>
+    <p class="lede">{localizeTechnicalCopy(template.description)}</p>
+    <ul class="public-list">{products.map((product) => product && <li><a href={`/produkt/${product.id}`}><strong>{product.canonicalName}</strong><span>{subcategoryLabel(product.subcategory)}</span></a></li>)}</ul>
+    <a class="primary-link" href="/#builder">Otwórz konfigurator →</a>
+  </article>
+</BaseLayout>

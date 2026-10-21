@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export function getStaticPaths() {
+  return import.meta.env.FILTERMATCH_BUILD_PROFILE === 'private-review'
+    ? [{ params: { path: undefined } }]
+    : [];
+}
+
+const { candidateReview, candidateReviewGeneratedAt, candidateEvidenceSummary } = await import('../../lib/review-data');
+
+const grouped = new Map<string, typeof candidateReview>();
+for (const row of candidateReview) {
+  grouped.set(row.device.brand, [...(grouped.get(row.device.brand) ?? []), row]);
+}
+const deviceCount = new Set(candidateReview.map(({ device }) => device.id)).size;
+const consumableCount = new Set(candidateReview.map(({ consumable }) => consumable.id)).size;
+const uniqueEvidence = new Map(
+  candidateReview.flatMap(({ evidence }) => evidence.map((source) => [source.id, source] as const))
+);
+const evidenceRecordCount = uniqueEvidence.size;
+const generatedAt = new Intl.DateTimeFormat('pl-PL', { dateStyle: 'long', timeStyle: 'short' }).format(
+  new Date(candidateReviewGeneratedAt)
+);
+const sourceTypeLabels = {
+  official_manual: 'Oficjalna instrukcja',
+  official_compatibility_list: 'Oficjalna lista kompatybilności',
+  official_product_page: 'Oficjalna strona produktu',
+  replacement_manufacturer: 'Producent zamiennika',
+  trusted_distributor: 'Dokumentacja wiarygodnego dystrybutora',
+  independent_supporting: 'Niezależne źródło pomocnicze'
+} as const;
+const dateFormatter = new Intl.DateTimeFormat('pl-PL', { dateStyle: 'medium' });
+---
+
+<BaseLayout
+  title="Prywatny przegląd prawdziwych danych — FilterMatch"
+  description="Prywatna kolejka weryfikacyjna prawdziwych modeli urządzeń, filtrów i kontrolowanych dowodów."
+  canonicalPath="/przeglad-danych/"
+  noindex
+>
+  <div class="review-banner" role="note">
+    <strong>Prywatny katalog danych.</strong>
+    To prawdziwe modele oraz źródła producentów lub wiarygodnych dystrybutorów, ale relacje widoczne na tej stronie oczekują na decyzję uprawnionego recenzenta.
+  </div>
+  <div class="shell page-shell review-page">
+    <header class="catalog-intro">
+      <span class="kicker">Kontrola przed publikacją</span>
+      <h1>Rzeczywiste urządzenia, filtry i dowody</h1>
+      <p>AI zebrało kandydatów. Żaden wpis nie jest przedstawiany jako pewna kompatybilność, dopóki człowiek nie sprawdzi źródła, wariantu regionalnego i oznaczenia produktu.</p>
+    </header>
+
+    <dl class="catalog-stats" aria-label="Zakres danych do przeglądu">
+      <div><dt>Urządzenia</dt><dd>{deviceCount}</dd></div>
+      <div><dt>Filtry i zestawy</dt><dd>{consumableCount}</dd></div>
+      <div><dt>Dowody w snapshotcie</dt><dd>{candidateEvidenceSummary.total}</dd></div>
+    </dl>
+    <p class="fine-print">Snapshot wygenerowany: {generatedAt}. Źródła producentów: {candidateEvidenceSummary.total - candidateEvidenceSummary.trustedDistributor}; źródła wiarygodnych dystrybutorów: {candidateEvidenceSummary.trustedDistributor}; unikalne dowody przypisane bezpośrednio do relacji: {evidenceRecordCount}. Kandydaci i konflikty pozostają poza publicznym indeksem wyszukiwania.</p>
+
+    <section class="review-search" aria-labelledby="review-search-heading">
+      <div>
+        <span class="kicker">Szybkie filtrowanie</span>
+        <h2 id="review-search-heading">Znajdź model, markę albo oznaczenie filtra</h2>
+      </div>
+      <label>
+        <span>Wpisz model urządzenia, markę lub SKU</span>
+        <input id="review-query" type="search" placeholder="np. AC3420/10 albo FY3400/30" autocomplete="off" />
+      </label>
+      <p id="review-count" class="fine-print" aria-live="polite">Widocznych relacji: {candidateReview.length}</p>
+    </section>
+
+    {[...grouped.entries()].map(([brand, rows]) => (
+      <section class="review-brand" data-review-brand aria-labelledby={`brand-${brand.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
+        <div class="review-brand-heading">
+          <h2 id={`brand-${brand.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>{brand}</h2>
+          <span>{new Set(rows.map(({ device }) => device.id)).size} urządzeń · {rows.length} relacji</span>
+        </div>
+        <div class="review-list">
+          {rows.map(({ edge, device, consumable, evidence }) => (
+            <article
+              class="review-card"
+              data-review-card
+              data-search-key={`${device.brand} ${device.canonicalModel} ${device.regionalVariant ?? ''} ${device.series ?? ''} ${consumable.brand} ${consumable.canonicalName} ${consumable.attributes.requiresOfficialSku === true ? '' : consumable.sku}`}
+            >
+              <div class="review-card-title">
+                <div>
+                  <span class:list={['tag', edge.verificationStatus === 'conflicting' ? 'tag-conflict' : 'tag-candidate']}>
+                    {edge.verificationStatus === 'conflicting' ? 'Konflikt źródeł' : 'Wymaga weryfikacji'}
+                  </span>
+                  <h3>{device.brand} {device.canonicalModel}</h3>
+                </div>
+                <span class="relation-arrow" aria-hidden="true">→</span>
+                <div>
+                  <span class="tag tag-category">{edge.relationType === 'required' ? 'Element wymagany' : edge.relationType === 'optional' ? 'Akcesorium opcjonalne' : 'Alternatywa'}</span>
+                  <h3>{consumable.canonicalName}</h3>
+                </div>
+              </div>
+              <dl class="review-facts">
+                <div><dt>Model urządzenia</dt><dd><code>{device.canonicalModel}</code>{device.regionalVariant ? ` · wariant ${device.regionalVariant}` : ''}</dd></div>
+                <div>
+                  <dt>{consumable.attributes.requiresOfficialSku === true ? 'Status oznaczenia filtra' : 'Oznaczenie filtra'}</dt>
+                  <dd>
+                    {consumable.attributes.requiresOfficialSku === true
+                      ? 'Brak potwierdzonego publicznego SKU'
+                      : <code>{consumable.sku}</code>}
+                  </dd>
+                </div>
+                <div><dt>Zawartość</dt><dd>{consumable.includedElements.map(({ name, quantity }) => `${quantity} × ${name}`).join(' · ')}</dd></div>
+              </dl>
+              {edge.notes && <p class="review-note">{edge.notes}</p>}
+              <details class="review-evidence" open>
+                <summary>Dowody ({evidence.length})</summary>
+                <ul>
+                  {evidence.map((source) => (
+                    <li>
+                      <div>
+                        <strong>{source.title}</strong>
+                        <p>{source.evidenceSummary}</p>
+                        <p class="evidence-meta">
+                          {sourceTypeLabels[source.sourceType]} · dostęp {dateFormatter.format(new Date(source.accessedAt))}
+                          {source.pageReference ? ` · strona ${source.pageReference}` : ''}
+                          {source.documentVersion ? ` · wersja ${source.documentVersion}` : ''}
+                        </p>
+                      </div>
+                      {source.url
+                        ? <a href={source.url} target="_blank" rel="nofollow noopener noreferrer">Otwórz źródło ↗</a>
+                        : <code>{source.documentId}</code>}
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
+    <p id="review-empty" class="empty-state" hidden>Brak kandydatów dla tego zapisu. Sprawdź pełny model albo oznaczenie filtra.</p>
+  </div>
+</BaseLayout>
+
+<script>
+  const query = document.querySelector<HTMLInputElement>('#review-query');
+  const count = document.querySelector<HTMLElement>('#review-count');
+  const empty = document.querySelector<HTMLElement>('#review-empty');
+  const cards = [...document.querySelectorAll<HTMLElement>('[data-review-card]')];
+  const brands = [...document.querySelectorAll<HTMLElement>('[data-review-brand]')];
+  const normalize = (value: string) => value
+    .normalize('NFKD')
+    .replace(/\p{M}/gu, '')
+    .toLocaleUpperCase('pl-PL')
+    .replace(/[^A-Z0-9]+/gu, ' ')
+    .trim();
+
+  query?.addEventListener('input', () => {
+    const needle = normalize(query.value);
+    let visible = 0;
+    for (const card of cards) {
+      const matches = !needle || normalize(card.dataset.searchKey ?? '').includes(needle);
+      card.hidden = !matches;
+      if (matches) visible += 1;
+    }
+    for (const brand of brands) {
+      brand.hidden = !brand.querySelector('[data-review-card]:not([hidden])');
+    }
+    if (count) count.textContent = `Widocznych relacji: ${visible}`;
+    if (empty) empty.hidden = visible !== 0;
+  });
+</script>

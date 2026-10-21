@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import catalog from '../../../../../data/fixtures/demo-catalog.json';
+
+export function getStaticPaths() {
+  return catalog.rigs.map((rig) => ({ params: { id: rig.id }, props: { rig } }));
+}
+const { rig } = Astro.props;
+const products = rig.selectedProductIds.map((id) => catalog.products.find((item) => item.id === id)).filter(Boolean);
+const totalWeight = products.reduce((sum, product) => sum + (product?.weightGrams ?? 0), 0);
+const template = catalog.useCaseTemplates.find((item) => item.id === rig.useCaseTemplateId);
+const mode = catalog.recordingModes.find((item) => item.id === rig.recordingModeId);
+---
+
+<BaseLayout title={`${template?.name ?? 'Gotowy zestaw'} — CreatorRig Match`} description="Gotowy, syntetyczny zestaw demonstracyjny z pełną listą elementów.">
+  <article class="public-page">
+    <p class="eyebrow">Gotowy zestaw · dane syntetyczne</p>
+    <h1>{template?.name ?? 'Zestaw demonstracyjny'}</h1>
+    <p class="lede">{products.length} elementów · {totalWeight} g{mode ? ` · ${mode.resolution} przy ${mode.frameRate} kl./s, ${mode.codec}` : ''}</p>
+    <ul class="public-list">{products.map((product) => product && <li><a href={`/produkt/${product.id}`}><strong>{product.canonicalName}</strong><span>{product.weightGrams} g</span></a></li>)}</ul>
+    <a class="primary-link" href="/#builder">Zweryfikuj w konfiguratorze →</a>
+  </article>
+</BaseLayout>

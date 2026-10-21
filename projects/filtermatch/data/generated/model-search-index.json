@@ -1,0 +1,387 @@
+{
+  "version": 1,
+  "normalizerVersion": "model-v1",
+  "generatedAt": "2026-07-13T10:00:00.000Z",
+  "entries": {
+    "airpure-ap100-pl": {
+      "deviceId": "airpure-ap100-pl",
+      "brand": "AirPure",
+      "canonicalModel": "AP100/PL",
+      "fullModel": "AP100/PL",
+      "regionalVariant": "/PL",
+      "series": "Seria demonstracyjna PureAir 100",
+      "keys": [
+        {
+          "value": "AP100/PL",
+          "normalized": "AP100PL",
+          "kind": "full_model"
+        },
+        {
+          "value": "AIRPURE AP100/PL",
+          "normalized": "AIRPUREAP100PL",
+          "kind": "brand_model"
+        },
+        {
+          "value": "SERIA DEMONSTRACYJNA PUREAIR 100 AP100/PL",
+          "normalized": "SERIADEMONSTRACYJNAPUREAIR100AP100PL",
+          "kind": "series_model"
+        },
+        {
+          "value": "AIRPURE SERIA DEMONSTRACYJNA PUREAIR 100 AP100/PL",
+          "normalized": "AIRPURESERIADEMONSTRACYJNAPUREAIR100AP100PL",
+          "kind": "series_model"
+        },
+        {
+          "value": "SYN-AP100PL",
+          "normalized": "SYNAP100PL",
+          "kind": "identifier"
+        },
+        {
+          "value": "AP100/PL",
+          "normalized": "AP100PL",
+          "kind": "approved_alias"
+        },
+        {
+          "value": "AIRPURE AP100/PL",
+          "normalized": "AIRPUREAP100PL",
+          "kind": "approved_alias"
+        },
+        {
+          "value": "SYN-AP100PL",
+          "normalized": "SYNAP100PL",
+          "kind": "approved_alias"
+        }
+      ],
+      "fuzzyKeys": [
+        "AP100PL",
+        "AIRPUREAP100PL"
+      ],
+      "numericSignature": [
+        "100"
+      ]
+    },
+    "airpure-ap101-pl": {
+      "deviceId": "airpure-ap101-pl",
+      "brand": "AirPure",
+      "canonicalModel": "AP101/PL",
+      "fullModel": "AP101/PL",
+      "regionalVariant": "/PL",
+      "series": "Seria demonstracyjna PureAir 100",
+      "keys": [
+        {
+          "value": "AP101/PL",
+          "normalized": "AP101PL",
+          "kind": "full_model"
+        },
+        {
+          "value": "AIRPURE AP101/PL",
+          "normalized": "AIRPUREAP101PL",
+          "kind": "brand_model"
+        },
+        {
+          "value": "SERIA DEMONSTRACYJNA PUREAIR 100 AP101/PL",
+          "normalized": "SERIADEMONSTRACYJNAPUREAIR100AP101PL",
+          "kind": "series_model"
+        },
+        {
+          "value": "AIRPURE SERIA DEMONSTRACYJNA PUREAIR 100 AP101/PL",
+          "normalized": "AIRPURESERIADEMONSTRACYJNAPUREAIR100AP101PL",
+          "kind": "series_model"
+        },
+        {
+          "value": "SYN-AP101PL",
+          "normalized": "SYNAP101PL",
+          "kind": "identifier"
+        },
+        {
+          "value": "AP101/PL",
+          "normalized": "AP101PL",
+          "kind": "approved_alias"
+        }
+      ],
+      "fuzzyKeys": [
+        "AP101PL",
+        "AIRPUREAP101PL"
+      ],
+      "numericSignature": [
+        "101"
+      ]
+    },
+    "cleanflow-cf300-10": {
+      "deviceId": "cleanflow-cf300-10",
+      "brand": "CleanFlow",
+      "canonicalModel": "CF300/10",
+      "fullModel": "CF300/10",
+      "regionalVariant": "/10",
+      "series": "Seria demonstracyjna AirGuard 300",
+      "keys": [
+        {
+          "value": "CF300/10",
+          "normalized": "CF30010",
+          "kind": "full_model"
+        },
+        {
+          "value": "CLEANFLOW CF300/10",
+          "normalized": "CLEANFLOWCF30010",
+          "kind": "brand_model"
+        },
+        {
+          "value": "SERIA DEMONSTRACYJNA AIRGUARD 300 CF300/10",
+          "normalized": "SERIADEMONSTRACYJNAAIRGUARD300CF30010",
+          "kind": "series_model"
+        },
+        {
+          "value": "CLEANFLOW SERIA DEMONSTRACYJNA AIRGUARD 300 CF300/10",
+          "normalized": "CLEANFLOWSERIADEMONSTRACYJNAAIRGUARD300CF30010",
+          "kind": "series_model"
+        },
+        {
+          "value": "SYN-CF30010",
+          "normalized": "SYNCF30010",
+          "kind": "identifier"
+        },
+        {
+          "value": "CF300/10",
+          "normalized": "CF30010",
+          "kind": "approved_alias"
+        },
+        {
+          "value": "CLEANFLOW CF300/10",
+          "normalized": "CLEANFLOWCF30010",
+          "kind": "approved_alias"
+        },
+        {
+          "value": "SYN-CF30010",
+          "normalized": "SYNCF30010",
+          "kind": "approved_alias"
+        }
+      ],
+      "fuzzyKeys": [
+        "CF30010",
+        "CLEANFLOWCF30010"
+      ],
+      "numericSignature": [
+        "30010"
+      ]
+    },
+    "homebreeze-hb200-de": {
+      "deviceId": "homebreeze-hb200-de",
+      "brand": "HomeBreeze",
+      "canonicalModel": "HB200/DE",
+      "fullModel": "HB200/DE",
+      "regionalVariant": "/DE",
+      "series": "Seria demonstracyjna Breeze 200",
+      "keys": [
+        {
+          "value": "HB200/DE",
+          "normalized": "HB200DE",
+          "kind": "full_model"
+        },
+        {
+          "value": "HOMEBREEZE HB200/DE",
+          "normalized": "HOMEBREEZEHB200DE",
+          "kind": "brand_model"
+        },
+        {
+          "value": "SERIA DEMONSTRACYJNA BREEZE 200 HB200/DE",
+          "normalized": "SERIADEMONSTRACYJNABREEZE200HB200DE",
+          "kind": "series_model"
+        },
+        {
+          "value": "HOMEBREEZE SERIA DEMONSTRACYJNA BREEZE 200 HB200/DE",
+          "normalized": "HOMEBREEZESERIADEMONSTRACYJNABREEZE200HB200DE",
+          "kind": "series_model"
+        },
+        {
+          "value": "SYN-HB200DE",
+          "normalized": "SYNHB200DE",
+          "kind": "identifier"
+        },
+        {
+          "value": "HB200/DE",
+          "normalized": "HB200DE",
+          "kind": "approved_alias"
+        },
+        {
+          "value": "HOMEBREEZE HB200/DE",
+          "normalized": "HOMEBREEZEHB200DE",
+          "kind": "approved_alias"
+        },
+        {
+          "value": "SYN-HB200DE",
+          "normalized": "SYNHB200DE",
+          "kind": "approved_alias"
+        }
+      ],
+      "fuzzyKeys": [
+        "HB200DE",
+        "HOMEBREEZEHB200DE"
+      ],
+      "numericSignature": [
+        "200"
+      ]
+    },
+    "homebreeze-hb200-pl": {
+      "deviceId": "homebreeze-hb200-pl",
+      "brand": "HomeBreeze",
+      "canonicalModel": "HB200/PL",
+      "fullModel": "HB200/PL",
+      "regionalVariant": "/PL",
+      "series": "Seria demonstracyjna Breeze 200",
+      "keys": [
+        {
+          "value": "HB200/PL",
+          "normalized": "HB200PL",
+          "kind": "full_model"
+        },
+        {
+          "value": "HOMEBREEZE HB200/PL",
+          "normalized": "HOMEBREEZEHB200PL",
+          "kind": "brand_model"
+        },
+        {
+          "value": "SERIA DEMONSTRACYJNA BREEZE 200 HB200/PL",
+          "normalized": "SERIADEMONSTRACYJNABREEZE200HB200PL",
+          "kind": "series_model"
+        },
+        {
+          "value": "HOMEBREEZE SERIA DEMONSTRACYJNA BREEZE 200 HB200/PL",
+          "normalized": "HOMEBREEZESERIADEMONSTRACYJNABREEZE200HB200PL",
+          "kind": "series_model"
+        },
+        {
+          "value": "SYN-HB200PL",
+          "normalized": "SYNHB200PL",
+          "kind": "identifier"
+        },
+        {
+          "value": "HB200/PL",
+          "normalized": "HB200PL",
+          "kind": "approved_alias"
+        },
+        {
+          "value": "HOMEBREEZE HB200/PL",
+          "normalized": "HOMEBREEZEHB200PL",
+          "kind": "approved_alias"
+        },
+        {
+          "value": "SYN-HB200PL",
+          "normalized": "SYNHB200PL",
+          "kind": "approved_alias"
+        }
+      ],
+      "fuzzyKeys": [
+        "HB200PL",
+        "HOMEBREEZEHB200PL"
+      ],
+      "numericSignature": [
+        "200"
+      ]
+    }
+  },
+  "exact": {
+    "AIRPUREAP100PL": [
+      "airpure-ap100-pl"
+    ],
+    "AIRPUREAP101PL": [
+      "airpure-ap101-pl"
+    ],
+    "AIRPURESERIADEMONSTRACYJNAPUREAIR100AP100PL": [
+      "airpure-ap100-pl"
+    ],
+    "AIRPURESERIADEMONSTRACYJNAPUREAIR100AP101PL": [
+      "airpure-ap101-pl"
+    ],
+    "AP100PL": [
+      "airpure-ap100-pl"
+    ],
+    "AP101PL": [
+      "airpure-ap101-pl"
+    ],
+    "CF30010": [
+      "cleanflow-cf300-10"
+    ],
+    "CLEANFLOWCF30010": [
+      "cleanflow-cf300-10"
+    ],
+    "CLEANFLOWSERIADEMONSTRACYJNAAIRGUARD300CF30010": [
+      "cleanflow-cf300-10"
+    ],
+    "HB200DE": [
+      "homebreeze-hb200-de"
+    ],
+    "HB200PL": [
+      "homebreeze-hb200-pl"
+    ],
+    "HOMEBREEZEHB200DE": [
+      "homebreeze-hb200-de"
+    ],
+    "HOMEBREEZEHB200PL": [
+      "homebreeze-hb200-pl"
+    ],
+    "HOMEBREEZESERIADEMONSTRACYJNABREEZE200HB200DE": [
+      "homebreeze-hb200-de"
+    ],
+    "HOMEBREEZESERIADEMONSTRACYJNABREEZE200HB200PL": [
+      "homebreeze-hb200-pl"
+    ],
+    "SERIADEMONSTRACYJNAAIRGUARD300CF30010": [
+      "cleanflow-cf300-10"
+    ],
+    "SERIADEMONSTRACYJNABREEZE200HB200DE": [
+      "homebreeze-hb200-de"
+    ],
+    "SERIADEMONSTRACYJNABREEZE200HB200PL": [
+      "homebreeze-hb200-pl"
+    ],
+    "SERIADEMONSTRACYJNAPUREAIR100AP100PL": [
+      "airpure-ap100-pl"
+    ],
+    "SERIADEMONSTRACYJNAPUREAIR100AP101PL": [
+      "airpure-ap101-pl"
+    ],
+    "SYNAP100PL": [
+      "airpure-ap100-pl"
+    ],
+    "SYNAP101PL": [
+      "airpure-ap101-pl"
+    ],
+    "SYNCF30010": [
+      "cleanflow-cf300-10"
+    ],
+    "SYNHB200DE": [
+      "homebreeze-hb200-de"
+    ],
+    "SYNHB200PL": [
+      "homebreeze-hb200-pl"
+    ]
+  },
+  "baseModels": {
+    "AIRPUREAP100": [
+      "airpure-ap100-pl"
+    ],
+    "AIRPUREAP101": [
+      "airpure-ap101-pl"
+    ],
+    "AP100": [
+      "airpure-ap100-pl"
+    ],
+    "AP101": [
+      "airpure-ap101-pl"
+    ],
+    "CF300": [
+      "cleanflow-cf300-10"
+    ],
+    "CLEANFLOWCF300": [
+      "cleanflow-cf300-10"
+    ],
+    "HB200": [
+      "homebreeze-hb200-de",
+      "homebreeze-hb200-pl"
+    ],
+    "HOMEBREEZEHB200": [
+      "homebreeze-hb200-de",
+      "homebreeze-hb200-pl"
+    ]
+  }
+}
