@@ -78,5 +78,6 @@
     "scope": "MIT for first-party code/demos except the two PHP integrations, GPL-2.0-or-later for those integrations",
     "implementation_changes": false,
     "not_publication_approval": true
-  }
+  },
+  "publication_note": "The publication and application flags record the local verification state at verified_at; GitHub repository metadata is authoritative for current publication status."
 }

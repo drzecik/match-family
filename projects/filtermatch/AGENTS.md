@@ -35,6 +35,6 @@ Treat these as high-priority defects:
 - Keep affiliate URLs structural and link directly; do not accept arbitrary redirect targets.
 - Preserve unrelated user changes and document architectural decisions.
 
-## Local OSS preparation boundary
+## Public source edition boundary
 
-No publishing or deployment is authorized. Use only fictional demo data. Packages remain private and UNLICENSED pending a separate license decision. Consult the standalone README for commands in this sanitized workspace.
+Use only fictional demo data. First-party licensing is defined in ../../LICENSE-STATUS.md. The npm packages remain private to prevent accidental registry publication. Changes to deployments, package publication or licensing require a separate maintainer decision. Consult the standalone README for commands in this sanitized workspace.

@@ -1,6 +1,6 @@
 # CreatorRig Match — sanitized source copy
 
-This independent workspace contains first-party source, generic tests and explicitly fictional demonstration data. It is a local preparation for review; no public release has been approved. First-party TypeScript source and demos use MIT, with the separately scoped GPL-2.0-or-later MaterialMatch PHP integrations. Packages remain private to prevent registry publication. See ../../LICENSE-STATUS.md.
+This independent workspace contains first-party source, generic tests and explicitly fictional demonstration data. It is part of the sanitized public Match Family source edition. First-party TypeScript source and demos use MIT, with the separately scoped GPL-2.0-or-later MaterialMatch PHP integrations. Packages remain private to prevent registry publication. See ../../LICENSE-STATUS.md.
 
 ## Run locally
 

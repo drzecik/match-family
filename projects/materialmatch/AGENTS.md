@@ -32,6 +32,6 @@ Treat the following as high-priority defects:
 Also verify input validation, import size limits, CSV formula-injection protection, WordPress
 capability and nonce checks, output escaping, accessibility, and honest roadmap status.
 
-## Local OSS preparation boundary
+## Public source edition boundary
 
-No publishing or deployment is authorized. Use only fictional demo data. Packages remain private and UNLICENSED pending a separate license decision. Consult the standalone README for commands in this sanitized workspace.
+Use only fictional demo data. First-party licensing is defined in ../../LICENSE-STATUS.md. The npm packages remain private to prevent accidental registry publication. Changes to deployments, package publication or licensing require a separate maintainer decision. Consult the standalone README for commands in this sanitized workspace.

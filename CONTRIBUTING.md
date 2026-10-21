@@ -1,12 +1,12 @@
 # Contributing to Match Family
 
-This is an unpublished source preparation. The first-party license scope is described in [LICENSE-STATUS.md](LICENSE-STATUS.md). Public contribution channels become available only after a separately authorized publication.
+This is the sanitized source edition of Match Family. The first-party license scope is described in [LICENSE-STATUS.md](LICENSE-STATUS.md). Use this repository’s issues and pull requests to propose improvements.
 
 ## Reproduce a problem
 
 Choose the affected workspace under `projects/` and follow its README. Keep its pinned Node and pnpm versions and its dependency lockfile. Include the exact revision, command, expected result and observed result. A small fictional input is preferable to a real catalog or customer record.
 
-Use the prepared issue form for ordinary defects once a repository is published. Do not attach credentials, environment files, customer information, private catalogs, browser session data or deployment logs containing private information. Use [SECURITY.md](SECURITY.md) for vulnerabilities.
+Use the issue form for ordinary defects. Do not attach credentials, environment files, customer information, private catalogs, browser session data or deployment logs containing private information. Use [SECURITY.md](SECURITY.md) for vulnerabilities.
 
 ## Changes
 

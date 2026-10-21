@@ -1,8 +1,8 @@
 # Security reporting
 
-This source copy is unpublished and has no public security-reporting channel yet. The maintainer must confirm a private reporting route before the public release. No response-time or supported-release commitment is currently made.
+No response-time or supported-release commitment is currently made. Keep vulnerability details out of public issues.
 
-If a future GitHub repository offers **Security > Advisories > Report a vulnerability**, use that private route. This file does not claim that private vulnerability reporting has already been enabled. If no private route is available, open an issue asking only for a private contact; do not include vulnerability details, exploit code or sensitive data.
+If this GitHub repository offers **Security > Advisories > Report a vulnerability**, use that private route. This file does not claim that private vulnerability reporting has already been enabled. If no private route is available, open an issue asking only for a private contact; do not include vulnerability details, exploit code or sensitive data.
 
 Use a local reproduction with fictional data. Identify the affected revision and workspace, prerequisites, impact and minimal steps. Do not test against an external store or another person's installation without authorization. Never post secrets, account/session data, private catalogs or customer records.
 

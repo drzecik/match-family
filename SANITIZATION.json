@@ -1,5 +1,5 @@
 {
-  "status": "SOURCE_COPY_ONLY_NOT_PUBLISHED",
+  "status": "SANITIZED_SOURCE_EDITION",
   "excluded_original_paths": [
     {
       "project": "filtermatch",

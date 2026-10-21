@@ -14,7 +14,7 @@ Use Node 24.18.0. Enter one project directory and follow its README. Run the pac
 
 ## Current status
 
-Prepared locally for review. No public repository, package publication, deployment or program application submission has been performed. First-party code is licensed as described in LICENSE-STATUS.md. The proposed project/repository name is Match Family / match-family.
+This repository is the public, sanitized source edition of Match Family. First-party code is licensed as described in [LICENSE-STATUS.md](LICENSE-STATUS.md). Packages are not published to a registry, and no hosted application is deployed by this repository. Local verification results are recorded in VERIFICATION.json; GitHub Actions records its own checks.
 
 All demo records are fictional and not for production. Candidate or unknown compatibility is not a recommendation. Synthetic evidence is only a test fixture. The MaterialMatch demo cart does not place an order.
 
@@ -22,4 +22,4 @@ Read SANITIZATION.md and SANITIZATION.json for removed private scope. Technical 
 
 ## Project participation
 
-[Contributing](CONTRIBUTING.md) explains how to reproduce defects and propose changes. [Security reporting](SECURITY.md) describes the reporting boundary. Issue and pull-request templates are prepared for a future repository; no public channel is active through this local copy.
+[Contributing](CONTRIBUTING.md) explains how to reproduce defects and propose changes. Use this repository’s issue form for ordinary defects and [Security reporting](SECURITY.md) for vulnerabilities. Do not include private catalogs, customer data or credentials in reports.
